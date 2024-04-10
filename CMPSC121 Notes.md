@@ -12,10 +12,30 @@
 - Variable Assignments and Initialization
 - Scope
 - The cin Object
+- Type Casting
+- Constants
+- C++ INput/Output
+- Header File
+- Operators
+- String Input
+- cin vs getline
 
 [Module 4: Structured Programming and Combined Assignement](./CMPSC121%20Notes.md#module-4-structured-programming-and-combined-assignment)
+- Structured Programming
+- Relational Operators and Expressions
+- The if Statement
+- Combined Assignment
+- if/else statements
+- Getting the last digit from an integer
+- Nested if statements
 
 [Module 5: Switch Statement and Repitition](./CMPSC121%20Notes.md#module-5-switch-statement-and-repitition)
+- The Switch Statement
+- Errors
+- Repitition
+- Introduction to Loops
+- Counters/Keeping a Running Total
+- Sentinels
 
 [Module 6: While Loop and validating input]
 
