@@ -1,4 +1,4 @@
-# Module 2 Object and variables
+# Module 2 Object and Variables
 
 ## - The COUT object
 
