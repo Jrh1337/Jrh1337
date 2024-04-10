@@ -105,7 +105,7 @@
 - No Bounds checking in C++
 - Processing Array Contents
 
-[Module 13: Vectors]
+[Module 13: Vectors](./CMPSC121%20Notes.md#module-13-vectors)
 - Using Parallel Arrays
 - Arrays as Function Arguments
 - Vector Manipulation
