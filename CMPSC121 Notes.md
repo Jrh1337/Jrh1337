@@ -101,3 +101,64 @@ Can be represented in fixed point `(0.000625)` or E notation `(3.14159E1)`
 
 If dividing an integer and you want to keep the remainder turn one of the operans into a floating point `num = 5/9.0` or `n1 = n2/static_cast<double>(n3);`
 
+- The bool Data Type
+
+Represents values that are true or false.  Bool variables are stored as integers.
+
+`False = 0`
+
+`True = 1`
+
+- Variable Assignments and Initialization
+
+Assignment statment uses `=`
+
+Variable receiving the value must appear on the left side of the `=` operator
+
+A variable cannot be used before it is defined.
+
+Common header files:
+
+`#include <iostream> //ALWAYS!!!`
+
+`#include <iomanip>  //To allow formatting of numbers and strings`
+
+`#include <cmath>  //To allow use of mathematical functions, eg sqrt or cosine`
+
+`#include <cstdlib>  //We use this with random numbers`
+
+`#include <string>  //We need this if we use string variables`
+
+- Comments
+
+`//` for single line comments
+
+`/**/` for multi line comments
+
+- The cin object
+
+cin stands for console input.  This requires the iostream header file.  Used to read input from keyboard.  INput is stored in one or more variables.
+
+`cin >> height >> width;` recieves input from multiple variables, must be seperated by spaces during keyboard input.
+
+cin can be used to assign a string to a string variable as long as the string doesn't contain spaces.
+
+In this case use the `getline(cin, "string variable name here")` function to read until it encounters a hard return in the stream.  It reads and discards the hard return.
+
+- Type Casting
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/bb8a61b4-4c26-4005-878e-6c50240a6910)
+
+- Constants
+
+A constant is like a variable because it holds a value, however, that value cannot change.  These are usually declared before main.  Use all caps for constants.
+
+`const double TAXRATE = 0.06;`
+
+
+
+
+
+
+
+
