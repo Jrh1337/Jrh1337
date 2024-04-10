@@ -2,10 +2,12 @@
 
 - The COUT object
 
-cout displays output to the cimputer screen.
-Use stream insertion operator <<
+`cout` displays output to the computer screen.
+Use stream insertion operator `<<`
 
-example: cout << "Programming is fun!";
+example: 
+
+`cout << "Programming is fun!";`
 
 Use endl; to create new line of output.
 
