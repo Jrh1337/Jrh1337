@@ -37,7 +37,7 @@
 - Counters/Keeping a Running Total
 - Sentinels
 
-[Module 6: While Loop and validating input]
+[Module 6: While Loop and validating input](./CMPSC121%20Notes.md#module-6-while-loop-and-validating-input)
 - Repitition Continued
 - The do ...while Loop
 - Validating input at the source
