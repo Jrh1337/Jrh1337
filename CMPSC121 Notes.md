@@ -73,7 +73,7 @@
 - String Functions
 - Demo of using the String Find Function
 
-[Module 10: Functions Continued]
+[Module 10: Functions Continued](./CMPSC121%20Notes.md#module-10-functions-continued)
 - Reference Parameters
 - Void Functions
 - Arguments and Parameters
