@@ -545,6 +545,139 @@ Logic (Program doesn't produce valid output)
 
 Runtime (Program runs fine until unexpected value is input) trace runtime errors by stepping through the program (f10 for visual studio)
 
+## - Repetition
+
+Three forms
+
+Pre test loop:
+```
+while(condition)
+{
+     …
+}
+```
+Post test loop:
+```
+do
+{
+     …
+} while(condition);
+```
+For:
+```
+for(initial;termination;iteration)
+```
+
+## - Introduction to Loops
+
+**The While Loop**
+
+Format:
+```
+while (condition)
+{ 
+ statement(s);
+}
+```
+
+If the condition evaluated is true then the statements are executed, and then the condition is evaluated again.  If conditional is false loop exits.
+This is a pretest loop because the condition is evaluated before the loop executes.  The loop must contain code to allow the condition to eventually become false otherwise 
+you will have an infinite loop.
+
+Example of a loop that won't execute:
+```
+int number = 6;
+while (number <= 5)
+{
+   cout << "Hello\n";
+   number++;
+}
+```
+Example of an infinite Loop:
+```
+int number = 1;
+while (number <= 5)
+{
+   cout << "Hello\n";
+}
+```
+
+## - Counters
+
+**Counter:** A variable which is incremented or decremented each time a loop repeats.  Can be used to control the execution of a loop (loop control variable).  The must be initialized before entering loop.
+
+```
+// This program displays a list of numbers and their squares.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int MIN_NUMBER = 1,  //Starting number to square
+            MAX_NUMBER = 10; //Maximum number to square
+
+  int num = MIN_NUMBER;      //Counter
+
+  cout << "Number Number Squared\n";
+  cout << "--------------------------\n";
+
+  while (num <= MAX_NUMBER)
+  {
+      cout << num << "\t\t" << (num * num) << endl;
+      num++; //increment the counter
+  }
+  return 0;
+}
+```
+
+The counter variable control the loops exit once condition is false.
+
+## - Keep a Running Total
+
+**Running Total:** accumulated sum of numbers from each repitition loop
+**Accumulator:** variable that holds running total
+
+Example 1:
+```
+int sum=0, num=1; // sum is the
+while (num <= 10) // accumulator
+{   
+   sum += num; // accumulator
+   num++;     //  counter
+}
+cout << "Sum of numbers 1 – 10 is"
+      << sum << endl;
+```
+Example 2:
+```
+int total = 0, num = 0;
+cout << “Enter integers, -99 to end”
+<< endl;
+while(num != -99)
+{
+cin >> num;
+   if(num !=-99)
+     total += num;  
+}
+cout << “The total is “ << total << endl;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
