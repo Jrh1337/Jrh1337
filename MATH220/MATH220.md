@@ -20,4 +20,4 @@
 - Pivot Test for Linear Independence/Dependence
 
 [WEEK 3: Basis, Matrix-Vector Products and Population Modeling]
-- Basis for the subspaces of \[R^n\]
+- Basis for the subspaces of $R^n$
