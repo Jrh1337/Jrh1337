@@ -7,7 +7,9 @@ Use stream insertion operator `<<`
 
 example: 
 
-`cout << "Programming is fun!";`
+```
+cout << "Programming is fun!";
+```
 
 Use `endl;` or `"\n"` to create new line of output.
 
@@ -63,9 +65,10 @@ Using the cin with >> will cause problems with strings because it stops reading 
 
 to find length of a string:
 
-`string state = "Texas";`
-
-`int size = state.length()`
+```
+string state = "Texas";
+int size = state.length()
+```
 
 # Module 3 input and output
 
@@ -75,17 +78,18 @@ Use header `#include <iomanip>`
 
 As first cout statement:
 
-`cout << fixed << setprecision(2);`
-
-`double cost;`
-
-`cost = 1989.87 / 96.22; // Evaluates to 20.68042`
-
-`cout << “|” << setw(10) << cost << “|” ;`
+```
+cout << fixed << setprecision(2);
+double cost;
+cost = 1989.87 / 96.22; // Evaluates to 20.68042
+cout << “|” << setw(10) << cost << “|” ;
+```
 
 Displays:
 
-`|      20.68| - 10 print positions, right justified`
+```
+|      20.68| - 10 print positions, right justified
+```
 
 - Floating Point Data Types
 
@@ -121,15 +125,13 @@ A variable cannot be used before it is defined.
 
 Common header files:
 
-`#include <iostream> //ALWAYS!!!`
-
-`#include <iomanip>  //To allow formatting of numbers and strings`
-
-`#include <cmath>  //To allow use of mathematical functions, eg sqrt or cosine`
-
-`#include <cstdlib>  //We use this with random numbers`
-
-`#include <string>  //We need this if we use string variables`
+```
+#include <iostream> //ALWAYS!!!
+#include <iomanip>  //To allow formatting of numbers and strings
+#include <cmath>  //To allow use of mathematical functions, eg sqrt or cosine
+#include <cstdlib>  //We use this with random numbers
+#include <string>  //We need this if we use string variables
+```
 
 - Comments
 
@@ -141,7 +143,9 @@ Common header files:
 
 cin stands for console input.  This requires the iostream header file.  Used to read input from keyboard.  INput is stored in one or more variables.
 
-`cin >> height >> width;` recieves input from multiple variables, must be seperated by spaces during keyboard input.
+```
+cin >> height >> width; //recieves input from multiple variables, must be seperated by spaces during keyboard input.
+```
 
 cin can be used to assign a string to a string variable as long as the string doesn't contain spaces.
 
@@ -155,13 +159,17 @@ In this case use the `getline(cin, "string variable name here")` function to rea
 
 A constant is like a variable because it holds a value, however, that value cannot change.  These are usually declared before main.  Use all caps for constants.
 
-`const double TAXRATE = 0.06;`
+```
+const double TAXRATE = 0.06;
+```
 
 - Extraction Operator (>>)
 
 Usage:
 
-`cin >> age >> weight;`
+```
+cin >> age >> weight;
+```
 
 When the extraction operator encounters whitespace in the input stream it stops reading and puts the data in the first variable before skipping the whitespace and moving on to the next variable.
 
@@ -202,24 +210,45 @@ Used to compare numbers to determine relative order (6 relational)
 
 Allows statements to be conditionally executed or skipped over
 
-`if (expression)`
-  `statement`
+```
+if (expression)
+  statement
+```
 
 example:
 
-`if (score > 90)`
-
-`{`
-
-  `grade = 'A';`
-  
-  `cout << "Good job!\n";`
-  
-`}`
+```
+if (score > 90)
+{
+  grade = 'A';
+  cout << "Good job!\n";
+}
+```
 
 If the expression is true then the statment is executed if flase statement is skipped.
 
 - The if/else statement
+
+Provides two possible paths of execution.  It performs one statement if the expression is true otherwise performs another statement.
+
+Example:
+
+```
+if (transType == 'C')
+{
+  bonusFactor = 1.03;
+}
+else
+{
+  bonusFactor = 1.015;
+)
+```
+
+Note: if only one statement is being executed you do not need brackets however I always use them regardless.
+
+Be careful testing floats and doubles for equality due to extra small values possibly being added.
+
+- Combined Assignment
 
 
 
