@@ -46,7 +46,6 @@
 - Lining Up Numbers
 - Reading Text Files
 - The for Loop
-- Loops Wrapup
 - Modular Programming
 - Defining and Calling Functions
 - Sending Data into a Function
@@ -1050,18 +1049,100 @@ int num;
 // What prints? num = 11
 ```
 
-## - Loops Wrapup
-
-
-
 
 ## - Modular Programming
+**Modular Programming:** Breaking a program up into smaller managable functions or modules
+
+**Function:** A collection of statements to perform a task
+
+Idea is to implement functions to reduce the size of main
+
+A Payroll Example:
+
+PseudoCode:
+```
+READ in PAY_RATES
+READ in EMPNO & HOURS
+CALCULATE PAY & DEDUCTIONS
+UPDATE YTD FILE
+PRINT CHECKS
+```
+
+Code using functions:
+```
+int main() //it’s pretty obvious
+{             //what this program
+              // does 
+    // Declarations, etc
+     …
+    readPayRates( …);
+    readEmployeeData( …);
+    calculatePayDeductions( …);
+    updateYTDFile( …);
+    printChecks( …);
+   …
+}
+```
 
 
 
 ## - Defining and Calling Functions
 
+**Function Call:** Statement causes a function to Execute.
+**Function Definition:** Statements which make up a function.
 
+Function Definition includes:
+- Return Type: Data type of the value that function returns to the part of the program that called it.
+
+- Name: Name of the function. Convention follows same rules as variables.
+
+- Parameter List: Variables containing values passed to the function
+
+- Body: Statements that perform the functions task.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/137d3f1d-32e5-4034-887b-02bf1d740f49)
+
+If a function is supposed to return a value the type of value must be indicated
+
+This function returns an int:
+```
+  int area(int length, int width)
+{
+   int a = length * width;
+   return a;
+}
+```
+
+This function doesn't return a value (void):
+```
+void printHeading()
+{ 
+     cout << "Monthly Sales\n";
+}
+```
+Calling a function:
+```
+printHeading(); //Place arguments being passed to the function in ()
+```
+Example of Program using a function:
+```
+//This program has two functions main and
+//displayMessage
+#include <iostream>
+using namespace std;
+void displayMessage(); //Prototype
+int main() // Beginning of main
+{
+   cout << “Hello from main” << endl;
+   displayMessage();  // call to displayMessage
+   cout << “Back in main again” << endl;
+}
+void displayMessage() //header
+{
+   //Body
+   cout << “Hello from displayMessage” << endl;
+}
+```
 
 ## - Sending Data into a Function
 
