@@ -1,3 +1,15 @@
 # CMPSC 121 TABLE OF CONTENTS
 - [Module 2: Objects and Variables](./CMPSC121%20Notes.md#module-2-object-and-variables)
-- [
+- [Module 3: Input and Output](./CMPSC121%20Notes.md#module-3-input-and-output)
+- [Module 4: Structured Programming and Combined Assignement]
+- [Module 5: Switch Statement and Repitition]
+- [Module 6: While Loop and validating input]
+- [Module 7: For Loops and Loops Wrap up]
+- [Module 8: Random Numbers and Simulations]
+- [Module 9: Functions]
+- [Module 10: Functions Continued]
+- [Module 11: Functions Wrap up]
+- [Module 12: Structured Data Types - struct/arrays]
+- [Module 13: Vectors]
+- [Module 14: Searching]
+- [Module 15: Sorting]
