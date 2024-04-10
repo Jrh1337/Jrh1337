@@ -52,7 +52,7 @@
 - Sending Data into a Function
 - Passing Data by Value
 
-[Module 8: Random Numbers and Simulations]
+[Module 8: Random Numbers and Simulations](./CMPSC121%20Notes.md#module-8-random-numbers-and-simulations)
 - Random Numbers and Simulations
 - The Rand Function
 - Modeling Using the Rand Function
