@@ -14,7 +14,7 @@
 - The cin Object
 - Type Casting
 - Constants
-- C++ INput/Output
+- C++ Input/Output
 - Header File
 - Operators
 - String Input
@@ -38,7 +38,6 @@
 - Sentinels
 
 [Module 6: While Loop and validating input](./CMPSC121%20Notes.md#module-6-while-loop-and-validating-input)
-- Repitition Continued
 - The do ...while Loop
 - Validating input at the source
 - Infinite Loops
@@ -703,7 +702,43 @@ int main()
 
 # Module 6 While Loop and Validating Input
 
-## - Repitition Continued
+## - The do ...while Loop
+
+**Format:**
+```
+do
+     statement;  // or block in { }
+while (expression);
+```
+**Example:**
+```
+int x = 1;
+do
+{
+    cout << x << endl;
+} while(x < 0);
+```
+These loops always execute at least once then follows logic of a normal while loop exited once condition is false.
+Should be implemented when the stateents must be executed before there is any knowledge of its condition.
+
+Example of a do ...while Loop which validates user input:
+```
+int value;
+cout << "Enter a value < 100:";
+do
+{    
+   cin >> value;
+   if (value >= 100)
+    cout << "Sorry, that is not within range\n"
+           << "Try again: ";
+} while (value >= 100);
+```
+This will display a error prompt to the user if invalid input is entered.
+
+This is especially useful in menu driven programs.
+
+
+
 
 
 
