@@ -872,16 +872,183 @@ do
 
 ## - Lining Up Numbers
 
+When Displaying strings using `cout` you can always pad with spaces like so:
+```
+cout << “July            “ << total << endl;
+cout << “August          “ << total << endl;
+cout << “September       “ << total << endl;
+```
+However what if I want to display strings of varying lengths which come from a variable?
 
+use the `setw()` function to calculate length of string variable for output:
+
+```
+cout << name << setw(29 – name.length()) << endl;
+```
+This sets the same print position to 29 and factors length of string variable prior.
 
 
 ## - Reading Text Files
 
+**Using a Loop to Read a File**
+Example:
+```
+while (datafile >> score)
+      sum += score;
+```
+The stream extraction operator returns a value as it reads through the file.  Once end of file is reached the read fails and loop exits.
 
+**Using Files for Data Storage**
+
+Steps:
+1. Open the file
+2. Use the file
+3. Close the File
+
+Use `fstream` header file for file access:
+```
+#include <fstream>
+```
+
+File stream Types:
+- **ifstream:** for input from a file
+- **ofstream:** for output to a file
+- **fstream:** for input from or output to a file
+
+Define file stream objects:
+```
+ifstream infile;
+ofstream outfile;
+```
+**Opening Files**
+
+Use the open member function:
+```
+infile.open("DeskTop\\Inventories\\inventory.txt");
+outfile.open("report.txt");
+```
+
+Implementing a test for open file errors:
+```
+infile.open("test.txt");
+if (!infile)
+{
+     cout << "File open failure!";
+}
+```
+and fail member function:
+```
+if (infile.fail())
+```
+
+**Using Files**
+
+Use `<<` to send data to a file and `>>` to copy data from a file to variables:
+
+```
+outfile << "Inventory report";
+
+infile >> partNum;
+infile >> qtyInStock >> qtyOnOrder;
+```
+
+**Closing Files**
+```
+infile.close();
+outfile.close();
+```
+
+**Letting a user specify a File name:**
+```
+string filename;
+cout << “Enter name of file” << endl;
+cin >> filename;
+fin.open(filename);
+```
+
+Example of Standard code for Reading a File:
+```
+ifstream fin;  //Creates a filestream
+cout << “Enter file name” << endl;
+cin >> filename;
+fin.open(fileName); //Associates it with a
+                             //physical file   
+if (fin.fail()) //checks to see if we can open it
+  cout << “Unable to open file!”;
+else
+{
+  while (fin >> partno >> ohb >> cost)//reads it
+  {
+     // code to process file
+     totalValueOfInventory += (ohb * cost);
+  }
+}
+fin.close();  // Closes the file
+```
+Example of Reading Strings from a File:
+```
+while (getline(infile, bookTitle))
+{
+  infile >> numSold >> price;
+  saleAmt = numSold*price;
+  totalSales += saleAmt;
+  cout << bookTitle
+          << setw(50 – bookTitle.length())
+          << saleAmt << endl;
+  infile.ignore(80, '\n');  //???????
+}
+```
 
 ## - The for Loop
 
+General Format:
+```
+for(initialization; test; update)
+         statement; // or block in { }
+```
+Mechanics:
+1. Perform Initialization
+2. Evaluate Test Expression
+   - If true, execute statement
+   - If false terminate loop
+3. Execute update then re-evaluate test expression
 
+Example:
+```
+int count;
+
+for (count = 1; count <= 5; count++)
+     cout << "Hello" << endl;
+```
+
+**When to Use a for Loop**
+In any situation that clearly requires:
+
+- an initialization
+- a false condition to stop the loop
+- an update to occur at the end of each iteration
+- 
+The for Loop is a pretest loop which means that it tests its test expression before each iteration. The following loop will never iterate:
+```
+for (count = 11; count <= 10; count++)
+     cout << "Hello" << endl;
+```
+
+Example:
+```
+int sum = 0;
+
+int num;
+
+   for (num=1; num <= 10; num++)
+       sum = sum + num;
+ cout << "Sum of the numbers 1–10 is "
+
+    << sum << endl;
+
+ cout << “num = “ << num << endl;
+// What prints? num = 11
+```
 
 ## - Loops Wrapup
 
