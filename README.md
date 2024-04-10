@@ -1,2 +1,3 @@
 # CMPSC 121 TABLE OF CONTENTS
-- [CMPSC 121 Notes](./CMPSC121%20Notes.md)
+- [Module 2](./CMPSC121%20Notes.md)
+- [
