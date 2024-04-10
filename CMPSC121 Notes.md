@@ -310,6 +310,54 @@ else
 cout << "Actual floor: " << actual_floor << endl;
 ```
 
+- Getting the last digit from an integer:
+
+If the last digit of an integer entered by the user is greater than 5, remove it, multiply the resulting number by 10 and store it in jNumber. Display jNumber. Otherwise, remove the last digit, multiply the resulting number by that digit and store it in eNumber. Display eNumber.
+
+```
+int jNumber, eNumber, numberIn,lastDigit;
+cout << "Enter an integer greater than 1000" << endl;
+cin >> numberIn;
+lastDigit = numberIn%10;
+if (lastDigit > 5)
+{
+     jNumber = numberIn / 10 * 10;
+     cout << "JNumber = " << jNumber << endl;
+}
+else
+{
+     eNumber = numberIn / 10 * lastDigit;
+     cout << "ENumber = " << eNumber << endl;
+}
+```
+- Nested if statements
+
+An if statement that is nested inside another if statement
+
+- The if/else if statement
+
+```
+if (expression)
+     statement1;  // or block
+else if (expression)
+     statement2;  // or block
+      
+     // other else ifs         
+else if (expression)
+     statementn;  // or block
+```
+
+# Module 5 Switch Statement and Repitition
+
+
+
+
+
+
+
+
+
+
 
 
 
