@@ -1,6 +1,6 @@
 # Module 2 Object and variables
 
-- The COUT object
+## - The COUT object
 
 `cout` displays output to the computer screen.
 Use stream insertion operator `<<`
@@ -13,7 +13,7 @@ cout << "Programming is fun!";
 
 Use `endl;` or `"\n"` to create new line of output.
 
-- Variables
+## - Variables
 
 A storage location in memory. It has a name and a type of data it can hold and must be defined before it can be used:
 
@@ -23,11 +23,11 @@ Valid and invalid identifiers for variables:
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/a941b78b-ae0e-4ea6-a0db-162b64ca73b0)
 
-- Numeric Types in C++
+## - Numeric Types in C++
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/01e37c48-1d5a-45b0-a63a-204ffa5c69f1)
 
-- Arithmetic operators
+## - Arithmetic operators
 
 `*` multiplication
 
@@ -37,13 +37,16 @@ Valid and invalid identifiers for variables:
 
 `-` subtraction
 
-- Increment and decrement a variable
+## - Increment and decrement a variable
 
+```
 counter++; //add 1 to counter
-
+```
+```
 counter--; //remove 1 from counter
+```
 
-- interger division and remainder
+## - interger division and remainder
 
 The `%` operator computes remainder of integer division.
 
@@ -51,15 +54,18 @@ This is the modulus operator.
 
 If to integers are divided the remainder is discarded or truncated.
 
-- Order of arthmetic operations
+## - Order of arthmetic operations
 
 left to right multiplication and division, then addition and subtraction
 
 Add parenthesis to change order
 
-- Strings
+## - Strings
 
-Must include the string header `#include <string>`
+Must include the string header:
+```
+#include <string>
+```
 
 Using the cin with >> will cause problems with strings because it stops reading input once whitespace is encountered.  Use the C++ function `getline()`
 
@@ -72,7 +78,7 @@ int size = state.length()
 
 # Module 3 input and output
 
-- Formatting output
+## - Formatting output
 
 Use header `#include <iomanip>`
 
@@ -91,7 +97,7 @@ Displays:
 |      20.68| - 10 print positions, right justified
 ```
 
-- Floating Point Data Types
+## - Floating Point Data Types
 
 These are: 
 
@@ -107,7 +113,7 @@ Can be represented in fixed point `(0.000625)` or E notation `(3.14159E1)`
 
 If dividing an integer and you want to keep the remainder turn one of the operans into a floating point `num = 5/9.0` or `n1 = n2/static_cast<double>(n3);`
 
-- The bool Data Type
+## - The bool Data Type
 
 Represents values that are true or false.  Bool variables are stored as integers.
 
@@ -115,7 +121,7 @@ Represents values that are true or false.  Bool variables are stored as integers
 
 `True = 1`
 
-- Variable Assignments and Initialization
+## - Variable Assignments and Initialization
 
 Assignment statment uses `=`
 
@@ -133,13 +139,13 @@ Common header files:
 #include <string>  //We need this if we use string variables
 ```
 
-- Comments
+## - Comments
 
 `//` for single line comments
 
 `/**/` for multi line comments
 
-- The cin object
+## - The cin object
 
 cin stands for console input.  This requires the iostream header file.  Used to read input from keyboard.  INput is stored in one or more variables.
 
@@ -151,11 +157,11 @@ cin can be used to assign a string to a string variable as long as the string do
 
 In this case use the `getline(cin, "string variable name here")` function to read until it encounters a hard return in the stream.  It reads and discards the hard return.
 
-- Type Casting
+## - Type Casting
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/bb8a61b4-4c26-4005-878e-6c50240a6910)
 
-- Constants
+## - Constants
 
 A constant is like a variable because it holds a value, however, that value cannot change.  These are usually declared before main.  Use all caps for constants.
 
@@ -163,7 +169,7 @@ A constant is like a variable because it holds a value, however, that value cann
 const double TAXRATE = 0.06;
 ```
 
-- Extraction Operator (>>)
+## - Extraction Operator (>>)
 
 Usage:
 
@@ -178,7 +184,7 @@ cin always leaves a hard return in the stream
 
 # Module 4 Structured Programming and combined Assignment
 
-- Structured Programming
+## - Structured Programming
 
 Structured programming theorem states every programming problem can be solved using one of these structures:
 
@@ -192,7 +198,7 @@ Executing a subprogram until a boolean variable is true (repetition)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/c93a8ef5-a7e0-4cd2-a8c0-31e2ca444765)
 
-- Relational Operators
+## - Relational Operators
 
 Used to compare numbers to determine relative order (6 relational)
 
@@ -206,7 +212,7 @@ Used to compare numbers to determine relative order (6 relational)
 
 `||` or
 
-- The if statement
+## - The if statement
 
 Allows statements to be conditionally executed or skipped over
 
@@ -227,7 +233,7 @@ if (score > 90)
 
 If the expression is true then the statment is executed if flase statement is skipped.
 
-- The if/else statement
+## - The if/else statement
 
 Provides two possible paths of execution.  It performs one statement if the expression is true otherwise performs another statement.
 
@@ -248,7 +254,7 @@ Note: if only one statement is being executed you do not need brackets however I
 
 Be careful testing floats and doubles for equality due to extra small values possibly being added.
 
-- Combined Assignment
+## - Combined Assignment
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/856adbdd-2197-4c27-9b99-4fe7db55646c)
 
@@ -265,7 +271,7 @@ num *= 10;
 ```
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/db32e8d8-c103-4cc4-bd2e-4643fa832a97)
 
-- Additional information about if/else statements
+## - Additional information about if/else statements
 
 General format:
 
@@ -310,7 +316,7 @@ else
 cout << "Actual floor: " << actual_floor << endl;
 ```
 
-- Getting the last digit from an integer:
+## - Getting the last digit from an integer:
 
 If the last digit of an integer entered by the user is greater than 5, remove it, multiply the resulting number by 10 and store it in jNumber. Display jNumber. Otherwise, remove the last digit, multiply the resulting number by that digit and store it in eNumber. Display eNumber.
 
@@ -330,11 +336,11 @@ else
      cout << "ENumber = " << eNumber << endl;
 }
 ```
-- Nested if statements
+## - Nested if statements
 
 An if statement that is nested inside another if statement
 
-- The if/else if statement
+## - The if/else if statement
 
 ```
 if (expression)
@@ -349,8 +355,67 @@ else if (expression)
 
 # Module 5 Switch Statement and Repitition
 
+## - The Switch Statement
 
+C++ has a statement that helps a bit with the readability of situations like this.  It's called The switch statement. ONLY a  sequence of if statements that compares a single integer value against several constant alternatives can be implemented as a switch statement.  They can be used to select among statements from several alternatives and may sometimes be used instead of if/else if statements.
 
+Many programmers consider the switch statement somewhat dangerous and prefer the if statement.
+
+It certainly is not needed and if you can’t write your code using if, you can’t even think about using switch.
+
+Format:
+
+```
+switch (IntExpression)
+{
+case exp1: statement set 1; 
+  case exp2: statement set 2;
+  ...
+  case expn: statement set n; 
+  default:   statement set n+1;
+}
+```
+Requirements:
+
+1. IntExpression must be a char or an integer variable or an expression that evaluates to an integer value
+2. exp1 through expn must be constant integer type expressions and must be unique in the switch statement
+3. default is optional but recommended
+
+How a Switch statement works:
+
+1. IntExpression is evaluated
+2. The value of intExpression is compared against exp1 through expn.
+3. If IntExpression matches value expi, the program branches to the statement(s) following expi and continues to the end of the switch
+4. If no matching value is found, the program branches to the statement after default.
+
+The break statement:
+
+Can be, but should NOT be used to stop execution in the current block.
+
+OK to use to exit a switch statement.
+
+Useful to execute a single case statement without executing statements following it
+
+DO NOT use for anything other than a switch statement
+
+Example:
+
+```
+switch (workDay)
+{
+case 1: cout << “Monday“;
+            break;
+  case 2: cout << “Tuesday“;
+            break;
+  case 3: cout << “Wednesday“;
+            break;
+  case 4: cout << “Thursday“;
+            break;
+  case 5: cout << “Friday“;
+            break;
+  default : cout << "invalid day!“;
+}
+```
 
 
 
