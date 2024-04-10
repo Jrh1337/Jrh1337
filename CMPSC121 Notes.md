@@ -43,6 +43,14 @@
 - Infinite Loops
 
 [Module 7: For Loops and Loops Wrap up]
+- Lining Up Numbers
+- Reading Text Files
+- The for Loop
+- Loops Wrapup
+- Modular Programming
+- Defining and Calling Functions
+- Sending Data into a Function
+- Passing Data by Value
 
 [Module 8: Random Numbers and Simulations]
 
@@ -737,11 +745,276 @@ This will display a error prompt to the user if invalid input is entered.
 
 This is especially useful in menu driven programs.
 
+## - Validating input at the Source
+
+Examples:
+```
+cout << “Enter a positive number\n”;
+cin >> num; // User may enter anything
+if (num < 0)
+{
+     cout << “Positive number, please!”
+     cin >> num
+} // Could be negative AGAIN!
+```
+This will only work once, if user enters a second negative number this won't execute
+
+So implement a do ...while Loop:
+```
+{
+     cout << “Enter a positive number\n”;
+     cin >> num;
+} while(num < 0);
+// If I get here, I can be certain
+// num is positive!
+```
+or
+```
+{
+  cout << “Enter a positive number\n”;
+  cin >> num; 
+  if (num < 0)
+  {
+     cout << num << “is NOT positive!”;
+  }
+} while(num < 0);
+```
+Using a do ...while Loop for character replies to continue (Y or N)
+```
+char reply;
+…..
+do
+{
+//some code
+cout << “Do you wish to continue Y or N?”
+        << endl;
+   cin >> reply;
+} while (toupper(reply) == ‘Y’);
+```
+
+**Character Handling Functions**
+
+`toupper()` converts an alphabetical character to upper case.
+`tolower()` converts an alphabetical character to lower case. 
+
+Usage:
+```
+do
+{
+//Code here
+cout << “Continue? Y or N” << endl;
+  cin >> reply;
+} while (toupper(reply) == ‘Y’);
+```
+This ensures if a user replies with `'y'` instead of `'Y'` it is read the same and loop continues.
+
+Example: This loop asks user for a vowel and will not continue until a vowel is entered.
+
+```
+do
+{
+     cout << “Enter a vowel” << endl;
+     cin >> v;
+     v = toupper(v);
+} while (v != ‘A’ && v != ‘E’ && v != ‘I’ && v != ‘O’ && v != ‘U’ );
+```
+
+# Module 7 For Loops and Loops Wrapup
+
+## - Lining Up Numbers
 
 
 
 
+## - Reading Text Files
 
+
+
+## - The for Loop
+
+
+
+## - Loops Wrapup
+
+
+
+
+## - Modular Programming
+
+
+
+## - Defining and Calling Functions
+
+
+
+## - Sending Data into a Function
+
+
+
+## - Passing Data by Value
+
+
+
+# Module 8 Random Numbers and Simulations
+
+## - Random Numbers and Simulations
+
+
+## - The Rand Function
+
+
+
+## - Modeling Using the Rand Function
+
+
+
+## - Random Numbers Part 2
+
+
+## - Function Calling
+
+
+## - Passing Data by Value
+
+
+## - USing Functions in Menu Driven Programs
+
+
+## - The Return Statement
+
+
+## - Returning Value From a Function
+
+
+
+# Module 9 Functions
+
+## - Returning a Boolean Value
+
+
+## - Local and Global Variables
+
+
+## - Static Local Variables
+
+
+## - Default Arguments
+
+
+# Module 10 Functions Continued
+
+## - Reference Parameters
+
+
+
+## - Void Functions
+
+
+
+## - Arguments and Parameters
+
+
+
+## - Value Returning Functions
+
+
+## - Character Testing
+
+
+## - Character Case Conversion
+
+
+
+## - String Functions
+
+
+
+## - Demo of using the String Find Function
+
+
+
+# Module 11 Functions Wrapup
+
+## - Overloading Functions
+
+
+## - Function Stubs
+
+
+## - Parameters vs. Arguments
+
+
+
+## - Recursion
+
+
+## - Recursive gcd Function
+
+
+## - Solving Recursively Defined Problems
+
+
+## - Recursion vs. Iteration
+
+
+## - Function Templates
+
+
+# Module 12 Structured Data Types -Structs/Arrays
+
+## - Abstract Data Types
+
+
+## - Combining Data into Structures
+
+
+## - Accessing Structure Members
+
+
+## - Initializing a Structure
+
+
+
+## - Nested Structure
+
+
+
+## - Structures as Function Arguments
+
+
+## - Returning a Structure from a Function
+
+
+## - Arrays Hold Multiple Values
+
+
+## - No Bounds checking in C++
+
+
+## - Processing Array Contents
+
+
+# Module 13 Vectors
+
+## - Using Parallel Arrays
+
+
+## - Arrays as Function Arguments
+
+
+## - Vector Manipulation
+
+
+## - Vector Parameters
+
+
+## - Common Algorithms
+
+
+## - Fun with Vectors
+
+
+## - 
 
 
 
