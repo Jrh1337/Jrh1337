@@ -1,5 +1,7 @@
 # CMPSC 121 TABLE OF CONTENTS
 - [Module 2: Objects and Variables](./CMPSC121%20Notes.md#module-2-object-and-variables)
+- The cout object
+- Variables
 - [Module 3: Input and Output](./CMPSC121%20Notes.md#module-3-input-and-output)
 - [Module 4: Structured Programming and Combined Assignement]
 - [Module 5: Switch Statement and Repitition]
