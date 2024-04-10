@@ -42,7 +42,7 @@
 - Validating input at the source
 - Infinite Loops
 
-[Module 7: For Loops and Loops Wrap up]
+[Module 7: For Loops and Loops Wrap up](./CMPSC121%20Notes.md#module-7-for-loops-and-loops-wrapup)
 - Lining Up Numbers
 - Reading Text Files
 - The for Loop
