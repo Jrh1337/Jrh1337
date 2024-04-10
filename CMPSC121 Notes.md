@@ -83,7 +83,7 @@
 - String Functions
 - Demo of using the String Find Function
 
-[Module 11: Functions Wrap up]
+[Module 11: Functions Wrap up](./CMPSC121%20Notes.md#module-11-functions-wrapup)
 - Overloading Functions
 - Function Stubs
 - Parameters vs. Arguments
