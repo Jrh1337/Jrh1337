@@ -212,7 +212,7 @@ Allows statements to be conditionally executed or skipped over
 
 ```
 if (expression)
-  statement
+  statement;
 ```
 
 example:
@@ -250,9 +250,65 @@ Be careful testing floats and doubles for equality due to extra small values pos
 
 - Combined Assignment
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/856adbdd-2197-4c27-9b99-4fe7db55646c)
 
+instead of writing:
 
+```
+num = num * 10;
+```
 
+I can write:
+
+```
+num *= 10;
+```
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/db32e8d8-c103-4cc4-bd2e-4643fa832a97)
+
+- Additional information about if/else statements
+
+General format:
+
+```
+if (expression)
+     statement1;  // or block
+else
+     statement2;  // or block
+```
+If the expression is true, then statement1 is executed and statement2 is skipped. If the expression is false, then statement1 is skipped and statement2 is executed.
+
+Removing duplication in if/else statements
+
+Example:
+
+```
+if (floor > 13)
+{
+     actual_floor = floor - 1;
+     cout << "Actual floor: " << actual_floor << endl;
+}
+else
+{
+     actual_floor = floor;
+     cout << "Actual floor: " << actual_floor << endl;
+}
+```
+
+In this instance the cout statement can be moved outside because it is executing for both regardless.
+
+Revised:
+
+```
+if (floor > 13)
+{
+     actual_floor = floor - 1;
+}
+else
+{
+     actual_floor = floor;
+}
+cout << "Actual floor: " << actual_floor << endl;
+```
 
 
 
