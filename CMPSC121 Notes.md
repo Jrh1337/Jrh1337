@@ -170,6 +170,55 @@ cin always leaves a hard return in the stream
 
 - Structured Programming
 
+Structured programming theorem states every programming problem can be solved using one of these structures:
+
+Executing one subprogram, and then another subprogram (sequence)
+
+Executing one of two subprograms according to the value of a booleanLinks to an external site. variable (selection)
+
+Executing a subprogram until a boolean variable is true (repetition)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/c18889c0-75f3-4a87-9385-6bd9828e3904)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/c93a8ef5-a7e0-4cd2-a8c0-31e2ca444765)
+
+- Relational Operators
+
+Used to compare numbers to determine relative order (6 relational)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/addd6ced-2e97-4ac4-bde7-031812f8dce9)
+
+3 logical:
+
+`!` not
+
+`&&` and
+
+`||` or
+
+- The if statement
+
+Allows statements to be conditionally executed or skipped over
+
+`if (expression)`
+  `statement`
+
+example:
+
+`if (score > 90)`
+
+`{`
+
+  `grade = 'A';`
+  
+  `cout << "Good job!\n";`
+  
+`}`
+
+If the expression is true then the statment is executed if flase statement is skipped.
+
+- The if/else statement
+
 
 
 
