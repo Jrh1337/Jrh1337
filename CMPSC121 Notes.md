@@ -9,7 +9,7 @@ example:
 
 `cout << "Programming is fun!";`
 
-Use `endl;` or `\n` to create new line of output.
+Use `endl;` or `"\n"` to create new line of output.
 
 - Variables
 
