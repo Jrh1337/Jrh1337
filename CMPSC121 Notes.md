@@ -63,7 +63,7 @@
 - The Return Statement
 - Returning Value From a Function
 
-[Module 9: Functions]
+[Module 9: Functions](./CMPSC121%20Notes.md#module-9-functions)
 - Reference Parameters
 - Void Functions
 - Arguments and Parameters
