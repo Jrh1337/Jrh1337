@@ -53,6 +53,15 @@
 - Passing Data by Value
 
 [Module 8: Random Numbers and Simulations]
+- Random Numbers and Simulations
+- The Rand Function
+- Modeling Using the Rand Function
+- Random Numbers Part 2
+- Function Calling
+- Passing Data by Value
+- Using Functions in Menu Driven Programs
+- The Return Statement
+- Returning Value From a Function
 
 [Module 9: Functions]
 
@@ -877,7 +886,7 @@ do
 ## - Passing Data by Value
 
 
-## - USing Functions in Menu Driven Programs
+## - Using Functions in Menu Driven Programs
 
 
 ## - The Return Statement
@@ -1013,8 +1022,6 @@ do
 
 ## - Fun with Vectors
 
-
-## - 
 
 
 
