@@ -1,4 +1,4 @@
-# WEEK 2 OBJECT AND VARIABLES
+# MODULE 2 Object and variables
 
 - The COUT object
 
@@ -64,3 +64,40 @@ to find length of a string:
 `string state = "Texas";`
 
 `int size = state.length()`
+
+# Module 3 input and output
+
+- Formatting output
+
+Use header `#include <iomanip>`
+
+As first cout statement:
+
+`cout << fixed << setprecision(2);`
+
+`double cost;`
+
+`cost = 1989.87 / 96.22; // Evaluates to 20.68042`
+
+`cout << “|” << setw(10) << cost << “|” ;`
+
+Displays:
+
+`|      20.68| - 10 print positions, right justified`
+
+- Floating Point Data Types
+
+These are: 
+
+double
+
+float 
+
+long double
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/3effeeb1-f536-4e0a-b3f5-04418b7c6f38)
+
+Can be represented in fixed point `(0.000625)` or E notation `(3.14159E1)`
+
+If dividing an integer and you want to keep the remainder turn one of the operans into a floating point `num = 5/9.0` or `n1 = n2/static_cast<double>(n3);`
+
