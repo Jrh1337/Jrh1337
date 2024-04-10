@@ -33,4 +33,34 @@ Valid and invalid identifiers for variables:
 
 `-` subtraction
 
-  
+- Increment and decrement a variable
+
+counter++; //add 1 to counter
+
+counter--; //remove 1 from counter
+
+- interger division and remainder
+
+The `%` operator computes remainder of integer division.
+
+This is the modulus operator.
+
+If to integers are divided the remainder is discarded or truncated.
+
+- Order of arthmetic operations
+
+left to right multiplication and division, then addition and subtraction
+
+Add parenthesis to change order
+
+- Strings
+
+Must include the string header `#include <string>`
+
+Using the cin with >> will cause problems with strings because it stops reading input once whitespace is encountered.  Use the C++ function `getline()`
+
+to find length of a string:
+
+`string state = "Texas";`
+
+`int size = state.length()`
