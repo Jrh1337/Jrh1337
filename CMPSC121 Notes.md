@@ -93,7 +93,7 @@
 - Recursion vs. Iteration
 - Function Templates
 
-[Module 12: Structured Data Types - struct/arrays]
+[Module 12: Structured Data Types - struct/arrays](./CMPSC121%20Notes.md#module-12-structured-data-types--structsarrays)
 - Abstract Data Types
 - Combining Data into Structures
 - Accessing Structure Members
