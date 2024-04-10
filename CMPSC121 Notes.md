@@ -2,9 +2,13 @@
 [Module 2: Objects and Variables](./CMPSC121%20Notes.md#module-2-object-and-variables)
 - The cout object
 - Variables
+
 [Module 3: Input and Output](./CMPSC121%20Notes.md#module-3-input-and-output)
+
 [Module 4: Structured Programming and Combined Assignement](./CMPSC121%20Notes.md#module-4-structured-programming-and-combined-assignment)
+
 [Module 5: Switch Statement and Repitition](./CMPSC121%20Notes.md#module-5-switch-statement-and-repitition)
+
 - [Module 6: While Loop and validating input]
 - [Module 7: For Loops and Loops Wrap up]
 - [Module 8: Random Numbers and Simulations]
