@@ -399,6 +399,24 @@ else
 
 An if statement that is nested inside another if statement
 
+example:
+```
+if (score < 100)
+{
+     if (score > 90)
+          grade = 'A';
+}
+```
+
+An else matches the nearest if that doesn't have an else:
+```
+if (score < 100)
+   if (score > 90)
+      grade = 'A';
+   else ...  // goes with second if,
+              // not first one
+```
+
 ## - The if/else if statement
 
 ```
@@ -475,6 +493,57 @@ case 1: cout << “Monday“;
   default : cout << "invalid day!“;
 }
 ```
+A switch statement is great for a menu driven program.
+
+Ex.
+```
+int digit;
+// code to read in digit
+switch (digit)
+{
+  case 1: digit_name = "one"; break;
+  case 2: digit_name = "two"; break;
+  case 3: digit_name = "three"; break;
+  case 4: digit_name = "four"; break;
+  case 5: digit_name = "five"; break;
+  case 6: digit_name = "six"; break;
+  case 7: digit_name = "seven"; break;
+  case 8: digit_name = "eight"; break;
+  case 9: digit_name = "nine"; break;
+  default: digit_name = ""; break;
+}
+```
+Possible to nest branches with multiple cases like so:
+
+```
+switch(month)
+{
+     case 1: case 2: case 12:
+          season = “Winter”;
+          break;
+     case 3: case 4: case 5:
+         season = “Spring”;
+         break;
+     case 6: case 7: case 8:
+         season = “Summer”;
+         break;
+     case 9: case 10: case 11:
+          season = “Autumn”;
+          break;
+}
+```
+Break:
+Every branch of the switch must be terminated by a break statement. If the break is missing, execution falls through to the next branch, and so on, until finally a break or the end of the switch is reached. In practice, this fall-through behavior is rarely useful, and it is a common cause of errors. If you accidentally forget the break statement, your program compiles but executes unwanted code.
+
+## - Errors
+
+Kinds:
+
+Syntax (Error in grammar) double click on error to take to line of code producing error
+
+Logic (Program doesn't produce valid output)
+
+Runtime (Program runs fine until unexpected value is input) trace runtime errors by stepping through the program (f10 for visual studio)
 
 
 
