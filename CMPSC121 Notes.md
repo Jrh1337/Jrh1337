@@ -1,4 +1,4 @@
-# MODULE 2 Object and variables
+# Module 2 Object and variables
 
 - The COUT object
 
@@ -154,6 +154,21 @@ In this case use the `getline(cin, "string variable name here")` function to rea
 A constant is like a variable because it holds a value, however, that value cannot change.  These are usually declared before main.  Use all caps for constants.
 
 `const double TAXRATE = 0.06;`
+
+- Extraction Operator (>>)
+
+Usage:
+
+`cin >> age >> weight;`
+
+When the extraction operator encounters whitespace in the input stream it stops reading and puts the data in the first variable before skipping the whitespace and moving on to the next variable.
+
+cin always leaves a hard return in the stream
+
+
+# Module 4 Structured Programming and combined Assignment
+
+- Structured Programming
 
 
 
