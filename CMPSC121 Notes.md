@@ -2,8 +2,16 @@
 [Module 2: Objects and Variables](./CMPSC121%20Notes.md#module-2-object-and-variables)
 - The cout object
 - Variables
+- Numeric Types in C++
+- Strings
+- String Member Functions and operators
 
 [Module 3: Input and Output](./CMPSC121%20Notes.md#module-3-input-and-output)
+- Formatting Output
+- Floating-Point Data Types
+- Variable Assignments and Initialization
+- Scope
+- The cin Object
 
 [Module 4: Structured Programming and Combined Assignement](./CMPSC121%20Notes.md#module-4-structured-programming-and-combined-assignment)
 
