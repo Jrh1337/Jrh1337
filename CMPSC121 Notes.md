@@ -1,7 +1,6 @@
-# WEEK 2
------------------------------------OBJECT AND VARIABLES-------------------------------------------
+# WEEK 2 OBJECT AND VARIABLES
 
-----The COUT object----
+- The COUT object
 
 cout displays output to the cimputer screen.
 Use stream insertion operator <<
