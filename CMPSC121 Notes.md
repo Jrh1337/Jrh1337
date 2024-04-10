@@ -64,14 +64,54 @@
 - Returning Value From a Function
 
 [Module 9: Functions]
+- Reference Parameters
+- Void Functions
+- Arguments and Parameters
+- Value Returning Functions
+- Character Testing
+- Character Case Conversion
+- String Functions
+- Demo of using the String Find Function
 
 [Module 10: Functions Continued]
+- Reference Parameters
+- Void Functions
+- Arguments and Parameters
+- Value Returning Functions
+- Character Testing
+- Character Case Conversion
+- String Functions
+- Demo of using the String Find Function
 
 [Module 11: Functions Wrap up]
+- Overloading Functions
+- Function Stubs
+- Parameters vs. Arguments
+- Recursion
+- Recursive gcd Function
+- Solving Recursively Defined Problems
+- Recursion vs. Iteration
+- Function Templates
 
 [Module 12: Structured Data Types - struct/arrays]
+- Abstract Data Types
+- Combining Data into Structures
+- Accessing Structure Members
+- Initializing a Structure
+- Nested Structure
+- Structures as Function Arguments
+- Returning a Structure from a Function
+- Arrays Hold Multiple Values
+- No Bounds checking in C++
+- Processing Array Contents
 
 [Module 13: Vectors]
+- Using Parallel Arrays
+- Arrays as Function Arguments
+- Vector Manipulation
+- Vector Parameters
+- Common Algorithms
+- Fun with Vectors
 
 [Module 14: Searching]
 
