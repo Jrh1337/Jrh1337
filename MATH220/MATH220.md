@@ -55,7 +55,7 @@
 
 
 
-[WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
+[WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./MATH220.md#week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
 
 
 
