@@ -58,3 +58,35 @@
 [WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices]
 
 
+
+
+
+# Week 11 Least Squares Approximation, QR factorization and Diagonalizable Matrices
+
+## - Introduction to Least Squares Approximation
+
+Consider the three points $(1,0), (2,1)$ and $(3,3)$ Setup and solve a linear system of equations $A\vec{x}=\vec{b}$ Determine if there is a line 
+$y=mx+b$ that passes through all data points.
+
+$(1,0)$: $y=0,x=1$ so, $0=1m+b$
+
+$(2,1)$: $1=2m+b$
+
+$(3,3)$: $3=3m+b$
+
+Put into an augmented matrix:
+
+$$\begin{bmatrix} 1 & 2 & 0 \\\ 2 & 1 & 1 \\\ 3 & 1 & 3 \end{bmatrix}$$
+
+Reduce to RREF:
+
+$$\begin{bmatrix} 1 & 1 & 0 \\\ 0 & -1 & 1 \\\ 0 & 0 & 5 \end{bmatrix}$$
+
+This is an inconsistent system with no solution.  Meaning no line passes through all three of these points.
+
+Now find an $\vec{x}$ that makes $A\vec{x}$ as close as possible to $\vec{b}$
+
+
+
+
+
