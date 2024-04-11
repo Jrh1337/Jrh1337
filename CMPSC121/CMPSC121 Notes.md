@@ -1302,8 +1302,63 @@ If calculated together instead of seperately the probability of rolling a 12 wil
 
 ## - Random Numbers Part 2
 
+Simulate flipping a coin:
+```
+flip = rand() % 2;
+if (flip == 0)
+    cout << “Heads\n”;
+ else
+    cout << “Tails\n”;
+```
+Simulate rolling a single die:
+```
+roll = rand() % 6 + 1;
+```
+rand() % 6 produces a number in the set {0, 1, 2, 3, 4, 5} and by adding 1 to it, we get a number in the set {1, 2, 3, 4, 5, 6}.
 
+Full program for rolling a single die:
+```
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+int main()
+{
+     srand(time(NULL)); //Seed the random number
+                                      //generator
+     for(int i=0;i<10;i++)  //Roll 10 times
+        cout << setw(5) << rand()%6 + 1;
+     cout << endl;
+}
+/*
+ 1    4    2    4    4    2    3    4    1    5
+*/
+```
+Rolling a pair of dice:
+```
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+   srand(time(0));
+  
+   for (i = 1; i <= 10; i++)
+   {
+      int d1 = rand() % 6 + 1;
+      int d2 = rand() % 6 + 1;
+      cout << d1 << " " << d2 << endl;
+   }
+   cout << endl;
+   return 0;
+}
+```
 ## - Function Calling
+
 
 
 ## - Passing Data by Value
