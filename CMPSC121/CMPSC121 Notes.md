@@ -86,7 +86,6 @@
 [Module 11: Functions Wrap up](./CMPSC121%20Notes.md#module-11-functions-wrapup)
 - Overloading Functions
 - Function Stubs
-- Parameters vs. Arguments
 - Recursion
 - Recursive gcd Function
 - Solving Recursively Defined Problems
@@ -1792,42 +1791,304 @@ pos1 = 0;
 
 ## - Overloading Functions
 
+Functions can have the exact same name as long as they have different parameter lists.  The compiler will determine which function version to call based on argument and parameter list.
 
+Ex:
+```
+int cube (int n);
+double cube (double n);
+void prtline (int l);
+void prtline (int l, char ch);
+```
 
+Three different versions of the same swap function but for different data types:
+```
+//String version
+void swapit (string& s, string& t)
+{
+  string temp;
+  temp = s;
+  s = t;
+  t = temp;
+}
 
+//Double version
+void swapit (double& x, double& y)
+{
+  double temp;
+  temp = x;
+  x = y;
+  y = temp;
+}
 
+//int version
+void swapit (int& a, int& b)
+{
+  int temp;
+  temp = a;
+  a = b;
+  b = temp;
+}
+```
+
+The different numbers or types of parameters are the functions **signature**
+based on:
+1. # of parameters
+2. the types
+
+Number of parameters differentiation:
+```
+a = round(x) or a = round(x,3)
+
+double triangle_area
+  (double base, double height);
+double triangle_area
+  (double a, double b, double c);
+```
+
+Overloaded functions have the same name but different parameter lists. Sometimes this is referred to as having a different signature. Overloaded functions perform the same or similar tasks. Overloaded functions take different parameter types or different number of parameters. The compiler will determine which version of function to call by the argument and parameter lists.
 
 ## - Function Stubs
 
+A function stub is an empty or predictable function definition used as a placeholder or debug notification.
+```
+void payment(double a, double r, int m) 
+     //empty stub
+{
+}
+  or
+double payment(double a, double r, int m) 
+    //notifying stub
+{
+  return 0;
+}
+```
+Example I'd like to write a program that can calculate the volume of a sphere but I don't know the formual at the moment:
+```
+double calc_vol(double);
+int main()
+{
+   double radius, volume;
+   cout << “Enter the radius\n”;
+   cin >> radius;
+   volume = calc_vol(radius);
+   cout   << “The volume with radius\n”;
+   cout << radius << “ is “ << volume << “\n”;
+   return 0;
+}
+```
+```
+double calc_vol(double r)
+{
+   double vol;
+   cout << “Look up formula\n”;
+   vol = 9 * r; // Fix this!
+   return vol;
+   //STUB STUB STUB!!!!
+}
+```
+```
+double calc_vol(double r)
+{
+   const double PI = 3.14159;
+   double vol;
+   vol = 4*PI*r*r*r/3;
+   return vol;
+}
+```
 
-## - Parameters vs. Arguments
-
-
+**Drivers:** Test functions by calling them.  Use for testing and debugging programs and functions for logic and design.
 
 ## - Recursion
 
+**Purpose:** used to reduce a complex problem to a simpler-to-solve problem.  The simpler-to-solve problem is known as the **base case**.  Recusrive calls stop when the base case is reached.
+
+A recursive function contains a call to itself.
+
+```
+countDown(5);
+
+void countDown (int num)
+{
+  if (num == 0)
+    cout << "Blast off!";
+  else
+  {
+    cout << num << "...\n";
+      countDown(num-1); //recursive call
+  }
+}
+```
+**Stopping Recursion**
+
+Must include a test to determine if another recursive call is to be made or if recursion should stop with the current call. `if (num == 0)`
+
+A different value is passed back unto the function until the criteria for the base case is met.
+
+**Types of recursion**
+1. Direct: Function calls on itself
+2. Indirect: Function A calls function B which calls ..., which calls function A
 
 ## - Recursive gcd Function
 
+Greatest common divisor (gcd) is the largest factor that two integers have in common. Computed using Euclid's algorithm:
+
+gcd(x, y) = y if y divides x evenly
+gcd(x, y) = gcd(y, x % y) otherwise
+
+gcd(x, y) = y is the base case
+
+int gcd(int x, int y)
+
+```
+{
+   int z;
+   if (x % y == 0)
+         z = y;
+   else
+         z = gcd(y, x % y);
+   return z;
+}
+```
 
 ## - Solving Recursively Defined Problems
 
+The natural definition of some problems leads to a recursive solution. Example: Fibonacci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+After the starting 0, 1, each number is the sum of the two preceding numbers
+
+Recursive solution:
+```
+fib(n) = fib(n – 1) + fib(n – 2);
+```
+Base cases: `n <= 0, n == 1`
+```
+int fib(int n)
+{
+     if (n <= 0)
+        n = 0;
+     else if (n == 1)
+        n =  1;
+     else
+        n = fib(n – 1) + fib(n – 2);
+   return n;
+}
+```
 
 ## - Recursion vs. Iteration
 
+**Benefits (+), disadvantages(-) for recursion:**
+
+- +Models certain algorithms most accurately
+- +Results in shorter, simpler functions
+- May not execute very efficiently
+
+**Benefits (+), disadvantages(-) for iteration:**
+
+- +Executes more efficiently than recursion
+- Often is harder to code or understand
 
 ## - Function Templates
+
+We can instruct the compiler to use a template to create a function for any type.
+
+Function templates tell the compiler that the definition will be a function template
+
+Before the declaration and the definition we put:
+
+```
+template <class Type>
+```
+
+Then use `Type` in place of actual data types.  You could rename type into anything.
+
+Good for creating sorting functions meant to sort different data types.
+
+```
+template <class Type>
+void swapit (Type& a, Type& b)
+{
+     Type hold;
+     hold = a;
+     a = b;
+     b = hold;
+}
+```
+
+This avoids creating 4 seperate overloaded functions.
+
+Template with multiple types:
+```
+template <class T1, class T2>
+T1 incr (T1 number, T2 step)
+// Increment a number by a step value
+{
+  T1 retVal;
+  retVal = number +
+     static_cast<T1>(step);
+  return retVal;
+}
+```
+Each templated function requires a template <class T>  line. Replace each instance of the type with T. If multiple types are to be used, employ: template <class T1, class T2> With multiple class types.
+
+With templated functions, instead of the normal prototype before main and definition after main, we usually just place the definition before main:
+```
+template <class t>
+void Swap(t a, t b)
+{
+   t temp;
+   temp = a;
+   a = b;
+   b = temp;
+}
+int main()
+{
+    // code here
+}
+```
 
 
 # Module 12 Structured Data Types -Structs/Arrays
 
 ## - Abstract Data Types
 
+A data type that specifies values that can be stored and operations that can be done on the values. User of an abstract data type does not need to know the implementation of the data type, e.g., how the data is stored. ADTs are created by programmers.
+
+- Abstraction: a definition that captures general characteristics without details Ex: An abstract triangle is a 3-sided polygon. A specific triangle may be scalene, isosceles, or equilateral
+- Data Type defines the values that can be stored in a variable and the operations that can be performed on it
+
 
 ## - Combining Data into Structures
 
+Format of a struct:
+```
+struct <structName>
+{
+  type1 field1;
+  type2 field2;
+  . . .
+};
+```
+Allows multiple variables to be grouped together.
+
+Example:
+```
+struct Student
+{
+  int studentID;
+  string name;
+  int yearInSchool;
+  double gpd;
+};
+```
+
+Struct declaration does not allocate memory or create variables.  To define a variable use the structure tag as the data type name:
+```
+Student bill;
+```
 
 ## - Accessing Structure Members
+
 
 
 ## - Initializing a Structure
