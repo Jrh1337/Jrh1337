@@ -1450,8 +1450,32 @@ int area (int l, int w)
 
 ## - Returning a Boolean Value
 
+A function can return true or false.  To do this declare return type of the function as `bool`.  A function body must contain return statements that return true or false.
+
+Validation:
+```
+bool isLeapYear(int year)
+{
+   bool OK = false;
+   OK = ((year % 400 == 0) || ((year % 4 == 0)
+           && (year % 100 !=0)));
+     return OK;
+}
+```
+Usage:
+```
+cout <<“Enter a date mm dd yy” << endl;
+cin >> month >> day >> year;
+if (isLeapYear(year))
+{
+    cout << year << “ is a leap year!” << endl;
+}
+```
 
 ## - Local and Global Variables
+
+Variables defined inside a function are local to that function. They are hidden from the statements in other functions, which normally cannot access them. Because the variables defined in a function are hidden, other 
+functions may have separate, distinct variables with the same name.
 
 
 ## - Static Local Variables
