@@ -48,6 +48,7 @@
 - The for Loop
 - Modular Programming
 - Defining and Calling Functions
+- Function Prototypes
 - Sending Data into a Function
 - Passing Data by Value
 
@@ -1143,26 +1144,160 @@ void displayMessage() //header
    cout << “Hello from displayMessage” << endl;
 }
 ```
+**Calling Functions**
 
+Main can call any number of functions and functions can call other functions as well.
+The compiler must know the following about a function before it is called:
+1. Name
+2. Return Type
+3. Number of Parameters
+4. Data Type of each parameter
+
+## - Function Prototypes
+
+You can notify the compiler about a function before a call to the function by establishing a function prototype.
+
+Place function prototypes before main:
+```
+#include <iostream>
+using namespace std;
+
+//function prototypes
+void first();
+void second();
+
+int main()
+{
+....
+```
+Placing function definition below main is how I prefer to do it.
+
+
+   
 ## - Sending Data into a Function
 
+You can pass values into a function at time of call:
 
+`c = pow(a, b);`
+
+The values being passed to a function are **arguments**.  Variables in a function that hold the values being passed as arguments are **parameters**.
+
+Example of a function witha parameter variable:
+```
+void displayValue(int num)
+{
+  cout << "The value is " << num << endl;
+}
+```
+`num` is a parameter.  It accepts any integer value being passed to the function.
+
+**Parameters, Prototypes and Function Headers**
+
+A function prototype must include the data type of each parameter inside the paranthesis, header must include a declaration for each parameter in its `()`
+```
+void evenOrOdd(int);                   //prototype
+
+evenOrOdd(val);                          //call
+
+void evenOrOdd(int num)           //header
+{
+    if (num %2 == 0)                   //Body
+        cout << num << “ is even!” << endl;
+    else
+        cout << num << “ is odd!” << endl;
+}
+```
+Notes on Function Calls:
+
+- Value of argument is copied into parameter when the function is called
+- A parameters scope is the function which uses it
+- Functions can have multiple parameters
+- There must be a data type listed in the prototype
+- Arguments will be promoted or demoted as necessary to match parameters
+
+**Passing Multiple Arguments**
+
+The number of arguments in the call must match the number of arguments in the prototype and definition.  The first argument will initialize the first parameter and so forth.
+
+Example of a function which passes multiple arguments:
+```
+//This program demonstrates a function with three parameters.
+#include <iostream>
+using namespace std;
+
+//Function Prototype
+void showSUm(int, int, int);
+
+int main()
+{
+  int value1, value2, value3;
+
+  //Get three integers
+  cout << "Enter three integers and I will display ";
+  cout << "their sum: "
+  cin >> value1 >> value2 >> value3;
+
+  //Call showSum passing three arguments
+  showSum(value1,value2, value3);
+  return 0;
+}
+//Function definition
+void showSum(int num1, int num2, int num3)
+{
+  cout << (num1 + num2 + num3) << endl;
+}
+```
+Notice that in the function definition the names of the variables do not have to match the names of the argument variables being passed to the function in main.
 
 ## - Passing Data by Value
 
-
+**Pass by Value**: When an argument is passed to a function, its value is copied into the parameter.  Changes to the parameter in the function do not affect the value of the argument.  
 
 # Module 8 Random Numbers and Simulations
 
 ## - Random Numbers and Simulations
 
+**Simulation**: Uses a computer program to simulate an activity in the real world.
+
+**Random Numbers**: Used to write programs to simulate real world chance events (ex. rolling dice)
 
 ## - The Rand Function
 
+Need `#include <cstdlib>` header for random number generation.
 
+C++ has a random number generator `rand()`
+
+Simply calling rand will produce a pseudorandom intger between 0 and RAND_MAX
+
+Rand only uses one pseudorandom sequence and it starts from the same place.  Every time you restart your program you will generate the same random numbers because of this.
+
+You get true random numbers by seeding the rand function.
+
+Calling `srand` sets where `rand` starts.  srand is also defined in the cstdlib header.
+
+A good way to seed rand is by calling the time function as time is always changing.
+
+Calling `time(0)` or `time(NULL)` will produce the current time.
+
+Must include the `#include <ctime>` header
+
+Calling srand and calling time will look like this:
+```
+srand(time(NULL)); seed rand()
+```
+**Important info:**
+
+`srand(time(NULL));` goes in main, near the top and never in a loop or any other function than main
+
+This is not generating a random number only seeds rand.
 
 ## - Modeling Using the Rand Function
 
+Consider rolling a pair of dice.  You must match programs to simulate how an event occurs in the real world when trying to recreate a simulation.
+
+Each dice roll must be calculated independently before taking their sums or else the probability will be effected.
+
+If calculated together instead of seperately the probability of rolling a 12 will be equal to rolling a 7, even though there is only one roll that will produce a 12 but multiple rolls that will produce a 7. 
 
 
 ## - Random Numbers Part 2
