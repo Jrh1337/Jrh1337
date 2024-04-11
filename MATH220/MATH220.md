@@ -55,7 +55,7 @@
 
 
 
-[WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices]
+[WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
 
 
 
@@ -193,8 +193,8 @@ $cos(\theta)*(-sin(\theta))+sin(\theta)*cos(\theta)=0$ so columns are orthogonal
 
 You can take the length of both column vectors:
 
-$$\begin{matrix} || cos(\theta)||^2 \\
-  ||sin(\theta)|| \end{matrix}$$ 
+$$\begin{Vmatrix} cos(\theta) \\
+  sin(\theta) \end{Vmatrix}^2$$ 
 
 $sin^2(\theta)+cos^2(\theta)=1$
 
@@ -386,6 +386,42 @@ $$A=\begin{bmatrix} 1 & -1 \\\ 1 & -1 \end{bmatrix}$$
 
 Find $\lambda$'s: $det(A-\lambda I_{n})$
 
-$$\begin{bmatrix} 1-\lambda & -1 \\\ 1 & -1-\lambda \end{bmatrix}$$
+$$\begin{bmatrix} 1-\lambda & -1 \\\ 1 & -1-\lambda \end{bmatrix}=(1-\lambda)(-1-\lambda)-1(-1)=\lambda^2$$
+
+$\lambda=0$ with a multiplicity of 2.
+
+Find Eigenvectors:
+
+$$\begin{bmatrix} 1-0 & -1 & 0 \\\ 1 & -1-0 & 0 \end{bmatrix}=\begin{bmatrix} 1 & -1 & 0 \\\ 0 & 0 & 0 \end{bmatrix}$$
+
+$x_{1}=x_{2}$
+
+$x_{2}=$ free
+
+$$\vec{v}=\begin{bmatrix} x_{2} \\\ x{2} \end{bmatrix}=x_{2}\begin{bmatrix} 1 \\\ 1 \end{bmatrix}$$
+
+Span of Eigen Vectors:
+
+$$span=\begin{bmatrix} 1 \\\ 1 \end{bmatrix}$$
+
+This does not span all of $R^2$ therefore, no eigen basis and this matrix isn't diagonalizable.
+
+**Further Theory:**
+
+The dimension of an eigenspace is less than or equal the multiplicity of the eigenvalue.  
+
+As a consequence, if $A$ is an nxn matrix where the dimension of each eigenspace equals the multiplicity of each eigenvalue, then $A$ is diagonalizable.
+
+Note: This condition is also necessary for such an eigenbasis to exist.
+
+If the dimension of the eigenspace is equal to the algebraic multiplicity of the corresponding eigenvalue for all eigenvalues of $A$, then $A$ is diagonalizable.
+
+If the dimension of any eigenspace is strictly less than the algebraic multiplicity of the corresponding eigenvalue then $A$ is not diagonalizable.
+
+## - Further examples of determining if a Matrix is diagonalizable
+
+Determine $M$ is diagonalizable
+
+$$M=\begin{bmatrix} 1 & 2 & 3 \\\ 0 & 4 & 5 \\\ 0 & 0 & 6 \end{bmatrix}$$
 
 
