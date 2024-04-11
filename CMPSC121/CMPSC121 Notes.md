@@ -1528,20 +1528,105 @@ Default values must go in the function prototype.
 
 These are a mechanism that allows a function to work with the original argument from the function call, not a copy of the argument. They allow the function to modify values stored in the calling environment, and provide a way for the function to ‘return’ more than one value.
 
+**Passing by Reference**
+
+A reference variable is an alias for another variable.  Defined with an ampersand `&`
+```
+void getDimensions(int &l, int &w);
+```
+
+Changes to a reference variable are made to the variable it refers to.  Use reference variables to implement passing parameters by reference.
+
+**Reference Parameters**
+
+You can also pass by reference to a function.  Instead of copying data from the arguments to the parameters, the parameter is the argument.  Changes made to the parameter variables are actually being made to the argument variable.
+
+```
+int main()
+{
+   int cost;
+   int &price = cost;  //price is an alias
+   int &value = price; //so is value   
+   cost = 100;
+   cout << “Cost = “ << cost << endl;
+   cout << “Price = “ << price << endl;
+   cout << “Value =” << value << endl;
+   cout << “Cost Addr= “<< &cost<< ‘\n’;
+   cout<<“Price Addr=“ << &price<< ‘\n’;
+   cout<< “Value Addr=”<< &value <<‘\n’;
+   return 0;
+}
+```
+
+The name of a variable with `&` in front of it means the address of the variable.
+
+```
+int count = 0;
+count++;
+cout << count << “ “ << &count;
+```
+This will display `1 0x124DCF` 1 and whatever address the compiler has assigned to count.
 
 ## - Void Functions
 
+2 types of parameters in void functions: value and reference.  
 
+- Value: Parameteers are not permanently changed by the function.  This is because only a copy of the value is sent to the function.
+- Reference: These parameters can be permanently changed by the function.  This is because the memory address of the variable is being sent to the function.
+Instead of copying the value it tells the function the address of the argument and gives it permission to change the value stored in there.
+
+**Using Reference Parameters for INput**
+```
+void get_cost_data (int &quantity, double &price)
+{
+   cout << “Enter Quantity “
+   cout << “-999 to quit\n”;
+   cin >> quantity;
+   cout << “Enter price\n”;
+   cin >> price;
+}
+```
 
 ## - Arguments and Parameters
 
+**Parameters** appear in the function header:
+```
+void get_cost_data(int &quantity, double &price)
+```
+Arguments appear in the function call:
+```
+get_cost_data (quantity, price);
+```
 
 
 ## - Value Returning Functions
 
+Value returning functions, with rare exceptions, have only value parameters. One exception might be to write a get_data function which fills an array as a bool function which returns false if unable to open the file.
 
 ## - Character Testing
 
+Useful builtin Functions for use with characters: (These do not work with strings)
+
+| Function | Meaning |
+| --- | --- |
+| isalpha | true if arg. is a letter, false otherwise |
+| isalnum | true if arg. is a letter or digit, false otherwise |
+| isdigit | true if arg. is a digit 0-9, false otherwise |
+| islower | true if arg. is lowercase letter, false otherwise |
+| isprint | true if arg. is a printable character, false otherwise |
+| ispunct | true if arg. is a punctuation character, false otherwise |
+| isupper | true if arg. is an uppercase letter, false otherwise |
+| isspace | true if arg. is a whitespace character, false otherwise |
+
+Usage Example:
+```
+cout << "Enter any character: ";
+cin.get(input);
+cout << "The character you entered is: " << input << endl;
+if (isalpha(input))
+  cout << "That's an alphabetic character.\n";
+...
+```
 
 ## - Character Case Conversion
 
