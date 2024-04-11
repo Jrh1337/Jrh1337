@@ -1746,13 +1746,55 @@ Positions of characters within a string are numbered starting at 0.
 
 
 ## - Demo of using the String Find Function
+```
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <fstream>
+#include <string>
+using namespace std;
 
-
+int main ()
+{
+  string haystack, linein;
+  string needle = "eedle";
+  int pos, pos1, count = 0;
+  ifstream fin;
+  fin.open("needles.txt");
+  if (fin.fail())
+    cout << "Unable to open file";
+  else
+    while (getline(fin,linein))
+    {
+      haystack += linein;
+    }
+    fin.close();
+pos1 = 0;
+  do
+  {
+    pos = haystack.find(needle, pos1);
+    if (pos != -1)
+    if ((haystack.substr(pos -1,1) == "N") || (haystack.substr(pos - 1,1) == "n"))
+      {
+      cout << "Found " << haystack.substr(pos -1,1) << needle << " at "
+            << setw(6) << pos
+            << " :" << haystack.substr(pos - 30, 50) << endl;
+      count++;
+      }
+  pos1 = pos + 1;
+  }while (pos != -1);
+    cout << endl << "Found needle " << count << " times." << endl;;
+}
+```
 
 
 # Module 11 Functions Wrapup
 
 ## - Overloading Functions
+
+
+
+
 
 
 ## - Function Stubs
