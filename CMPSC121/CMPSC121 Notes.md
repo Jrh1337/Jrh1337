@@ -1630,13 +1630,123 @@ if (isalpha(input))
 
 ## - Character Case Conversion
 
+Functions:
+
+`toupper` if `char` argument is lowercase letter, return the uppercase equivelent.
+
+example:
+```
+char ch1 = 'H';
+char ch2 = 'e';
+char ch3 = '!';
+
+cout << toupper(ch1);  // displays 'H'
+
+cout << toupper(ch2);  // displays 'E'
+
+cout << toupper(ch3);  // displays '!'
+```
+`tolower` if `char` argument is uppercase return lowercase equivalent:
+```
+char ch1 = 'H';
+char ch2 = 'e';
+char ch3 = '!';
+
+cout << tolower(ch1);  // displays 'h'
+
+cout << tolower(ch2);  // displays 'e'
+
+cout << tolower(ch3);  // displays '!'
+```
+
+**String Comparison**
+
+You can use relational operators to compare string objects:
+```
+  string str1 = "George",
+              str2 = "Georgia";
+  if (str1 < str2)
+    cout << str1 << " is less than "
+            << str2;
+```
+**String Operators:**
+
+| Operator | Meaning |
+| --- | --- |
+| >> | extracts characters from stream up to whitespace, insert into string |
+| << | inserts string into stream |
+| = | assigns string on right to string object on left |
+| += | appends string on right to end of contents on left |
+| + | concatenates two strings |
+| [] | references character in string using array notation |
+| >,>=,<,<=,++,!= | relational operators for string comparison.  Return true or false |
+
+Example:
+```
+string word1, phrase;
+string word2 = " Dog";
+cin >> word1; // user enters "Hot Tamale"
+                        // word1 has "Hot"
+phrase = word1 + word2; // phrase has
+                                           // "Hot Dog"
+phrase += " on a bun";
+for (int i = 0; i < 16; i++)
+     cout << phrase[i];
+   // displays "Hot Dog on a bun"
+```
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/f479fe45-0097-4bd9-999d-1bc9a93182d6)
 
 
 ## - String Functions
 
+Strings are objects of the string class.  They contain data like any other variable but also properties and methods to inquire about and manipulate that data.
+
+`.length()`
+`.substr(start, numchar)`
+`.find(what, where)`
+
+**Length Function**
+
+Function length returns an unsigned integer equal to number of characters currently in the string.
+
+Function size returns the same value.
+
+**String Function**
+
+The `length` memember function is invoked with dot notation with string name before function.
+```
+int n= name.length();
+```
+
+**Find Function**
+
+Find returns an unsigned integer value that is the beginning position for the first occurence of a particular substring within the string.  The substring argument can be a string constant, expression or char value.
+
+If the substring was not found function find returns `string::npos`
+
+If start position is ommited starts at beginning of string
+
+**substr Function**
+
+Returns a particular substring of a string.  First argument is an unsigned integer which specifies starting position within the string.  Second argument specifies desired length.
+```
+string fullname, first, last;
+fullname = "Emily Blunt";
+
+first = fullname.substr(0,5);
+last = fullname.substr(6, 5);
+cout << last << ", " << first;
+```
+If you do not specify how many characters you want to take in the argument you will get every character after the starting position.
+
+If you do not enter any arguments you get all characters of the string.
+
+Positions of characters within a string are numbered starting at 0.
 
 
 ## - Demo of using the String Find Function
+
 
 
 
