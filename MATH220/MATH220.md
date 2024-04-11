@@ -255,5 +255,44 @@ $A^TA\vec{x}=A^T\vec{b}$
 
 If the columns of $A$ however are linearly independent the least squares solution can be computed more reliably through a $QR$ factorization of $A$.
 
+**Least-Squares Solution**
+
+Suppose $A$ is an mxn matrix with linearly independent columns and that the $QR$ factorization is given by: $A=QR$. Then the least-squares solution to $A\vec{x}=\vec{b}$
+is calculated by the solution to:
+
+$R\vec{x}=Q^T\vec{b}$
+
+Example:
+
+Use the $QR$ factorization above to find the least-squares solution of 
+
+
+
+
+$$A\vec{x}=\begin{bmatrix} 3 \\\ 5 \\\ 7 \\\ -3 \end{bmatrix}$$
+
+$$Q^T\vec{b}=\begin{bmatrix} \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} \\
+  \frac{1}{2} & \frac{-1}{2} & \frac{-1}{2} & \frac{1}{2} \\
+  \frac{1}{2} & \frac{-1}{2} & \frac{1}{2} & \frac{-1}{2} \end{bmatrix} \begin{bmatrix} 3 \\\ 5 \\\ 7 \\\ -3 \end{bmatrix}=\begin{bmatrix} 6 \\\ -6 \\\ 4 \end{bmatrix}$$
+
+Translate into an augmented matrix:
+
+
+$$\begin{bmatrix} 2 & 4 & 5 & 6 \\
+ 0 & 2 & 3 & -6 \\
+ 0 & 0 & 2 & 4 \end{bmatrix}$$
+
+ RREF and Solve:
+
+$$\begin{bmatrix} 1 & 0 & 0 & 10 \\
+ 0 & 1 & 0 & -6 \\
+ 0 & 0 & 1 & 2 \end{bmatrix}$$
+
+ $$\hat{x}=\begin{bmatrix} 10 \\\ -6 \\\ 2 \end{bmatrix}$$
+
+This is the least-squares solution.
+
+## - Diagonalization of a matrix
+
 
 
