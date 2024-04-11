@@ -1477,17 +1477,56 @@ if (isLeapYear(year))
 Variables defined inside a function are local to that function. They are hidden from the statements in other functions, which normally cannot access them. Because the variables defined in a function are hidden, other 
 functions may have separate, distinct variables with the same name.
 
+**Local Variable Lifetime:** A function’s local variables exist only while the function is executing. This is known as the lifetime of a local variable. When the function begins, its local variables and its parameter variables are created in memory, and when the function ends, the local variables and parameter variables are destroyed. This means that any value stored in a local variable is lost between calls to the function in which the variable is declared.
+
+**Global Variables and Constants:** Declared outside of all functions, this can be accessed by all functions.  Should only be used for constants
+
+**Initializing Global and Local Variables:** Global variables are automatically initialized to `0` or `NULL` when defined.
+
+Objects of the string type are always initialized to the `NULL` string for local or global strings.  Any local variables must be initialized by the programmer.
 
 ## - Static Local Variables
 
+**Local variables do not retain values between function calls**
+
+To maintain a variables value inside a function use a static variable:
+```
+void showStatic()
+{
+  static int statNum = 5;
+
+  cout << "statNum is " << statNum << endl;
+  statNum++;
+}
+```
+Once a local static variable is initialized it only occurs once any further changes when calling the function again will continue to alter the variable without it being set to 5 again.
 
 ## - Default Arguments
 
+An argument that is passed automatically to a parameter if the argument is missing on the function call.
+
+Must be a constant declared in prototype:
+```
+void evenOrOdd(int = 0);
+```
+It can be declared in header if no prototype. Multi-parameter functions may have default arguments for some or all of them:
+```
+int getSum(int, int=0, int=0);
+```
+If not all parameters have default values the defaultless ones must be declared first in the parameter list like so:
+```
+int getSum (int, int, int = 0);  //YES
+int getSum (int, int = 0, int); //NO
+```
+
+Default values must go in the function prototype.
 
 # Module 10 Functions Continued
 
 ## - Reference Parameters
+**Using reference variables as parameters**
 
+These are a mechanism that allows a function to work with the original argument from the function call, not a copy of the argument. They allow the function to modify values stored in the calling environment, and provide a way for the function to ‘return’ more than one value.
 
 
 ## - Void Functions
