@@ -144,4 +144,73 @@ so, $y=3/2x-5/3$
 
 Suppose the columns of a matrix $Q$ is an orthonormal set.
 
+$$Q = 
+ \begin{pmatrix}
+  q_{1} & q_{2} & \cdots & q_{n} \\
+  \vdots  & \vdots  & \vdots & \vdots  \\
+\end{pmatrix}$$
+
+$\vec{q_{i}} * \vec{q_{j}} = 0$ if $i\neq{j}$
+
+$$Q^TQ=\begin{bmatrix}
+  \vec{q_{1}} \\
+  \vdots \\
+  \vec{q_{n}} \end{bmatrix}
+  \begin{bmatrix} 
+  \vec{q_{1}} & \cdots & \vec{q_{1}}
+  \end{bmatrix}$$
+
+  $$=\begin{bmatrix} \vec{q_{1, 1}} & \vec{q_{1, 2}} & \cdots & \vec{q_{1, n}} \\
+      \vec{q_{2, 1}} & \cdots & \cdots & \vec{q_{2, n}} \\
+      \vdots & \vdots & \vdots & \vdots \\
+      \vec{q_{n}}\vec{q_{1}} & \cdots & \cdots & \vec{q_{n}}\vec{q_{n}} 
+      \end{bmatrix}$$
+
+$\vec{q_{i}}*\vec{q_{i}}=||\vec{q_{i}}||^2=1$ This is because an orthonormal set and all vectors have unit length.
+
+This gives all 1's on the diagonal and 0's everywere else.
+
+## - Orthogonal Matrices
+
+A square matrix $Q$ is said to be an orthogonal matrix if the columns form an orthonormal set.
+
+An equivalent formulation is that $Q$ satisfies:
+
+$Q^T=Q^-1$     or     $QQ^T=Q^TQ=I_{n}$
+
+If they are the same it can be implied that $Q$ is an orthogonal matrix.
+
+- **Rotation matrix example:**
+
+For any $\theta$, let:
+
+$$Q=\begin{bmatrix} cos(\theta) & -sin(\theta) \\
+  sin(\theta) & cos(\theta) \end{bmatrix}$$
+
+You can take the dot product of the two columns with each other to show it is equal to 0:
+
+$cos(\theta)*(-sin(\theta))+sin(\theta)*cos(\theta)=0$ so columns are orthogonal
+
+You can take the length of both column vectors:
+
+$$\begin{matrix} || cos(\theta)||^2 \\
+  ||sin(\theta)|| \end{matrix}$$ 
+
+$sin^2(\theta)+cos^2(\theta)=1$
+
+Therefore $Q$ is an orthogonal matrix by satisfying both conditions above.
+
+- **Reflection Example:**
+
+$$Q=\begin{bmatrix} 0 & -1 \\
+  -1 & 0 \end{bmatrix}$$
+
+  Reflects over $y= -x$
+
+Observe:
+
+$$Q^T=\begin{bmatrix} 0 & -1 \\
+  -1 & 0 \end{bmatrix}$$
+
+$Q^T=Q^-1$
 
