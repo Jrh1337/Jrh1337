@@ -376,3 +376,16 @@ $$A^k=PD^kP^{-1}=\begin{bmatrix} 2 & -1 \\\ 1 & 1 \end{bmatrix}\begin{bmatrix} (
 
 $$A^{100}=\begin{bmatrix} 2 & -1 \\\ 1 & 1 \end{bmatrix}\begin{bmatrix} (1)^{100} & 0 \\\ 0 & (\frac{-1}{2})^{100} \end{bmatrix}\begin{bmatrix} \frac{1}{3} & \frac{1}{3} \\\ \frac{-1}{3} & \frac{2}{3} \end{bmatrix}$$
 
+## - Determining When a Matrix is Diagonalizable
+
+An nxn matrix $A$ is diagonalizable when its eigenvectors form a basis (an eigenbasis) for $R^n$.
+
+Example: Determine if the following matrix is diagonalizable:
+
+$$A=\begin{bmatrix} 1 & -1 \\\ 1 & -1 \end{bmatrix}$$
+
+Find $\lambda$'s: $det(A-\lambda I_{n})$
+
+$$\begin{bmatrix} 1-\lambda & -1 \\\ 1 & -1-\lambda \end{bmatrix}$$
+
+
