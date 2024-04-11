@@ -128,4 +128,20 @@ $$A^T\vec{b}=\begin{bmatrix}1 & 1 & 1 \\\ 1 & 2 & 3 \end{bmatrix}\begin{bmatrix}
 
 Put into an augmented matrix:
 
+$$\begin{bmatrix}3 & 6 & 4 \\\ 6 & 14 & 11 \end{bmatrix}$$
+
+Solve:
+
+$$\begin{bmatrix}1 & 0 & -5/3 \\\ 0 & 1 & 3/2 \end{bmatrix}$$
+
+In this case b is corresponding to the first column and m the second column.  Therefore, $b=-5/3$ and $m=3/2$
+
+This is the solution to the least-squares now to find the line that comes closest to the original data points by inputting these values into &y=mx+b$
+
+so, $y=3/2x-5/3$
+
+## - Orthogonal Matrices
+
+Suppose the columns of a matrix $Q$ is an orthonormal set.
+
 
