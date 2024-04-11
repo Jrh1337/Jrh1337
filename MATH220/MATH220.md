@@ -214,3 +214,46 @@ $$Q^T=\begin{bmatrix} 0 & -1 \\
 
 $Q^T=Q^-1$
 
+## - QR Factorization
+
+If $A$ is an $m$ x $n$ matrix with $n$ linearly independent columns, then $A$ can be factored as $A=QR$ where $Q$ is an $m$ x $n$ matrix whose columns are an orthonormal basis
+for $Col(A)$, and $R$ is an $n$ x $n$ upper triangular invertible matrix with positive entries on the diagonal.
+
+**Example of QR factorization:**
+
+Suppose. 
+
+$$A=\begin{bmatrix} 1 & 3 & 5 \\
+ 1 & 1 & 0 \\
+ 1 & 1 & 2 \\
+ 1 & 3 & 3 \end{bmatrix}$$
+
+ $$Q=\begin{bmatrix} \frac{1}{2} & \frac{1}{2}& \frac{1}{2} \\
+  \frac{1}{2} & \frac{-1}{2} & \frac{-1}{2} \\
+  \frac{1}{2} & \frac{-1}{2} & \frac{1}{2} \\
+  \frac{1}{2} & \frac{1}{2} & \frac{-1}{2} \end{bmatrix}$$
+
+  and
+  
+  $$R=\begin{bmatrix} 2 & 4 & 5 \\
+   0 & 2 & 3 \\
+   0 & 0 & 2 \end{bmatrix}$$
+
+$A=QR$
+
+For $A$: it is a 4x3 matrix and columns are linearly independent.
+
+For $Q$ it is also a 4x3 matrix and columns form an orthonormal basis for $Col(A)$
+
+For $R$: it is a 3x3 upper triangular invertible matrix with positive entries along the diagonal.
+
+## - Solving Least-Squares Problems with QR factorization
+
+Previously one way to find the least-squares solution to $A\vec{x}=\vec{b}$ was to set up and solve the normal equations:
+
+$A^TA\vec{x}=A^T\vec{b}$
+
+If the columns of $A$ however are linearly independent the least squares solution can be computed more reliably through a $QR$ factorization of $A$.
+
+
+
