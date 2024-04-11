@@ -294,5 +294,56 @@ This is the least-squares solution.
 
 ## - Diagonalization of a matrix
 
+A diagonal matrix has 0's everywhere that isn't in the diagonal.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/dc0300c7-debf-466f-a799-274ce17266a1)
+
+Example:
 
 
+Suppose: 
+
+$$D=\begin{bmatrix} 2 & 0 \\ 
+0 & -1 \end{bmatrix}$$ 
+
+
+Find $D^2$ and $D^5$
+
+Because this matrix is diagonal you can use the property above:
+
+$$D^2=\begin{bmatrix} 2^2 & 0 \\\ 0 & (-1)^2 \end{bmatrix}= \begin{bmatrix} 4 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+$$D^5=\begin{bmatrix} 2^5 & 0 \\\ 0 & (-1)^5 \end{bmatrix}= \begin{bmatrix} 32 & 0 \\\ 0 & -1 \end{bmatrix}$$
+
+
+**Diagonalizable Matrices**
+
+An nxn matrix $A$ is diagonalizable if there is an invertible matrix $P$ and diagonal matrix $D$ such that:
+
+$A=PDP^{-1}$
+
+This matrix factorization is reffered to as the diagonalization of $A$.
+
+**Powers of diagonalizable Matrics**
+
+Suppose $A=PDP^{-1}$.  Then, $A^k=PD^kP^{-1}$
+
+## - Computing the Diagonalization
+
+An nxn matrix $A$ is diagonalizable precisely when there is an eigenbasis with eigenvectors $\{\vec{v_{1}},...,\vec{v_{n}}\}$ of $A$ for $R^n$.
+
+If $\lambda_{1},...,\lambda_{n}$ are the corresponding eigenvalues, then:
+
+$$P=\begin{bmatrix} \vec{v_{1}} & \cdots & \vec{v_{n}} \end{bmatrix}$$
+
+(the eigenvectors are in the columns of P).
+
+$$D= \begin{bmatrix} \lambda_{1} & 0 & \cdots & 0 \\
+ 0 & \lambda_{2} & \cdots & 0 \\
+ \vdots & . & \ddots & \vdots \\
+ 0 & . & . & \lambda_{n} \end{bmatrix}$$
+
+$P^{-1}$ is the inverse matrix of $P$.
+
+
+ 
