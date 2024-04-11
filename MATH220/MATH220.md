@@ -424,4 +424,29 @@ Determine $M$ is diagonalizable
 
 $$M=\begin{bmatrix} 1 & 2 & 3 \\\ 0 & 4 & 5 \\\ 0 & 0 & 6 \end{bmatrix}$$
 
+Find eigenvalues:
+
+$(1-\lambda)(4-\lambda)(6-\lambda)$
+
+$\lambda_{1}=1$
+
+$\lambda_{2}=4$
+
+$\lambda_{3}=6$
+
+Each $\lambda$ has a multiplicity of 1
+
+The dimension of the eigenspace is always at least 1 and the mulitiplicity of each eigenvalue is greater than or equal to the dimension of the eigenspace.
+
+So, The dimension of the span of the eigenvectors associated with each eigenvalue must equal the multiplicity of that eigenvector.
+
+If the multiplicity of $\lambda_{1}=2$ then it must have 2 eigenvectors in its span to be diagonalizable.
+
+$M$ is diagonizable.
+
+**Observation:**
+
+If each eigenvalue has a multiplicity of 1 then we know right there the matrix is diagonalizable.
+
+
 
