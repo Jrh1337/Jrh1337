@@ -1358,19 +1358,91 @@ int main()
 }
 ```
 ## - Function Calling
+Value of argument is copied into parameter when the function is called. A parameter’s scope is the function which uses it. Function can have multiple parameters. There must be a data type listed in the prototype () and
+an argument declaration in the function header () for each parameter. Arguments will be promoted/demoted as necessary to match parameters
 
-
+```
+int main()
+{
+   double z = pow(2, 3.0);
+   ...
+}
+```
+Main calls the `pow` function the two arguments in () are passed to the function and return a value back to main which is now stored in the variable `z`
 
 ## - Passing Data by Value
 
+**Pass by value:** when an argument is passed to a function, its value is copied into the parameter.  Changes to the parameter in the function do not affect the value of the argument.
 
 ## - Using Functions in Menu Driven Programs
 
+Example:
+```
+cout << "Select aaction: " << endl;
+cout << "1. List Employees" << endl;
+cout << "2. Add New Employee" << endl;
+cout << "3. Delete Employee" << endl;
+cout << "4. Exit" << endl;
+do
+{
+  cin >> action;
+  switch(action)
+  {
+    case 1:
+      listEmployees(eList);
+      break;
+    case 2:
+      addEmployee(eNum, name, address, city, state);
+      break;
+    case 3:
+      deleteEmplyee(eNum);
+      break;
+    case 4:
+      cout << "Ending program" << endl;
+      break;
+    default:
+      cout << "Invalid choice!\n";
+  }
+}while (action != 4);
+```
 
 ## - The Return Statement
 
+Used to end the execution of a function.  They can be placed anywhere inside a function, however statements after a return statement wont be executed.  In the case of a `void` function with no return statement,
+the function ends at its last `}`.
+
+**Single Entry - Single Exit (SESE)**
+
+Any structure is required to have single entry and single exit point.  Don't use break (except in a switch) and don't use a return statement in a void function.
 
 ## - Returning Value From a Function
+
+Example:
+```
+int sum(int num1, int num2)
+{
+   return num1 + num2;
+}
+```
+Functions can return values of expression as seen above or can return just the result at the end like below:
+```
+int sum(int num1, int num2)
+{
+   int result;
+   result = num1 + num2;
+   return result;
+}
+```
+Local variables can be declared in functions:
+```
+int area (int l, int w)
+{
+   int a;
+   a = l * w;
+   return a;
+}
+```
+`l` and `w` did not have to be declared because they are already being passed as arguments
 
 
 
