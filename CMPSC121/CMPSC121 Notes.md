@@ -2535,6 +2535,42 @@ evenSize = j;
 
 ## - Vector Manipulation
 
+**Defining a vector**
+
+Must include the vector header file:
+```
+#include <vector>
+```
+
+Defining:
+```
+vector<int> numbers(10);
+```
+This statement defines numbers as a vector of 10 integers.
+
+You can also initalize all elements in the vector to a value (2 in this case):
+```
+vector<int> numbers(10, 2);
+```
+
+Also you can initialize a vector with the values of another vector:
+```
+vector<int> set2(set1);
+```
+set2 will be a copy of set1
+
+You can inialize a vector with a list of values:
+```
+vector<int> numbers { 10, 20, 30, 40 };
+```
+storing a value that already exists in an element of a vector, use the array subscript `[]`
+
+```
+vector<int> hours(NUM_EMPLOYEES);
+cin >> hours[index];
+```
+
+
 Read a file of int values into a vector, skipping odd values and values greater than 100:
 ```
 while (input >> num)
