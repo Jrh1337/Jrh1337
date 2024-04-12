@@ -37,3 +37,22 @@
 -[10.6/8 Series Solutions to DEs]
 
 -[10.8 Complex Numbers Euler Formula]
+
+
+
+# 5.7/5.8 U-Substitution
+
+# 7.1 Integration by Parts
+
+**From the Product Rule**
+
+$\frac{\mathrm d}{\mathrm d x}[f(x)g(x)]=f'(x)g(x)+f(x)g(x)$
+
+If we integrate each:
+
+$\int\frac{\mathrm d}{\mathrm d x}[f(x)g(x)]=\int f'(x)g(x)+f(x)g(x)$
+
+This results in:
+
+$f(x)g(x)=\int f'(x)g(x)dx + \int f(x)g'(x)dx$
+
