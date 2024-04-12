@@ -2426,15 +2426,270 @@ void showScores(int tests[])
         // function header
 ```
 
+When passing an array to a function, it is common to pass array size so that the function knows how many elements to process:
+```
+showScores(tests, ARRAY_SIZE);
+```
 
+Array size must be reflected in the prototype header:
+```
+void showScores(int tests[], int size);
+          // function prototype
+void showScores(int tests[], int size)
+         // function header
+```
+
+Example Program of an array being passed to a function:
+```
+#include <iostream>
+using namespace std;
+
+void showValues(int [], int);  //Function Prototype
+
+int main()
+{
+  const int ARRAY_SIZE = 8;
+  int numbers[ARRAY_SIZE] = {5, 10, 15, 20, 25, 30, 35, 40};
+
+  showValues(numbers, ARRAY_SIZE);
+}
+
+//This function accepts an array of integers and the arrays size as its arguments.  Contents are displayed.
+
+void showValues(int nums[], int size)
+{
+  for (int index = 0; index < size; index++)
+    cout << nums[index] << " ";
+  cout << endl;
+}
+
+?
+// output
+//5 10 15 20 25 30 35 40
+```
+
+**Modifying Arrays in Functions**
+Array names in functions are like reference variables - changes made to an array in a function are reflected in the actual array in the calling function.  
+
+Exercise caution that you are not changing the array in a function unless you want to.
+
+What if I don't want the function to change the array?
+
+```
+int findmax(const int grades[]);
+const int SIZE = 350;
+int grades[SIZE], i, max;
+...
+max = findmax(grades);
+```
+Pass array as a const to prevent changes in the function.
+
+**Reading a File into an Array**
+
+Two events that will end the read loop:
+1. End of file
+2. End of Array
+
+**Visiting all elements in an Array**
+```
+for (int i = 0; i < CAPACITY; i++)
+{
+   cout << values[i] << endl;
+}
+```
+Note that the loop condition is that the index is less than CAPACITY. That's because there is no element corresponding to data[10]. But CAPACITY (10) is the number of elements we want to visit.
+
+**Swapping elements**
+```
+void swapit (int & a, int &b)
+{
+   int hold;
+   hold = a;
+   a = b;
+   b = hold;
+}
+```
+
+The call:
+```
+if(num[i] > num[j])
+swapit(num[i], num[j);
+```
+
+**Copy Selected Elements**
+```
+const int SIZE=350;
+int all[SIZE], even[SIZE], i, j;
+// code here to fill the array
+j = 0;
+for (i=0; i<SIZE;i++)
+{
+   if (all[i] %2 == 0)
+     {
+         even[j] = all[i];
+         j++;
+     }
+}
+evenSize = j;
+```
 
 ## - Vector Manipulation
+
+Read a file of int values into a vector, skipping odd values and values greater than 100:
+```
+while (input >> num)
+{
+if (num % 2 == 0 && num <=100)
+   {
+     nums.push_back(num);
+   }
+}
+```
+
+`push_back` Puts a value back into a vector
+```
+values.push_back(32);
+```
+This adds the value 32.0 to the vector named values.  The vector increases its size by 1.
+
+`pop_back` Removes the last value placed into the vector with push_back
+```
+values.pop_back();
+```
 
 
 ## - Vector Parameters
 
+How can you pass vectors as parameters?
+
+This function computes the sum of a vector of floating point numbers:
+```
+  double sum(vector<double> values)
+  {
+     double total = 0;
+     for (int i = 0; i < values.size(); i++)
+     {
+        total = total + values[i];
+     }
+     return total;
+  }
+```
+This function visits vector elements without changing them, but is copying the entire vector from one place in memory into the function.
+
+Instead use a reference variable to save resources and memory:
+```
+  double sum(const vector<double> &values)
+  {
+     double total = 0;
+     for (int i = 0; i < values.size(); i++)
+     {
+        total = total + values[i];
+     }
+     return total;
+  }
+```
+
+**Changing vector values**
+```
+void multiply(vector<double>& values, double factor)
+{
+  for (int i = 0; i < values.size(); i++)
+  {
+     values[i] = values[i] * factor;
+  }
+}
+```
+Note the vector is being passed as reference to make these changes.
+
+Always pass vectors be reference if you don't want to make changes add `const` in front of the parameter
+
+```
+int findIt(const vector <string> & parts,
+              string partToFind);
+//Can access, but not change the vector!
+
+void sortIt (vector <string> &parts);
+//can access and change the vector
+```
+**Returning a vector from a function**
+
+Simply build the vector in the function and return it:
+```
+  vector<int> squares(int n)
+  {
+     vector<int> result;
+     for (int i = 0; i < n; i++)
+     {
+        result.push_back(i * i);
+     }
+     return result;
+  }
+```
+Function Call:
+```
+vector <int> aVector;
+int limit = 20;
+…
+aVector = squares(limit);
+```
 
 ## - Common Algorithms
 
+Vectors do not suffer from the same limitations as array.  For example if you wanted to copy an array to another array you would have to use a loop to iterate through the arrays.
+
+Vectors can be assigned:
+```
+ vector<int> squares;
+  for (int i = 0; i < 5; i++)
+  {
+       squares.push_back(i * i);
+  }
+
+  vector<int> lucky_numbers;
+     // Initially empty
+  lucky_numbers = squares;|
+     // Now lucky_numbers contains
+     // the same elements as squares
+```
+
+Vectors must hold the same data type to be assigned to each other:
+```
+vector<int> squares; 
+         for (int i = 0; i < 5; i++)
+  {
+       squares.push_back(i * i);
+  }
+
+  vector<int> lucky_numbers;
+               // Initially empty
+
+  lucky_numbers = squares;
+
+     // Now lucky_numbers contains
+    // the same elements as squares
+```
+Example using a template:
+```
+template <class T>
+bool get_data(vector <T>& v, string f)
+{
+  T valueIn;
+  bool ok = true;
+  ifstream input;
+  input.open(f.c str());
+  if (input.fail())
+  {
+    cout << "Unable to open file\n";
+    ok = false;
+  }
+  else
+  {
+    while (input >> valueIn);
+    }
+      input.close();
+    }
+  return ok;
+}
+```
 
 ## - Fun with Vectors
