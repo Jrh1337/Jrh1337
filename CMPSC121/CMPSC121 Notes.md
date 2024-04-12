@@ -2089,37 +2089,343 @@ Student bill;
 
 ## - Accessing Structure Members
 
+Use the dot operator to access struct variables:
+```
+cin >> stu1.studentID;
+getline(cin, stu1.name);
+stu1.gpa = 3.75;
+```
+**Displaying a struct Variable**
+Must display each field seperately:
 
+```
+cout << bill; // won’t work
+cout << bill.studentID << endl;
+cout << bill.name << endl;
+cout << bill.yearInSchool;
+cout << " " << bill.gpa;
+```
+**Comparing struct Variables**
+Cannot compare directly:
+```
+if (bill.studentID ==  
+              william.studentID) ...
+```
+Must compare on a field basis.
 
 ## - Initializing a Structure
 
+struct variable can be initialized when defined:
+```
+Student s = {11465, "Joan", 2, 3.75};
+```
+or member-by-member after definition:
+```
+s.name = "Joan";
+s.gpa = 3.75;
+```
+You can initialize some members but can't skip over members order:
+```
+Student bill = {14579};
+Student s = {1234, "John", ,2.83}; // illegal
+```
 
+You cannot initialize in the structure declaration.
 
 ## - Nested Structure
 
-
+A struct can contain another struct as a member:
+```
+ struct PersonInfo
+  {     string name,
+    address,
+    city;
+  };
+  struct Student
+  {  int studentID;
+  PersonInfo pData;
+  short yearInSchool;
+  double gpa;
+  };
+```
+Use the dot operator multiple time when accessing a nested struct:
+```
+Student s;
+s.pData.name = "Joanne";
+s.pData.city = "Tulsa";
+```
 
 ## - Structures as Function Arguments
+
+May pass members of struct variables to functions:
+```
+ computeGPA(stu.gpa);
+```
+You can also pass entire structs to functions:
+```
+showData(stu);
+```
+
+structs can be passed as refernce to modify contents of a struct variable
+
+**Structures as Function Arguments**
+
+Using value parameter for structure can slow down a program, waste space. Using a reference parameter will speed up program, but function may change data in structure. Using a const reference parameter allows read-only access to reference parameter, does not waste space, speed.
 
 
 ## - Returning a Structure from a Function
 
+Function can return a struct:
+```
+Student getStudentData();  // prototype
+stu1 = getStudentData();   // call
+```
+
+Function must define a local structure:
+- for internal use
+- for use with a return statement
+
+Example:
+```
+Student getStudentData()
+{    Student tempStu;
+      cin >> tempStu.studentID;
+      getline(cin, tempStu.pData.name);
+      getline(cin, tempStu.pData.address);
+      getline(cin, tempStu.pData.city);
+      cin >> tempStu.yearInSchool;
+      cin >> tempStu.gpa;
+      return tempStu;
+}
+```
 
 ## - Arrays Hold Multiple Values
 
+**Array:** Variable that can store multiple values of the same type.  Values are stored in adjacent memory locations.  Declare using `[]`
+
+```
+int tests[5];
+```
+- int is the data type of the array elements
+- tests is the name of the array
+- `[5]` is the size declarator.  Shows number of elements in the array
+
+You can use a named constant as a size declarator:
+```
+const int SIZE = 5;
+int tests[SIZE];
+```
+This makes it more convenient to change the size of an array.
+
+**Array vs. Vector**
+Vectors are a super set of array.  Vectors can be handled in the same way but have greater functionality and are easier to use.
+
+**Simple vs Structured Data Types**
+
+Simple: variables of that type can store only one value at a time:
+```
+int num;
+```
+
+Structured Data Type: Each data item is a collection of other data items.
+```
+int nums[3];
+```
+
+**Reference Data Type**
+
+Each element in an array is assigned a unique subscript.  Subscripts start a 0.  The last elements subscript is n-1 where n is the number of elements in the array.
+
+**Accessing Array Elements**
+
+Arrays must be accessed by there individual elements
+
+Array elements can be used as regular variables:
+```
+tests[0] = 79;
+cout << tests[0];
+cin >> tests[1];
+tests[4] = tests[0] + tests[1];
+```
+
+**Using a Loop to step through an Array**
+```
+const int ARRAY_SIZE = 5;
+int numbers[ARRAY_SIZE];
+
+for (int count = 0; count < ARRAY_SIZE; count++)
+       numbers[count] = 99;
+```
+
+**Default Initialization**
+
+Global Array: all elements initialized to 0 by default.
+
+Local Array: All elements uninitialized by default.
 
 ## - No Bounds checking in C++
 
+C++ will let you use an invalid subscript for an array outside of its bounds.
+
+Doing so can cause some serious issues and crashes.  Off by one errors happen when you start subscripts at 1 rather than 0:
+```
+// This code has an off-by-one error.
+const int SIZE = 100;
+int numbers[SIZE];
+for (int count = 1; count <= SIZE; count++)
+     numbers[count] = 0;
+```
+**Filling an Array:**
+```
+const int SIZE = 500;
+int numbers[SIZE];
+..
+..
+for(int i=0;i<SIZE;i++)
+{
+     numbers[i] = rand() % 100;
+}
+```
 
 ## - Processing Array Contents
 
+Array elements can be treated as ordinary variables of the same type as the array
+```
+tests[i]++; // add 1 to tests[i]
+tests[i++]; // increment i, no
+                         // effect on tests
+```
+
+**Array Assignement**
+
+To copy one array to another use:
+```
+for (i = 0; i < ARRAY_SIZE; i++)
+       newTests[i] = tests[i];
+```
+
+**Printing the contents of an Array**
+
+You can display the contents of a character array by sending its name to cout:
+```
+char fName[] = "Henry";
+cout << fName << endl;
+```
+All other types of arrays must be printed by element
+
+**Summing and averaging array elements**
+
+To add:
+```
+int tnum;
+double average, sum = 0;
+for(tnum = 0; tnum < SIZE; tnum++)
+                         sum += tests[tnum];
+```
+Now you can compute average:
+```
+average = sum / SIZE;
+```
+Example:
+```
+const int NUM_SCORES = 100;
+double total = 0;  // Initialize accumulator
+double average;    // Will hold the average
+for (int i=0;i< NUM_SCORES;i++)
+    total += val;
+average = total / NUM_SCORES;
+```
+
+**Finding the highest Value from an Array**
+
+```
+int count;
+int highest;
+highest = numbers[0];
+for (count = 1; count < SIZE; count++)
+{
+   if (numbers[count] > highest)
+      highest = numbers[count];
+}
+```
+Once complete the highest variable will contain the highest value in the numbers array.
+
+**Finding the lowest value in an Array**
+```
+int count;
+int lowest;
+lowest = numbers[0];
+for (count = 1; count < SIZE; count++)
+{
+   if (numbers[count] < lowest)
+      lowest = numbers[count];
+}
+```
+Once complete lowest variable will contain the lowest value in the numbers array.
+
+If it is unknown how much data an array will be holding make the array large enough to hold the largest expected number of elements 
+use a counter variable to track number of items stored in array.
+
+**Comparing Arrays**
+
+Must compare element by element:
+```
+const int SIZE = 5;
+int firstArray[SIZE] = { 5, 10, 15, 20, 25 };
+int secondArray[SIZE] = { 5, 10, 15, 20, 25 };
+bool arraysEqual = true; // Flag variable
+int count = 0;                  // Loop counter variable
+// Compare the two arrays.
+while (arraysEqual && count < SIZE)
+{
+   if (firstArray[count] != secondArray[count])
+      arraysEqual = false;
+   count++;
+}
+if (arraysEqual)
+   cout << "The arrays are equal.\n";
+else
+   cout << "The arrays are not equal.\n";
+```
 
 # Module 13 Vectors
 
 ## - Using Parallel Arrays
 
+Two or more Arrays that contain related data.  A subscript is used to relate arrays: elements at same subscript are related.  Arrays may be different types.
+
+example:
+```
+const int SIZE = 5;        // Array size
+int id[SIZE];                  // student ID
+double average[SIZE]; // course average
+char grade[SIZE];        // course grade
+...
+for(int i = 0; i < SIZE; i++)
+{
+     cout << "Student ID: " << id[i]
+             << " average: " << average[i]
+             << " grade: " << grade[i]
+             << endl;
+}
+```
+
 
 ## - Arrays as Function Arguments
+
+To pass an array to a function use the array name as the argument:
+```
+showScores(tests);
+```
+
+To define a function that takes an array parameter, use `[]` for the array argument:
+```
+void showScores(int []);
+         // function prototype
+void showScores(int tests[])
+        // function header
+```
+
 
 
 ## - Vector Manipulation
