@@ -1,6 +1,6 @@
-# TABLE OF CONTENTS
+# ---------TABLE OF CONTENTS----------
 
-## Activities - Designed as homework assignments to build proficiency.
+## ---Activities--- Designed as homework assignments to build proficiency.
 
 ## [Activity 2](./Activity%202.cpp)
 - Write an algorithm to read in three numbers from the user. Then, add the first two  numbers and divide the result by the third one.
