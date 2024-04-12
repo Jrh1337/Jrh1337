@@ -1,4 +1,5 @@
 # ---------TABLE OF CONTENTS----------
+-Hyperlinks take you to .cpp with solution I came up with.
 
 ## ---Activities--- Designed as homework assignments to build proficiency.
 
