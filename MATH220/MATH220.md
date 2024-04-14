@@ -59,6 +59,165 @@
 
 
 
+# Week 1 Solving Systems of Equations
+
+## - What is a Linear System
+
+A linear equation in the variables $x_{1},x_{2}, ...,x_{n}$ is an equation that can be written in the form:
+
+$$a_{1}x_{1}+a_{2}x_{2}+...+a_{n}x_{n}=b$$
+
+where $b$ and the coefficients $a_{1},a_{2},...,a_{n}$ are real numbers.
+
+A system of linear equations (or a linear system) is a collection of one or more linear equations involving the same variables, say $x_{1},...,x_{n}$
+
+Example:
+
+$x_{1} + 2x_{2} - x_{3}=4$
+
+$2x_{1} + x_{2} + 5 x_{3}=0$
+
+$-x_{1} - 3x_{2} +x_{3}=-1$
+
+This is now a system of linear equations.
+
+A **solution** of a linear system is a list of numbers that make each equation a true statement when these numbers are substituted for $x_{1},x_{2},...,x_{n}$
+
+The set of all possible solutions is called the **solution set** of the linear system.
+
+## - Matrices
+
+A matrix is an ordered rectangular array of numbers, usually enclosed in parenthesis or square brackets.
+
+The size of a matrix is specified by the number of rows and the number of columns.
+
+An $m$ x $n$ matrix has m rows and n columns.
+
+Example of a $2x3$ matrix:
+
+$$A=\begin{bmatrix} 1 & 2 & 3 \\\ 4 & 5 & 6 \end{bmatrix}$$
+
+**Entries of a Matrix**
+
+We use $a_{ij}$ to denote the entry of the $i$ th row and $j$ th column of $A$
+
+**General notation of a matrix**
+
+$$\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\
+ a_{21} & a_{22} & \cdots & a_{2n} \\
+ \vdots & \vdots & \ddots \\
+ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$
+
+Consider the system:
+
+$x_{1} - 2x_{2}=1$
+
+$3x_{1} + 2x_{2}=11$
+
+The coefficient matrix of the linear system is:
+
+$$\begin{bmatrix} 1 & -2 \\\ 3 & 2 \end{bmatrix}$$
+
+The augmented matrix is:
+
+$$\begin{bmatrix} 1 & -2 & 1 \\\ 3 & 2 & 11 \end{bmatrix}$$
+
+The coefficients for the first column of the matrix correspond to $x_{1}$ while the second column of coefficents corresponds to $x_{2}$
+
+## - Elementary Row Operations
+
+Three main Operations:
+1. Replacement
+2. Scaling
+3. Interchange
+
+**Replacement**
+
+Replaces one row by the sum of itself and a multiple of another row.
+
+Example:
+
+$2x - 3y = -6$
+
+$4x + 5y = 10$
+
+
+$$\begin{bmatrix} 2 & -3 & -6 \\\ 4 & 5 & 10 \end{bmatrix} R2\to R2 - 2R1$$
+
+Now becomes:
+
+$$\begin{bmatrix} 2 & -3 & -6 \\\ 0 & 11 & 22 \end{bmatrix}$$
+
+**Scaling**
+
+Multiples all entries in a row by a nonzero constant.  Used to solve for a single variable.
+
+$$\begin{bmatrix} 2 & -3 & -6 \\\ 0 & 11 & 22 \end{bmatrix} R2\to \frac{R2}{11}$$
+
+Becomes:
+
+$$\begin{bmatrix} 2 & -3 & -6 \\\ 0 & 1 & 2 \end{bmatrix}$$
+
+**Interchanging**
+
+Used to change the position of leading entries
+
+All you do is swap entire rows with each other if neccessary
+
+$$\begin{bmatrix} 0 & 1 & 2 \\\ 2 & -3 & -6 \end{bmatrix} R1\leftrightarrow R2 \begin{bmatrix} 2 & -3 & -6 \\\ 0 & 1 & 2 \end{bmatrix}$$
+
+
+**Solving a system of equations using row operations**
+
+Example: Solve the following using row operations:
+
+$x_{1} + 5x_{2}= 7$
+
+$-2x_{1} - 7x_{2}= -5$
+
+Put into an augmented matrix:
+
+$$\begin{bmatrix} 1 & 5 & 7 \\\ -2 & -7 & -5 \end{bmatrix}$$
+
+$R2\to R2 +2R1$
+
+$$\begin{bmatrix} 1 & 5 & 7 \\\ 0 & 3 & 9 \end{bmatrix}$$
+
+Note: This matrix is now in echelon form.
+
+$R2\to \frac{R2}{3}$
+
+$$\begin{bmatrix} 1 & 5 & 7 \\\ 0 & 1 & 3 \end{bmatrix}$$
+
+$R1\to R1 - 5R2$
+
+$$\begin{bmatrix} 1 & 0 & -8 \\\ 0 & 1 & 3 \end{bmatrix}$$
+
+Note: This matrix is now in reduced echelon form.
+
+This translates to:
+
+$x_{1}= -8$
+
+$x_{2}= 3$
+
+**Echelon and Reduced Echelon Form**
+
+The leading entry of a row in a matrix is the first nonzero entry in the row
+
+$$\begin{bmatrix} 1 & 2 & 3 \\\ 0 & 0 & 4 \\\ 0 & 0 & 0 \end{bmatrix}$$
+
+The leading entries are 1 and 4 with the third row not having a leading entry.
+
+Properties of Echelon form:
+1. All non zero rows are above any rows of all zeros
+
+$$\begin{bmatrix} 1 & -2 & 1 \\\ 0 & 8 & 8 \\\ 0 & 0 & 0 \end{bmatrix}$$
+
+2. Each leading entry of a row is in a column to the right of the leading entry in the row above it.
+
+$$\begin{bmatrix} 1 & -2 & 1 \\\ 0 & 8 & 8 \\\ 0 & 0 & 2 \end{bmatrix}$$
+
 
 
 # Week 11 Least Squares Approximation, QR factorization and Diagonalizable Matrices
