@@ -1,5 +1,5 @@
 # MATH 220 LINEAR ALGEBRA TABLE OF CONTENTS
-[WEEK 1: Solving Systems of Equations]
+[WEEK 1: Solving Systems of Equations](./MATH220.md#week-1-solving-systems-of-equations)
 - What is a Linear System
 - Matrices
 - Elementary Row Operations
