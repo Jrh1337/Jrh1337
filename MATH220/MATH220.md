@@ -397,12 +397,35 @@ In this case the unique solution is $x = 2, y = 3, z = 4$
 
 # Week 2 Vectors, Span and Linear Independence
 
+## - Vectors and Vector Addition
 
+$R^2$ represents a Euclidean space in the second dimension.
 
+**Vectors in $R^n$**
 
+If $n$ is a positive integer, a list $v_{1},v_{2},...,v_{n}$ of real numbers produces an $n$ -dimensional vector:
 
+$$\vec{v}=\begin{bmatrix} v_{1} \\\ v_{2} \\\ \vdots \\\ v_{n} \end{bmatrix}$$
 
+Another notation: $(v_{1},v_{2},...,v_{n})$
 
+What we have is a matrix notation column vector and a tuple notation vector.
+
+**Vector Addition**
+
+We define the sum of vectors $\vec{v}$ and $\vec{w}$:
+
+$$\vec{v} + \vec{w}=\begin{bmatrix} v_{1} \\\ v_{2} \\\ \vdots \\\ v_{n} \end{bmatrix} + \begin{bmatrix} w_{1} \\\ w_{2} \\\ \vdots \\\ w_{n} \end{bmatrix}= \begin{bmatrix} v_{1} + w_{1} \\\ v_{2} + w_{2} \\\ \vdots \\\ v_{n} + w_{n} \end{bmatrix}$$
+
+Addition of vectors is as simple as adding there components together.
+
+**Geometric interpretation of vector sum in $R^2$**
+
+Geometrically, we add vectors using the Parallelogram Law:  $\vec{v} + \vec{w}$ lies along the diagonal of the parallelogram with side $\vec{v}$ and $\vec{w}$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/d421fbf9-c7fb-4647-ab59-ce3b1b7fa4d9)
+
+## - Scalar Multiplication of Vectors and Algebraic Properties
 
 
 
