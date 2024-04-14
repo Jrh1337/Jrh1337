@@ -218,6 +218,61 @@ $$\begin{bmatrix} 1 & -2 & 1 \\\ 0 & 8 & 8 \\\ 0 & 0 & 0 \end{bmatrix}$$
 
 $$\begin{bmatrix} 1 & -2 & 1 \\\ 0 & 8 & 8 \\\ 0 & 0 & 2 \end{bmatrix}$$
 
+Properties of Reduced Echelon form (RREF) have the additional conditions:
+1. The leading entry in each non zero row is a 1
+
+
+2. Each leading 1 is the only non zero entry in its column.
+
+RREF Example:
+
+$$\begin{bmatrix} 1 & 0 & 3 \\\ 0 & 1 & 1 \end{bmatrix}$$
+
+## - Pivots
+
+A pivot position in a matrix $A$ is a location in $A$ that corresponds to a leading 1 in the reduced echelon form of $A$ or a leading entry in an echelon form of $A$.
+
+- A Pivot column is a column that contains a pivot
+- A pivot is a number in a pivot position. Always a nonzero number.
+
+Example:
+
+$$\begin{bmatrix} 2 & 4 & -2 & 2 \\\ 0 & 0 & 1 & 4 \end{bmatrix}$$
+
+The pivots are 2 and 1 and the pivot columns are column 1 and 3.
+
+
+## - Gauss Jordan Elimination
+
+This is a row reduction algorithm used to reduce a matrix to reduced echelon form.
+- Steps 1-4 produces a matrix in echelon form
+- Step 5 puts matrix into RREF
+
+1. Step 1: Begin with the leftmost nonzero column.  This is a pivot column and the pivot position is at the top.
+
+2. Step 2: Select a nonzero entry in the pivot column as a pivot.  If necessary, interchange rows to move this entry to the pivot position.
+
+3. Step 3: Use row replacement operations to create zeros in all positions below the pivot.
+
+4. Step 4: Cover the row containing the pivot position and cover all rows above it.  Apply steps 1-3 to the submatrix that remains.  Repeat until there are no more nonzero rows to modify.
+
+5. Step 5: Beginning with the rightmost pivot and working upward and to the left, create zeros above each pivot.  If a pivot is not 1, make it a 1 using a scaling operation.
+
+## - Interpolating Polynomials
+
+Example. Find the RREF of the augmented matrix corresponding to this linear system using Gauss Jordan Elimination:
+
+$2x + 4y - 2z = 2$
+
+$4x + 9y - 3z = 8$
+
+$-2x - 3y + 7z = 10$
+
+Put into an augmented matrix:
+
+$$\begin{bmatrix} 2 & 4 & -2 & 2 \\\ 4 & 9 & -3 & 8 \\\ -2 & -3 & 7 & 10 \end{bmatrix}$$
+
+
 
 
 # Week 11 Least Squares Approximation, QR factorization and Diagonalizable Matrices
