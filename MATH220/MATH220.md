@@ -262,15 +262,118 @@ This is a row reduction algorithm used to reduce a matrix to reduced echelon for
 
 Example. Find the RREF of the augmented matrix corresponding to this linear system using Gauss Jordan Elimination:
 
-$2x + 4y - 2z = 2$
+$$2x + 4y - 2z = 2$$
 
-$4x + 9y - 3z = 8$
+$$4x + 9y - 3z = 8$$
 
-$-2x - 3y + 7z = 10$
+$$-2x - 3y + 7z = 10$$
 
 Put into an augmented matrix:
 
 $$\begin{bmatrix} 2 & 4 & -2 & 2 \\\ 4 & 9 & -3 & 8 \\\ -2 & -3 & 7 & 10 \end{bmatrix}$$
+
+$R2\to R2 - 2R1$
+
+$R3\to R3 + R1$
+
+$$\begin{bmatrix} 2 & 4 & -2 & 2 \\\ 0 & 1 & 1 & 4 \\\ 0 & 1 & 5 & 12 \end{bmatrix}$$
+
+$R3\to R3 - R2$
+
+$$\begin{bmatrix} 2 & 4 & -2 & 2 \\\ 0 & 1 & 1 & 4 \\\ 0 & 0 & 4 & 8 \end{bmatrix}$$
+
+Now in echelon form.  Now work from right to left for RREF.
+
+$R3\to \frac{R3}{4}$
+
+$R1\to \frac{R1}{2}$
+
+$$\begin{bmatrix} 1 & 2 & -1 & 1 \\\ 0 & 1 & 1 & 4 \\\ 0 & 0 & 1 & 2 \end{bmatrix}$$
+
+$R1\to R1 + R3$
+
+$R2\to R2 - R3$
+
+$$\begin{bmatrix} 1 & 2 & 0 & 3 \\\ 0 & 1 & 0 & 2 \\\ 0 & 0 & 1 & 2 \end{bmatrix}$$
+
+$R1\to R1 - 2R2$
+
+$$\begin{bmatrix} 1 & 0 & 0 & -1 \\\ 0 & 1 & 0 & 2 \\\ 0 & 0 & 1 & 2 \end{bmatrix}$$
+
+Now in RREF.
+
+Solution to the system: $x = -1, y = 2, z = 2$
+
+**Application example**  
+
+Suppose experimental data is represented by a set of points in the plane.  An interpolating polynomial for the data is a polynomial whose graph passes through every point.
+
+Find the interpolating polynomial $y = ax^2 + bx + c$ for the data $(1,12),(2,15)$ and $(3,16)$.
+
+Plug in each point into the equation to form a system of equations:
+
+$(1,12)$:  $a + b + c = 12$
+
+$(2,15)$:  $4a + 2b +c = 15$
+
+$(3,16)$:  $9a + 3b + c = 16$
+
+Place in an augmented matrix and solve:
+
+$$\begin{bmatrix} 1 & 1 & 1 & 12 \\\ 4 & 2 & 1 & 15 \\\ 9 & 3 & 1 & 16 \end{bmatrix}$$
+
+After solving with row operations:
+
+$$\begin{bmatrix} 1 & 0 & 0 & -1 \\\ 0 & 1 & 0 & 6 \\\ 0 & 0 & 1 & 7 \end{bmatrix}$$
+
+$$a = -1, b = 6, c = 7$$
+
+$$y = -x^2 + 6x + 7$$
+
+## - Identifying inconsistent Systems
+
+A linear system can have:
+1. No solutions
+2. One Unique solution
+3. Infinitely many solutions
+
+If there are no solutions then the system is inconsistent.  A system is considered consistent if it either has a unique or infinite solutions.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/58184f8b-0037-4ab1-a8bc-c484f965591a)
+
+**Identifying an inconsistent system**
+
+A linear system is inconsistent when an echelon form of the augmented matrix has a row in the form:
+
+$$\begin{bmatrix} 0 & 0 & 0 & \cdots & 0 & | & k \end{bmatrix}$$
+
+where k is nonzero.
+
+## - Systems with infinite many solutions
+
+Find the solution set of a linear system where the reduced matrix is:
+
+$$\begin{bmatrix} 1 & 0 & -3 & 0 & 8 & 11 \\\ 0 & 1 & -6 & 0 & 5 & 7 \\\ 0 & 0 & 0 & 1 & -4 & 22 \end{bmatrix}$$
+
+The solution set:
+
+$$x_{1} = 11 + 3x_{3} - 8x_{5}$$
+
+$$x_{2} = 7 + 6x_{3} - 5x_{5}$$
+
+$$x_{4} = 22 + 4x_{5}$$
+
+In this case $x_{3}$ and $x_{5}$ can be any real number.
+
+This implies that there are infintely many solutions.
+
+Tuple form of the solution set:
+
+$$(x_{1},x_{2},x_{3},x_{4},x_{5})$$
+
+$$=(11+3x_{3}-8x_{5},7+6x_{3}-5x_{5},x_{3},22+4x_{5},x_{5})$$
+
+This is the general solution if you wanted a specific solution set $x_{3}$ and $x_{5}$ to any value.
 
 
 
