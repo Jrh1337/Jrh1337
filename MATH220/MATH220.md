@@ -375,6 +375,56 @@ $$=(11+3x_{3}-8x_{5},7+6x_{3}-5x_{5},x_{3},22+4x_{5},x_{5})$$
 
 This is the general solution if you wanted a specific solution set $x_{3}$ and $x_{5}$ to any value.
 
+**Identifying when there are infinite many solutions**
+
+Once an augmented matrix has been converted to an echelon form, the variables corresponding to the pivot columns are called basic variables.  All other variables are called free variables.  If a linear system is consistent, then the presence of a free variable indicates it has infinitely many solutions.
+
+In the previous example $x_{3}$ and $x_{5}$ are both free variables because there isn't a pivot in there respective column.
+
+## - Systems with Unique Solutions and Summary of Solution Set Types
+
+**Unique Solutions**
+
+A consistent linear system has a unique solutions when there is a pivot in every column of the coefficient matrix.
+
+Note: You can determine this once the matrix is in echelon form.
+
+This means there are no free variables, every variable is a basic variable with a specific value.
+
+$$\begin{bmatrix} 1 & 0 & 0 & 2 \\\ 0 & 1 & 0 & 3 \\\ 0 & 0 & 1 & 4 \end{bmatrix}$$
+
+In this case the unique solution is $x = 2, y = 3, z = 4$
+
+# Week 2 Vectors, Span and Linear Independence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
