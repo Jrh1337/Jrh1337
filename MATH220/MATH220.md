@@ -427,9 +427,57 @@ Geometrically, we add vectors using the Parallelogram Law:  $\vec{v} + \vec{w}$ 
 
 ## - Scalar Multiplication of Vectors and Algebraic Properties
 
+**Scalar Multiplication**
 
+Suupose $c$ is a scalar and $\vec{v}$ is a vector, then:
 
+$$c\vec{v}=c \begin{bmatrix} v_{1} \\\ v_{2} \\\ \vdots \\\ v_{n} \end{bmatrix} = \begin{bmatrix} cv_{1} \\\ cv_{2} \\\ \vdots \\\ cv_{n} \end{bmatrix}$$
 
+**Geometric Interpretations**
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/b32016a4-0f3b-4f68-943e-542c66edb7fc)
+
+**List of Algebraic Properties**
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/59c8ab0d-c774-473f-a7df-cbaa91ccb753)
+
+## - Linear Combinations of Vectors
+
+Given $p$ vectors $\vec{a_{1}},\vec{a_{2}},...,\vec{a_{p}}$ in $R^n$ and $p$ scalars $x_{1},x_{2},...,x_{n}$, the vector:
+
+$$\vec{b}=x_{1}\vec{a_{1}} + x_{2}\vec{a_{2}} + \cdots + x_{p}\vec{a_{p}}$$
+
+is called a linear combination of $\vec{a_{1}},\vec{a_{2}},...,\vec{a_{p}}$$ with weights $x_{1},x_{2},...,x_{p}$
+
+Example:
+
+Let,
+
+$$\vec{a_{1}}=\begin{bmatrix} 1 \\\ -2 \\\ -5 \end{bmatrix}, \vec{a_{2}}=\begin{bmatrix} 2 \\\ 5 \\\ 6 \end{bmatrix}, \vec{b}=\begin{bmatrix} 7 \\\ 4 \\\ -3 \end{bmatrix}$$
+
+Can $\vec{b}$ be written as a linear combination of $a_{1}$ and $a_{2}$?
+
+This is asking is there an $x_{1},x_{2}$ so that if they were each multiplied by $\vec{a_{1}},\vec{a_{2}}$ it would equal $\vec{b}$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5de333bb-8df2-4119-a597-de69ad4c4729)
+
+We have 3 equivalent equations here with the vector equation at the top.
+
+Solving the augmented matrix results in a consistent system with infinite solutions.
+
+This translates to yes $\vec{b}$ can be written as a linear combination of $a_{1}$ and $a_{2}$
+
+**Vector Equation**
+
+The vector equation:
+
+$$x_{1}\vec{a_{1}} + x_{2}\vec{a_{2}} + \cdots + x_{p}\vec{a_{p}}=\vec{b}$$
+
+has the same solution set as the linear system with augmented matrix:
+
+$$\begin{bmatrix} \vec{a_{1}} & \vec{a_{2}} & \cdots & \vec{a_{p}} & | & \vec{b} \end{bmatrix}$$
+
+Note: The vectors in the matrix are representing columns.
 
 
 
