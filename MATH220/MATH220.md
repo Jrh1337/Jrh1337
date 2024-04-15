@@ -57,7 +57,7 @@
 
 [WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./MATH220.md#week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
 
-[WEEK 12: SVD and Abstract Vectors]
+[WEEK 12: SVD and Abstract Vectors](./MATH220.md#week-12-svd-and-abstract-vectors)
 - The Singular Value Decomposition (SVD)
 - Using SVD to find a low-rank approximation of a matrix
 - Vector Space
