@@ -57,6 +57,10 @@
 
 [WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./MATH220.md#week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
 
+[WEEK 12: SVD and abstract Vectors]
+
+
+
 
 
 # Week 1 Solving Systems of Equations
@@ -481,17 +485,137 @@ Note: The vectors in the matrix are representing columns.
 
 ## - Span
 
+Span in $R^2$
+
+Plotting a single vector 
+
+$$\vec{v}=\begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
+
+This is just going to be a line on a 2D plane.  Multiplying by any scalar will extend this line up to infinity.
+
+Adding a second vector:
+
+$$\vec{w}=\begin{bmatrix} -1 \\\ 1 \end{bmatrix}$$
+
+Now $\vec{w}$ with all its scalar multiples being added to $\vec{v}$ will span across all of $R^2$
+
+**Formal definition of span:**
+
+If $\vec{v_{1}},\vec{v_{2}},...,\vec{v_{p}}$ are vectors in $R^n$ the set of all linear combinations of $\vec{v_{1}},\vec{v_{2}},...,\vec{v_{p}}$ is denoted span { $\vec{v_{1}},\vec{v_{2}},...,\vec{v_{p}}$ }
+
+It is referred to as the subspace of $R^n$ spanned by $\vec{v_{1}},\vec{v_{2}},...,\vec{v_{p}}$
+
+Example:
+
+Find 4 vectors in span
+
+$$\begin{bmatrix} 1 \\\ 2 \end{bmatrix}, \begin{bmatrix} 1 \\\ 1 \end{bmatrix}$$
+
+So any vector in the form:
+
+$$x_{1} \begin{bmatrix} 1 \\\ 2 \end{bmatrix} + x_{2} \begin{bmatrix} 1 \\\ 1 \end{bmatrix}$$
+
+The scalars could be any number to produce vectors in the span.
+
+## - What does a Span of Vectors Look Like?
+
+The span of vectors in $R^2$ is either:
+1. a point (just the origin) This would just be the zero vector
+2. a line (a line through the origin) This would be the span of just 1 vector
+3. a plane (all of $R^2$) This would be the span of two vectors that don't lie on the same line
+
+The span of vectors in $R^3$
+1. a point, 0 vector
+2. a line, one vector
+3. a plane (a plane in $R^3$) two vectors not on the same line
+4. 3D space (all of $R^3$) Three vectors not on the same plane
+
+## - Linear Independence
+
+If a vector $\vec{v_{p}}$ can be written as a linear combination of $\vec{v_{1}},\vec{v_{2}},...,\vec{v_{p-1}}$ then,
+
+$\vec{v_{p}}$ is redundent and does not add to the span.
+
+Consider the span:
+
+$$\begin{bmatrix} 1 \\\ 1 \\\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\\ 0 \\\ 1 \end{bmatrix}, \begin{bmatrix} 4 \\\ 2 \\\ 1 \end{bmatrix}$$
+
+The first two vectors can be multiplied by 2 and 1 respectively and added together to make the third vector.
+
+$$2 \begin{bmatrix} 1 \\\ 1 \\\ 0 \end{bmatrix} + \begin{bmatrix} 2 \\\ 0 \\\ 1 \end{bmatrix} = \begin{bmatrix} 4 \\\ 2 \\\ 1 \end{bmatrix}$$
+
+This third vector is considered redundent because it does not add to the span of $R^3$
+
+A set of vectors in $R^n$ is linearly dependent if for some scalar one set of vectors is a linear combination of the other vecotrs in the set.
+
+If this isn't the case the set of vectors is linearly independent.
+
+**Equivelent definition for linear independence/dependence**
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/845d36bb-e377-4c63-81ad-d0ba7984d8a9)
+
+Basically if the only solution to the system of equations equaling the zero vector is when all scalars are set to zero means the set is linearly independent.
+
+This is known as the trivial solution.
 
 
+## - Pivot Test for Linear Independence/Dependence
+
+You can't always immediately tell from a set if it is dependent or not:
+
+Set 1:
+
+$$\begin{bmatrix} 0 \\\ 1 \\\ 5 \end{bmatrix}, \begin{bmatrix} 1 \\\ 2 \\\ 8 \end{bmatrix}, \begin{bmatrix} 4 \\\ -1 \\\ 0 \end{bmatrix}$$
+
+Are there non-zero solutions to:
+
+$$c_{1} \begin{bmatrix} 0 \\\ 1 \\\ 5 \end{bmatrix} + c_{2} \begin{bmatrix} 1 \\\ 2 \\\ 8 \end{bmatrix} + c_{3} \begin{bmatrix} 4 \\\ -1 \\\ 0 \end{bmatrix} = \vec{0}$$
+
+Put into an augmented matrix and solve:
 
 
+$$\begin{bmatrix} 0 & 1 & 4 & 0 \\\ 1 & 2 & -1 & 0 \\\ 5 & 8 & 0 & 0 \end{bmatrix}$$
+
+Reduce to echelon form:
+
+$$\begin{bmatrix} 1 & 2 & -1 & 0 \\\ 0 & 1 & 4 & 0 \\\ 0 & 0 & 13 & 0 \end{bmatrix}$$
+
+Notice there is a pivot in every column meaning there is one unique solution:
+
+The unique solution to this augmented matrix must be formed by setting each scalar to 0 to produce the $\vec{0}$ vector.
+
+If there was no pivot in the third column and the last row was all zero's such as in this case:
+
+$$\begin{bmatrix} 1 & 4 & 2 & 0 \\\ 0 & -3 & -3 & 0 \\\ 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+This indicates there are infinte many solutions which also corresponds to linear dependence (non zero solutions).
+
+Finding the dependence relation:
+
+Convert to RREF:
+
+$$\begin{bmatrix} 1 & 0 & -2 & 0 \\\ 0 & 1 & 1 & 0 \\\ 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+Solve for basic variables in terms of the free variable $c_{3}$
+
+$$c_{1}=2c_{3}$$
+
+$$c_{2}=-c_{3}$$
+
+$$c_{3}=c_{3}$$
+
+Solution Set: $(2c_{3}, -c_{3}, c_{3})$
+
+Pick any nonzero number to replace with $c_{3}$ in this case we'll pick 1.
+
+Now our set is $(2, -1, 1)$ meaning if you use these as scalar multiples on each vector and add them together it will equal $\vec{0}$
 
 
+Summary:
 
+If $A$ has a pivot free column it is linearly Dependendent
 
-
-
-
+If $A$ has pivots in every column it is linearly independent
 
 
 
@@ -887,6 +1011,15 @@ $M$ is diagonizable.
 **Observation:**
 
 If each eigenvalue has a multiplicity of 1 then we know right there the matrix is diagonalizable.
+
+
+
+
+
+# WEEK 12: SVD and Abstract Vectors
+
+
+
 
 
 
