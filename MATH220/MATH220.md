@@ -11,7 +11,7 @@
 - Inconsistent Systems
 - Consistent Systems with Unique and Infinite Solutions
 
-[WEEK 2: Vectors, Span and Linear Independence]
+[WEEK 2: Vectors, Span and Linear Independence](./MATH220.md#week-2-vectors-span-and-linear-independence)
 - Vectors and Vector Addition
 - Scalar Multiplication of Vectors and Properties
 - Linear Combinations and Vector Equations
