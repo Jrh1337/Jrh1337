@@ -38,7 +38,7 @@
 
 -[10.8 Complex Numbers Euler Formula]
 
-
+-[11.3 Polar Coordinates]
 
 # 5.7/5.8 U-Substitution
 
