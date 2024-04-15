@@ -479,6 +479,8 @@ $$\begin{bmatrix} \vec{a_{1}} & \vec{a_{2}} & \cdots & \vec{a_{p}} & | & \vec{b}
 
 Note: The vectors in the matrix are representing columns.
 
+## - Span
+
 
 
 
