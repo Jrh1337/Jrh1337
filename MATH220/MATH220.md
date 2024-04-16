@@ -1210,7 +1210,7 @@ $$r \begin{bmatrix} 0 \\\ 2 \\\ 2 \\\ -6 \end{bmatrix} + s \begin{bmatrix} 1 \\\
 where r, s and t are real numbers a subspace of $R^4$?
 
 
-Yes, this is a subspace of $R^4$ because it is a span of vectors in $R^$$.
+Yes, this is a subspace of $R^4$ because it is a span of vectors in $R^4$.
 
 
 
