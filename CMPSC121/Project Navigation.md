@@ -11,7 +11,7 @@
 
 Enter 5 integers: 3 8 9 6 7  The average is 6.6
 
-## [Activity 4]
+## [Activity 4](./Coding%20Projects/Activity%204.cpp)
 - Write a program which reads in five temperature values in Fahrenheit and displays them in Celsius. Organize your results in a table, similar to the one shown below. Make sure to set the appropriate precision and try to match the table alignment shown in the output sample. You can find the appropriate formula on the web.  Hint: Integer division does NOT give accurate answers!
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/46ab9a87-652f-4958-b681-39761575e365)
