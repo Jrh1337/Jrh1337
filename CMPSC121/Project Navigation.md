@@ -68,7 +68,7 @@ The Vectors contain 128 cells where both values are even.
 
 Note: create a much smaller vector (20 numbers perhaps) to test your program on. This way you can test your program correctness much easier.
 
-## [Activity 25]
+## [Activity 25](./Project%20Navigation.md#activity-25)
 Write a program to fill a vector with 5000 random numbers. Then display:
 
 - The smallest number
