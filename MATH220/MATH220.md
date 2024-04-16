@@ -1193,6 +1193,24 @@ To show $H$ is closed under vector addition.  This fails because you can add two
 
 $$\begin{bmatrix} 1 & 0 \\\ 0 & 0 \end{bmatrix} + \begin{bmatrix} 0 & 0 \\\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\\ 0 & 1 \end{bmatrix}$$
 
+## - Subspaces of $R^n$
+
+Example:
+
+Which planes in $R^3$ are subspaces of $R^3$?
+
+If a random plane in $R^3$ does not contain the zero vector (goes through the origin) then it is not a subspace of $R^3$
+
+Example:
+
+Is the set:
+
+$$r \begin{bmatrix} 0 \\\ 2 \\\ 2 \\\ -6 \end{bmatrix} + s \begin{bmatrix} 1 \\\ 2 \\\ 3 \\\ 4 \end{bmatrix} + t \begin{bmatrix} -1 \\\ 0 \\\ 5 \\\ 6 \end{bmatrix}$$
+
+where r, s and t are real numbers a subspace of $R^4$?
+
+
+Yes, this is a subspace of $R^4$ because it is a span of vectors in $R^$$.
 
 
 
