@@ -16,7 +16,7 @@ Enter 5 integers: 3 8 9 6 7  The average is 6.6
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/46ab9a87-652f-4958-b681-39761575e365)
 
-## [Activity 5]
+## [Activity 5](./Coding%20Projects/Activity%205.cpp)
 - Modify the problem so that the program asks for the number of shares purchased, the purchase price, the commission percent, and the sell price. You can assume that he sold all the shares and that the buy and sell commissions are the same.
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/767565d1-88f4-4e6b-b1f3-656a0bddbb01)
