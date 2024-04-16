@@ -628,6 +628,17 @@ If $A$ has pivots in every column it is linearly independent
 
 
 
+
+# Week 3 Basis, Matrix-Vector Products, Population Modeling
+
+## - Basis for Subspaces of $R^n$
+
+
+
+
+
+
+
 # Week 11 Least Squares Approximation, QR factorization and Diagonalizable Matrices
 
 ## - Introduction to Least Squares Approximation
