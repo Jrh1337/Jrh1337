@@ -59,7 +59,7 @@ Enter 5 integers: 3 8 9 6 7  The average is 6.6
 
 ## [Activity 23]
 
-## [Activity 24]
+## [Activity 24](./Project%20Navigation.md#activity-24)
 Write a program using parallel vectors and a function which fills each of them with 500 random numbers between 1 and 100. The program should then pass both vectors to a function which will return an integer indicating a count of how many times both vectors had even numbers in the same location. So if vector01[0] contained 4 and vector02[0] contained 12, you would add one to count. If vector01[1] contained 3 and vector02[1] contained 4, you would not add one to count.
 
 main would display something like:
