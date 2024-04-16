@@ -1099,6 +1099,61 @@ $$A= \sigma_{1} \vec{u_{1}} \vec{v_{1}}^T + \sigma_{2} \vec{u_{2}} \vec{v_{2}}^T
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/4bddd71e-3616-40b2-aa4b-5aac86612445)
 
 
+## - Vector Spaces
+
+A vector space is a nonempty set $V$ of objects, called vectors, on which are defined two operations, called addition and multiplication by scalars, subject to the ten axioms below:
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/095814da-712e-4f3e-9148-88eccea77e3c)
+
+
+Example:
+
+The Euclidean spaces $R^n$ are vectors spaces for all $n \geq 1$ Verify $(1), (4), (6)$
+
+1. Take any two vectors and add them together and confirm they are both in the same dimension.
+
+4. The zero vector is a vector with all zeros, adding this to any vector will not change it.
+
+6. Multiplying a vector by a scalar does not change the space the vector lies in.
+
+
+## - Examples of Vector Spaces
+
+The vector space $M_{2x2}$ consists of all 2x2 matrices:
+
+$$\begin{bmatrix} a_{11} & a_{12} \\\ a_{21} & a_{22} \end{bmatrix} | a_{11}, a_{12}, a_{21}, a_{22} R$$
+
+It is equipped witht the operations: matrix sum and scalar-matrix multiplication.
+
+**Vector Spaces of Polynomials**
+
+The vector space $P_{2}$ consists of all polynomials with degree at most 2:
+
+$$a_{2}x^2+a_{1}x+a_{0} | a_{0}, a_{1}, a_{2}$$
+
+## - Definition of a Subspace
+
+A subspace, $H$, of a vector space $V$ is a subset of $V$ where $H$ is a vector space itself.
+
+To check if something is a subspace of a beigger vector space you dont have to check all of the properties some will be automatic from $H$ just living in $V$ you would have to check 1, 4 and 6.
+
+criteria for a subspace:
+
+1. The zero vector of $V$ is in $H$
+2. $H$ is closed under vector addition.  That is, if $\vec{u}$ and $\vec{v}$ are in $H$, then the sum of $\vec{u}+\vec{v}$ is also in $H$.
+3. $H$ is closed under scalar multiplication.  That is, if $\vec{u}$ is in $H$ and c is any scalar, then $c\vec{u}$ is also in $H$.
+
+## - Examples/Non-Examples of Subspaces
+
+Show that the subset:
+
+$$\begin{bmatrix} b \\\ b \end{bmatrix} | b$$
+
+is a subspace of $R^2$
+
+
+
+
 
 
 
