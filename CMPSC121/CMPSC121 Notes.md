@@ -112,7 +112,9 @@
 - Common Algorithms
 - Fun with Vectors
 
-[Module 14: Searching]
+[Module 14: Searching](./CMPSC121%20Notes.md#searching)
+- Searching and Sorting Types
+- Binary Search
 
 [Module 15: Sorting]
 
