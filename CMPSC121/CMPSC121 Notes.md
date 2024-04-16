@@ -2728,4 +2728,51 @@ bool get_data(vector <T>& v, string f)
 }
 ```
 
-## - Fun with Vectors
+# Searching
+
+## - Introduction to Sorting and Searching
+
+**Sort**
+
+Arranging a list of values in order, eg. Alphabetical or numerical
+
+**Sorting Algorithms**
+- Selection Sort
+- Bubble Sort
+- Insertion Sort
+- Shell Sort
+- Quick Sort
+
+**Searching**
+
+THe process of looking for a specific element in a vector; for example, discovering whether a certain score is included in a list of scores.  Searching, like sorting, is a common computer programming task.  There are many algorithms and data structures devoted to searching.  Two commonly used approaches are:
+1. Linear Search
+2. Binary Search
+
+**Three Ways to Search**
+1. Serial **Slowest** but only available method if a vector isn't in order.
+2. Seriel search with early exit (Works if a vector is in order)
+3. Binary Search (**Fastest** Vecotr or Array must be in order)
+
+**Serial Search**
+
+Serial Search is not very efficient. In the worst case, the target may not be in the list, so we access every element in the vector. On average, the target will be in the middle of the vector, so we search half of the elements in the vector. For example, if we had a 1000 element vector:
+- Worst case search through all 1000
+- Average search about 500 elements
+
+## - Binary Search
+
+Look at the middle item:
+1. If larger than target, set high to middle -1
+2. If smaller, set low to middle +1
+3. if equal element is found
+
+- Recalculate middle as (high+low)/2
+- Repeat steps until found or low>high(not in list)
+
+Maximum number of compares is equal to the first power of two greater than number of cells.
+
+So, if you had to search through 1000 elements $2^10=1024$ you would have to make a maximum of 10 compares to find a name in this list.
+
+This scales exponentially with 1 billion cells requiring a maximum of 30 compares.
+
