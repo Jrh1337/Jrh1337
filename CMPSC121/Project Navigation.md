@@ -6,7 +6,7 @@
 ## [Activity 2](./Coding%20Projects/Activity%202.cpp)
 - Write an algorithm to read in three numbers from the user. Then, add the first two  numbers and divide the result by the third one.
 
-## [Activity 3]
+## [Activity 3](./Coding%20Projects/Activity%203.cpp)
 - Write a program that will ask the user to enter 5 integers, read them in and display their average. Average should be a double. A typical run might look similar to the following:
 
 Enter 5 integers: 3 8 9 6 7  The average is 6.6
