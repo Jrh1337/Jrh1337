@@ -77,8 +77,8 @@ Write a program to fill a vector with 5000 random numbers. Then display:
 - The number of even values
 - The total of the values
 - The average of the values
-- 
-Ask the user for an integer and display the subscript of the cell where it was found or NOT FOUND! if it isn’t found. Use a binary search to do this.
+- Ask the user for an integer and display the subscript of the cell where it was found or NOT FOUND! if it isn’t found. Use a binary search to do this.
+
 There is a file called "Activity 25 Sort functions.zip" under Materials in this week’s module. Download and unzip the shellSort and swapper function Download Download and unzip the shellSort and swapper function. Since you will be using a binary search, the vector will have to be in order. We will discuss sorting more in the next module, but you can use the provided code to perform the sort.
 
 Each of the preceding values should be determined by a function and returned to main where they should be displayed.
