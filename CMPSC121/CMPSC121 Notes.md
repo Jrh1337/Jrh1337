@@ -2774,5 +2774,5 @@ Maximum number of compares is equal to the first power of two greater than numbe
 
 So, if you had to search through 1000 elements $2^10=1024$ you would have to make a maximum of 10 compares to find a name in this list.
 
-This scales exponentially with 1 billion cells requiring a maximum of 30 compares.
+This scales exponentially with 1 billion cells requiring a maximum of 30 compares. 
 
