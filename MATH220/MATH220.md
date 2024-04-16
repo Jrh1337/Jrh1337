@@ -1151,6 +1151,49 @@ $$\begin{bmatrix} b \\\ b \end{bmatrix} | b$$
 
 is a subspace of $R^2$
 
+This represents all vectors where both components are the same.  So think of:
+
+$$\begin{bmatrix} 1 \\\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\\ 0 \end{bmatrix}, \begin{bmatrix} -5 \\\ -5 \end{bmatrix}$$
+
+We can see the zero vector is in the subspace.
+
+If we added two random vectors the new vector would still meet this criteria of a vector in the subspace.
+
+If you multiplied any vector by any scalar c, the new vector would still be in the subspace.
+
+Example:
+
+Show the subset:
+
+$$\begin{bmatrix} b \\\ 2 \end{bmatrix} | b$$
+
+is not a subspace of $R^2$
+
+You could subsititue any value for b.  The zero vector is not in the subspace so that property fails right away.
+
+Example:
+
+Determine if the subset:
+
+$$\begin{bmatrix} a_{11} & 0 \\\ 0 & a_{22} \end{bmatrix} | a_{11}, a_{22}$$
+
+consisting of all diagonal 2x2 matrices is a subspace of $M_{2x2}$
+
+You could place 0's and get the zero vector.
+
+Adding and adding a scalar still reproduces a diagonal matrix.  So yes this is a subspace.
+
+Example:
+
+Determine if the subset { $H= A|det(A) = 0$ } of $M_{2x2}$ } consisting of all 2x2 matrices where the determinant is 0 is a subspace of $M_{2x2}$.
+
+Determinant of the zero vector is ) so yes the zero vector is in $H$
+
+To show $H$ is closed under vector addition.  This fails because you can add two 2x2 matrices with a determinant value of 0 and produce a 2x2 matrix with a determinant value of 1.
+
+$$\begin{bmatrix} 1 & 0 \\\ 0 & 0 \end{bmatrix} + \begin{bmatrix} 0 & 0 \\\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+
 
 
 
