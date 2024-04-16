@@ -1181,13 +1181,13 @@ consisting of all diagonal 2x2 matrices is a subspace of $M_{2x2}$
 
 You could place 0's and get the zero vector.
 
-Adding and adding a scalar still reproduces a diagonal matrix.  So yes this is a subspace.
+Adding or multiplying by a scalar still reproduces a diagonal matrix.  So yes this is a subspace.
 
 Example:
 
 Determine if the subset { $H= A|det(A) = 0$ } of $M_{2x2}$ } consisting of all 2x2 matrices where the determinant is 0 is a subspace of $M_{2x2}$.
 
-Determinant of the zero vector is ) so yes the zero vector is in $H$
+Determinant of the zero vector is 0 so yes the zero vector is in $H$
 
 To show $H$ is closed under vector addition.  This fails because you can add two 2x2 matrices with a determinant value of 0 and produce a 2x2 matrix with a determinant value of 1.
 
