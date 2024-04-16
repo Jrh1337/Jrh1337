@@ -1073,5 +1073,38 @@ What are the eigenvalues of $A^TA$? $12^2, 6^2, 2^2$ These are the three largest
 
 ## - Low rank approximations of matrices using SVD
 
+**Important for Data Compression**
+
+If $A$ is an mxn matrix with rank $r$, then the SVD of $A$. $A=U\Sigma V^T$ is equivalent to writing $A$ as a sum of rank 1 matrices:
+
+$$A= \sigma_{1} \vec{u_{1}} \vec{v_{1}}^T + \cdots + \sigma_{r} \vec{u_{r}} \vec{v_{r}}^T$$
+
+$\sigma_{1} \geq \cdots \geq \sigma_{r} > 0$
+
+**Reduced Rank Approximation**
+
+Keeping the first j terms of the sum above will create a rank j approximation of $A$.
+
+$$A=\begin{bmatrix} -1 & 1 & 3 & 5 & 6 \\\ 3 & -1 & 3 & -1 & 6 \\\ -1 & 3 & -3 & 1 & -6 \end{bmatrix}$$
+
+A singular decomposition of $A$ is given by:
+
+
+$$\begin{bmatrix} \frac{1}{\sqrt{3}} & \frac{2}{\sqrt{6}} & 0 \\\ \frac{1}{\sqrt{3}} & \frac{-1}{\sqrt{6}} & \frac{1}{\sqrt{2}} \\\ \frac{-1}{\sqrt{3}} & \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} \end{bmatrix} \begin{bmatrix} 12 & 0 & 0 & 0 & 0 \\\ 0 & 6 & 0 & 0 & 0 \\\ 0 & 0 & 2 & 0 & 0 \end{bmatrix} \begin{bmatrix} \frac{1}{4\sqrt{3}} & \frac{-1}{4\sqrt{3}} & \frac{3}{4\sqrt{3}} & \frac{1}{4\sqrt{3}} & \frac{6}{4\sqrt{3}} \\\ \frac{-1}{\sqrt{6}} & \frac{1}{\sqrt{6}} & 0 & \frac{2}{\sqrt{6}} & 0 \\\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 & 0 & 0 \\\ \frac{1}{4} & \frac{-1}{4} & \frac{3}{4} & \frac{1}{4} & \frac{-2}{4} \\\ \frac{1}{2} & \frac{-1}{2} & \frac{-1}{2} & \frac{-1}{2} & 0 \end{bmatrix}$$
+
+Find a rank 2 approximation of $A$.
+
+$$A= \sigma_{1} \vec{u_{1}} \vec{v_{1}}^T + \sigma_{2} \vec{u_{2}} \vec{v_{2}}^T$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/4bddd71e-3616-40b2-aa4b-5aac86612445)
+
+
+
+
+
+
+
+
+
 
 
