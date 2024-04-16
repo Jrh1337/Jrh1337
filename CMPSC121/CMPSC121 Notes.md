@@ -2778,3 +2778,98 @@ So, if you had to search through 1000 elements $2^10=1024$ you would have to mak
 
 This scales exponentially with 1 billion cells requiring a maximum of 30 compares. 
 
+We simply compare the search key with the value of each element of the array until we find what we are looking for or reach the end.  The code would look like:
+
+```
+int seq_search (const vector <string>& pn, string key)
+{
+  int i = 0, return_val;
+  bool found = false;
+  while (!found && i < pn.size())
+    if (key == pn[i])
+      found = true;
+    else
+      i++;
+
+  if (found) return_val = i;
+  else return_val = -1;
+  return return_val;
+}
+```
+
+The call would be:
+
+```
+index = seq_search(part_num, part_to_find);
+if (index == -1)
+  cout << part_to_find << " not on file!" << endl;
+else
+  cout << part_to_find << " found at " << index << endl;
+```
+
+Or we could use index to point into other parallel vectors.
+
+**Serial Search with Early Exit:**
+
+If the list is in order, we only need to search until either we find a match or find an element that is greater than our key.  Since they are in order, if we haven't found it, but have found an element that is greater, then the key must not be in the list.  e.g encounter 10879 now I know 10377 is not in the list.
+
+```
+int seq_search (const vector <string>& pn, string key)
+{
+  int i = 0, return_val;
+  bool found = false;
+  while (!found && i < pn.size() && key >= pn[i])
+    if (key == pn[i])
+      found = true;
+    else
+      i++;
+  if(found) return_val = i;
+  else return_val = -1;
+  return return_val;
+}
+```
+
+**Binary Search Logic:**
+
+Continue dividing the list in half until the key is found or you've eliminated all possibilities
+
+```
+int binary_search (const vector <string>& name, string key)
+{
+  bool found = false;
+  int first, mid, last, return_val;
+  first = 0;
+  last = name.size() - 1;
+  while ((first <= last) && (!found))
+    {
+        mid = (first + last) / 2;
+      if (key == name[mid])
+        found == tue;
+      else
+        if (key < name[mid])
+          last = mid - 1;
+        else
+          first = mid + 1;
+    }
+    if (found)
+      return_val = mid;
+    else
+      return_val = -1;
+    return return_val;
+}
+```
+
+The call from main might look like:
+
+```
+finder = binary_search(name, nameIN);
+if (finder == -1)
+  cout << nameIn << " not found!\n";
+else
+{
+  cout << nameIn << ''s email is " << email[finder] << endl;
+}
+```
+
+
+
