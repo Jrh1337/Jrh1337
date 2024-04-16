@@ -59,7 +59,7 @@ Enter 5 integers: 3 8 9 6 7  The average is 6.6
 
 ## [Activity 23]
 
-## [Activity 24](./Project%20Navigation.md#activity-24)
+## [Activity 24](./Coding%20Projects/Activity%2024.cpp)
 Write a program using parallel vectors and a function which fills each of them with 500 random numbers between 1 and 100. The program should then pass both vectors to a function which will return an integer indicating a count of how many times both vectors had even numbers in the same location. So if vector01[0] contained 4 and vector02[0] contained 12, you would add one to count. If vector01[1] contained 3 and vector02[1] contained 4, you would not add one to count.
 
 main would display something like:
@@ -68,7 +68,7 @@ The Vectors contain 128 cells where both values are even.
 
 Note: create a much smaller vector (20 numbers perhaps) to test your program on. This way you can test your program correctness much easier.
 
-## [Activity 25](./Project%20Navigation.md#activity-25)
+## [Activity 25]
 Write a program to fill a vector with 5000 random numbers. Then display:
 
 - The smallest number
