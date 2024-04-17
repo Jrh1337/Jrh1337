@@ -37,7 +37,7 @@ A “magic date” is a date where the month times the day equals the two-digit 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/992b0caf-45f7-4a54-9165-6fe36a5ad362)
 
 
-## [Activity 8]
+## [Activity 8](./Coding%20Projects/Activity%208.cpp)
 
 Write a program to ask for a Cartesian coordinate x,y. Your program should read in an x value and a y value and then inform the user whether it is the origin (0,0), on the y axis, eg (0, 10), on the x axis, eg (-3,0) or in which quadrant it appears.
 
