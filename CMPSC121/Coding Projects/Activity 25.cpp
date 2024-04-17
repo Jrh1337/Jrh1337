@@ -1,8 +1,5 @@
-//Author:   John Hayes
-//Class:    CMPSC 121
 //Activity 25
 //Purpose: This program generates a 5000 random numbers in a vector and sorts them then displays information about the elements in the vector.
-//Sources of logic assistance: None
 #include <iostream>
 #include <vector>
 #include <cstdlib>
