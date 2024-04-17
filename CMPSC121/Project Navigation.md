@@ -71,7 +71,7 @@ Hints:
 
 ## [Activity 15](./Coding%20Projects/Activity%2015.cpp)
 
-## [Activity 16]
+## [Activity 16](./Coding%20Projects/Activity%2016.cpp)
 
 ## [Activity 17]
 
