@@ -65,7 +65,7 @@ Hints:
 
 ## [Activity 11](./Coding%20Projects/Activity%2011.cpp)
 
-## [Activity 12]
+## [Activity 12](./Coding%20Projects/Activity%2012.cpp)
 
 ## [Activity 13]
 
