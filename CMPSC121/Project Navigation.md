@@ -23,7 +23,7 @@ Enter 5 integers: 3 8 9 6 7  The average is 6.6
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/4dd5c354-6809-4373-ae62-34ef01945453)
 
-## [Activity 6]
+## [Activity 6](./Coding%20Projects/Activity%206.cpp)
 
 A “magic date” is a date where the month times the day equals the two-digit year (when written mm/dd/yy - e.g., 2/8/16). Write a program to ask the user to input a month, day and year. Then display whether it is a magic date or not.
 
