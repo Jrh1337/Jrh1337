@@ -1,8 +1,5 @@
-//Author:   John Hayes
-//Class:    CMPSC 121
 //Activity 07 
 //Purpose: This program calculate what a users phone bill will cost each month based on which subscription plan they have and the number of minutes they have used each month.
-//Sources of logic assistance: None
 #include <iostream>
 #include <cmath>
 #include <string>
