@@ -61,7 +61,7 @@ Hints:
 4. You can access the last digit of an integer by dividing modulo by 10, eg digit = workingNumber % 10;
 5. You can remove the last digit of an integer by dividing by 10, eg workingNumber /= 10;
 
-## [Activity 10]
+## [Activity 10](./Coding%20Projects/Activity%2010.cpp)
 
 ## [Activity 11]
 
