@@ -1,8 +1,5 @@
-//Author:   John Hayes
-//Class:    CMPSC 121
 //Activity 06 
 //Purpose: This program determines whether the product of the day and month matches the last 2 digits of the year inputted and outputs if it is a magic date or not.
-//Sources of logic assistance: None
 #include <iostream>
 #include <cmath>
 
