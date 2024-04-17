@@ -69,9 +69,7 @@ Hints:
 
 ## [Activity 13](./Coding%20Projects/Activity%2013.cpp)
 
-## [Activity 14]
-
-## [Activity 15]
+## [Activity 15](./Coding%20Projects/Activity%2015.cpp)
 
 ## [Activity 16]
 
