@@ -1,8 +1,5 @@
-//Author:   John Hayes
-//Class:    CMPSC 121
 //Lab 13
 //Purpose: This program generates a random number of votes for each candidate and then outputs the percent of vote each candidate recieved and declares a winner.
-//Sources of logic assistance: None
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
