@@ -1,8 +1,5 @@
-//Author:John Hayes
-//Class:CMPSC 121
 //Activity 08 
 //Purpose: This program determines the location of two coordinates on a two dimensional plane.
-//Sources of logic assistance: None
 #include <iostream>
 #include <iomanip>
 using namespace std;
