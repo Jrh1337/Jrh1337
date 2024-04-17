@@ -73,19 +73,19 @@ Hints:
 
 ## [Activity 16](./Coding%20Projects/Activity%2016.cpp)
 
-## [Activity 17]
+## [Activity 17](./Coding%20Projects/Activity%2017.cpp)
 
-## [Activity 18]
+## [Activity 18](./Coding%20Projects/Activity%2018.cpp)
 
-## [Activity 19]
+## [Activity 19](./Coding%20Projects/Activity%2019.cpp)
 
-## [Activity 20]
+## [Activity 20](./Coding%20Projects/Activity%2020.cpp)
 
-## [Activity 21]
+## [Activity 21](./Coding%20Projects/Activity%2021.cpp)
 
-## [Activity 22]
+## [Activity 22](./Coding%20Projects/Activity%2022.cpp)
 
-## [Activity 23]
+## [Activity 23](./Coding%20Projects/Activity%2023.cpp)
 
 ## [Activity 24](./Coding%20Projects/Activity%2024.cpp)
 Write a program using parallel vectors and a function which fills each of them with 500 random numbers between 1 and 100. The program should then pass both vectors to a function which will return an integer indicating a count of how many times both vectors had even numbers in the same location. So if vector01[0] contained 4 and vector02[0] contained 12, you would add one to count. If vector01[1] contained 3 and vector02[1] contained 4, you would not add one to count.
