@@ -2844,7 +2844,7 @@ int binary_search (const vector <string>& name, string key)
     {
         mid = (first + last) / 2;
       if (key == name[mid])
-        found == tue;
+        found = true;
       else
         if (key < name[mid])
           last = mid - 1;
