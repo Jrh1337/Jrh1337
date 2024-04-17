@@ -1,8 +1,5 @@
-//Author:   John Hayes
-//Class:    CMPSC 121
 //Activity 24
 //Purpose: This program fills 2 vectors with 500 random numbers (1-100) then displays how many even pairs of numbers between the sets.
-//Sources of logic assistance: None
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
