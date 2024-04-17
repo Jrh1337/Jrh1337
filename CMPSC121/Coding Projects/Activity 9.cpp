@@ -1,8 +1,5 @@
-//Author:John Hayes
-//Class:CMPSC 121
 //Activity 09 
 //Purpose: This program has a user enter a number > 10000 and determines the sum of all even digits.
-//Sources of logic assistance: None
 #include <iostream>
 #include <iomanip>
 using namespace std;
