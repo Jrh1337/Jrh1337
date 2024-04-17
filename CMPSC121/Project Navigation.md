@@ -30,7 +30,7 @@ A “magic date” is a date where the month times the day equals the two-digit 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/49f85c49-6781-47eb-9822-a0809f2287f5)
 
 
-## [Activity 7]
+## [Activity 7](./Coding%20Projects/Activity%207.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/b0cc66e2-b8d8-4b49-96b8-b23e8ea18c78)
 
