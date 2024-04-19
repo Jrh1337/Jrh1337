@@ -240,26 +240,27 @@ Each of the preceding values should be determined by a function and returned to 
 
 # Labs
 
-## [Lab 2]
+## [Lab 2](./Coding%20Projects/Lab%202.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/9f7a1833-9700-4f73-ac5b-055db13227de)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/7456a521-6d8c-4066-8c2b-52bc1af00d7a)
 
-## [Lab 3]
+## [Lab 3 Part 1](./Coding%20Projects/Lab%203_1.cpp)
+## [Lab 3 Part 2](./Coding%20Projects/Lab%203_2.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/636353b8-c22e-4dd8-9a14-6c1df8fc1f3b)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/6f3c3de9-050a-4668-b83d-ed251574b7fd)
 
-## [Lab 4]
+## [Lab 4](./Coding%20Projects/Lab%204.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/faa10776-a6dc-4cb1-8f97-7be69957f48c)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/a475f5f4-e72c-4c0c-9b12-517472f62996)
 
 
-## [Lab 5]
+## [Lab 5](./Coding%20Projects/Lab%205.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/7f78f584-4544-480a-88b6-bff8751e5356)
 
@@ -274,22 +275,22 @@ Each of the preceding values should be determined by a function and returned to 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/1cfb3869-d027-48e6-9442-ffd5e71c9984)
 
 
-## [Lab 6]
+## [Lab 6](./Coding%20Projects/Lab%206.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5a12817f-2595-43f8-b043-c040fdb429bc)
 
-## [Lab 7]
+## [Lab 7](./Coding%20Projects/Lab%207.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/838d4506-2577-4ee5-8a9c-79221ebb2994)
 
-## [Lab 8]
+## [Lab 8](./Coding%20Projects/Lab%208.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/60bbec16-5e27-402d-ac08-98edbaaaf80a)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/ba55adf8-7dc6-44ea-a28c-16431d839013)
 
 
-## [Lab 9]
+## [Lab 9](./Coding%20Projects/Lab%209.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/55185063-c164-48f6-9489-13f10f58cc0e)
 
@@ -297,17 +298,17 @@ Each of the preceding values should be determined by a function and returned to 
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/6c1dc34f-57cb-48c3-9b87-2de51d3020fb)
 
-## [Lab 10]
+## [Lab 10](./Coding%20Projects/Lab%2010.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5751d45b-a6ca-457f-8305-7b12f2e9b858)
 
 
-## [Lab 11]
+## [Lab 11](./Coding%20Projects/Lab%2011.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/9071bdb1-4a52-43af-bea8-32fb00ab606d)
 
 
-## [Lab 12]
+## [Lab 12](./Coding%20Projects/Lab%2012.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/822f254f-b099-4342-8a71-e7c3729bbd99)
 
