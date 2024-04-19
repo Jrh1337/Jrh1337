@@ -348,5 +348,8 @@ Each of the preceding values should be determined by a function and returned to 
 
 ## [Project 3]
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/73e030c7-d2c2-4f48-97c2-61a8d4df20e9)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/ac14b73a-0a8d-4667-bbdc-68853f7aa9a3)
 
 
