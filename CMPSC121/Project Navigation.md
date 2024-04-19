@@ -3,7 +3,7 @@
 
 ## [Activities](./Project%20Navigation.md#activity-2)
 - Designed as homework assignments to build proficiency.
-## [Labs]
+## [Labs](./Project%20Navigation.md#lab-2)
 - More difficult
 ## [Projects]
 - Most difficult, culminative of topics previously learned
