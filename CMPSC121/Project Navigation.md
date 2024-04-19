@@ -339,7 +339,7 @@ Each of the preceding values should be determined by a function and returned to 
 
 # Big Projects
 
-## [Project 1]
+## [Project 1](./Coding%20Projects/Project%201.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/d2c17de3-3f41-4e40-a384-e07f2e515e25)
 
