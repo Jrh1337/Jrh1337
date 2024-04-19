@@ -63,15 +63,80 @@ Hints:
 
 ## [Activity 10](./Coding%20Projects/Activity%2010.cpp)
 
+Write a program which asks the user to enter a number which represents a weekday (e.g., 1 for Sunday, 2 for Monday, etc.). Do not accept a number that is out of range. Then display the name of that day. Encase your logic in an outer loop which asks the user if he or she wants to enter another number. An entry of Y will continue asking for days, anything else should end the program. A typical run would be:
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/dc7b58bd-e92b-4a94-981e-acb571ba66e1)
+
+
+
 ## [Activity 11](./Coding%20Projects/Activity%2011.cpp)
+
+Write a program to read the parts.txt file and display the cost of inventory for each of the part classes.  The file contains parts of class A, B, C and D. A typical line in the file would be:
+
+P-11191 A 10 34.29
+
+This is part number P-11191, a class A part, of which there are 10 in stock and each costs $34.29.  Your program, therefore, would add 342.90 to class A inventory.
+
+The parts file is on Canvas in this week’s module in .zip format. After downloading it, right click and choose Extract.
+
+```
+...................... INVENTORY REPORT .....................
+A parts   Count:  85    Value of inventory:   191180.07
+B parts   Count:  69    Value of inventory:    74764.16
+C parts   Count:  77    Value of inventory:    50322.30
+D parts   Count:  60    Value of inventory:    22416.49
+Unknown   Count:  13    Value of inventory:     4282.68
+Press any key to continue . . .
+```
 
 ## [Activity 12](./Coding%20Projects/Activity%2012.cpp)
 
+Write a program with a loop to ask the user for an integer greater than or equal to 2 and then pass the integer to a function which will produce and display on the console the ulam sequence1. Do not accept a number less than 2.
+
+1The ulam sequence begins with an integer. If it is even, divide by 2. If it is odd, multiply by 3 and add 1. Then apply the appropriate rule to the resulting integer. Continue in this way until the number produced is 1. This sequence will always, eventually produce a value of 1.
+
+A typical program run might be similar to the screen shot below:
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/7f9079cb-c943-47e2-ad7e-557c37d02f81)
+
+
 ## [Activity 13](./Coding%20Projects/Activity%2013.cpp)
+
+A coin is tossed repeatedly, and a payoff of 2n dollars is made, where n is the number of the toss on which the first Head appears. So TTH pays $8, TH pays $4 and H pays $2. Write a program to simulate playing the game 10 times. Display the result of the tosses and the payoff. At the end, display the average payoff for the games played. A typical run would be:
+
+```
+TTTH       You win $16.00
+TH            You win $4.00
+TH            You win $4.00
+H               You win $2.00
+TTTTH      You win $32.00
+TH             You win $4.00
+H               You win $2.00
+H               You win $2.00
+TH             You win $4.00
+TH             You win $4.00
+
+The average payout was $7.40
+```
 
 ## [Activity 15](./Coding%20Projects/Activity%2015.cpp)
 
+Write a program to ask the user to input the number of items sold and the cost of one item and then use a function to calculate the value of a purchase. The call to the function in main should pass the number of items purchased and the cost of an item. The function should return the value of the purchase. main should then display the value.
+
+```
+The call in main would be: value = calculateValue(items, cost);
+A typical run would be:
+Enter number of items and cost: 5 2.50
+The extended amount is $12.50
+Do you have another purchase to enter? Y or N
+N
+Thank you!
+```
+
 ## [Activity 16](./Coding%20Projects/Activity%2016.cpp)
+
+Write a program with function which uses a static variable to keep track of the current balance of a bank account. Do not allow an overdraft! A typical run would be:
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/083475ac-41ab-4695-9efa-2b25e502cbec)
 
 ## [Activity 17](./Coding%20Projects/Activity%2017.cpp)
 
@@ -113,9 +178,18 @@ Each of the preceding values should be determined by a function and returned to 
 
 # Labs
 
-## [Lab 1]
 ## [Lab 2]
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/9f7a1833-9700-4f73-ac5b-055db13227de)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/7456a521-6d8c-4066-8c2b-52bc1af00d7a)
+
 ## [Lab 3]
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/636353b8-c22e-4dd8-9a14-6c1df8fc1f3b)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/6f3c3de9-050a-4668-b83d-ed251574b7fd)
+
 ## [Lab 4]
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/faa10776-a6dc-4cb1-8f97-7be69957f48c)
@@ -140,11 +214,26 @@ Each of the preceding values should be determined by a function and returned to 
 
 ## [Lab 6]
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5a12817f-2595-43f8-b043-c040fdb429bc)
+
 ## [Lab 7]
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/838d4506-2577-4ee5-8a9c-79221ebb2994)
 
 ## [Lab 8]
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/60bbec16-5e27-402d-ac08-98edbaaaf80a)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/ba55adf8-7dc6-44ea-a28c-16431d839013)
+
+
 ## [Lab 9]
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/55185063-c164-48f6-9489-13f10f58cc0e)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/6831de4b-d94f-469e-9f7b-ce73cf7ff136)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/6c1dc34f-57cb-48c3-9b87-2de51d3020fb)
 
 ## [Lab 10]
 
