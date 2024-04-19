@@ -30,15 +30,13 @@ int main()
 
 	return 0;
 
+}
 	/*Enter radius of ring and radius of cross section
 25.75 3
 For a ring with a radius of 25.750 and a cross section radius of
 3.000
 The volume is:             4574.554
 The surface area is:       3049.703
+*/
 
-C:\Users\John\Desktop\Hayes Documentation\Classes\College\CMPSC 121\cmpsc121\Labs\Lab03\Lab03-1\Debug\Lab03-1.exe (process 23188) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .*/
 
-}
