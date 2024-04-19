@@ -9,6 +9,7 @@
 - Most difficult, culminative of topics previously learned
 
 -----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 ## [Activity 2](./Coding%20Projects/Activity%202.cpp)
 - Write an algorithm to read in three numbers from the user. Then, add the first two  numbers and divide the result by the third one.
 
