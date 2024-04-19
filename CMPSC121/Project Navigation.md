@@ -1,8 +1,14 @@
 # ---------TABLE OF CONTENTS----------
 -Hyperlinks take you to .cpp with solution I came up with.
 
-## ---Activities--- Designed as homework assignments to build proficiency.
+## [Activities](./Project%20Navigation.md#activity-2)
+- Designed as homework assignments to build proficiency.
+## [Labs]
+- More difficult
+## [Projects]
+- Most difficult, culminative of topics previously learned
 
+-----------------------------------------------------------------------------------------------
 ## [Activity 2](./Coding%20Projects/Activity%202.cpp)
 - Write an algorithm to read in three numbers from the user. Then, add the first two  numbers and divide the result by the third one.
 
