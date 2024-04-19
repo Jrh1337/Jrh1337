@@ -5,7 +5,7 @@
 - Designed as homework assignments to build proficiency.
 ## [Labs](./Project%20Navigation.md#lab-2)
 - More difficult
-## [Projects]
+## [Projects](./Project%20Navigation.md#big-projects)
 - Most difficult, culminative of topics previously learned
 
 -----------------------------------------------------------------------------------------------
