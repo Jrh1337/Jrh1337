@@ -140,17 +140,79 @@ Write a program with function which uses a static variable to keep track of the 
 
 ## [Activity 17](./Coding%20Projects/Activity%2017.cpp)
 
+Write a program with a function which will ask for the length, width and height of a room and then pass that data to another function which will calculate and display the length of the longest pole which will fit in that room. That pole would run diagonally across the room from an upper corner to a lower
+These will both be void functions. The first one will use reference parameters.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/de638306-c52c-4e3a-aa9f-9fb1ca6c8f10)
+
+
 ## [Activity 18](./Coding%20Projects/Activity%2018.cpp)
+
+Write a program which asks you to enter a name in the form of first middle initial last. So you might enter for example samuel p. clemens. Use getline to read in the string because it contains spaces. Also, apparently the shift key on your keyboard doesn’t work, because you enter it all lower case. Pass the string to a function which uses .find to locate the letters which need to be upper case and use toupper to convert those characters to uppercase. The revised string should then be returned to main in the form Last, First MI where it will be displayed.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/0856dbfb-90c9-4a7b-b08b-1e8916e2b282)
+
 
 ## [Activity 19](./Coding%20Projects/Activity%2019.cpp)
 
+The area of a triangle can be calculated given its base and height, or given the lengths of its sides.  You can find the formulas for each of these methods on the web.  Write a program with two overloaded functions both named triangleArea.  In main, randomly ask the user to enter either base and height or the lengths of the three sides and then make the appropriate call to triangleArea. triangleArea should return the area to main where it will be displayed. The program should contain an outer loop which asks if the user wishes to continue. A typical run would be:
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/4c988f2e-c1c4-47b6-b674-b3ea6bcbc6e4)
+
+
 ## [Activity 20](./Coding%20Projects/Activity%2020.cpp)
+
+Write a program which asks the user to enter a string and then passes it to a void recursive function which displays the string in reverse. The prototype of the function would be:
+
+```
+void reverse(string s, int i);
+```
+
+The function call would be:
+
+```
+reverse(strIn, strIn.length());
+```
+
+A typical run will be:
+```
+Enter a string:
+
+Four score and seven years ago ..
+
+.. oga sraey neves dna erocs ruoF
+```
 
 ## [Activity 21](./Coding%20Projects/Activity%2021.cpp)
 
+Write a program to ask for Part number, part name, part class, number in stock and unit price.  The data should be read into a struct and passed to a function which writes it out to a data file.  Part number and name will be strings, part class is a character, number in stock is an integer and unit price is  a double.  Enclose your program in a do while which asks the user if he/she wants to enter more parts.  Typical run:
+
+Enter part information (part number, name, class, on hand balance and price):
+
+```
+P-14376 Widget B 120 34.95
+More parts? Y or N
+y
+P-16543 Wodget C 80 15.75
+More parts? Y or N
+n
+```
+Part name will be a string without spaces.
+
 ## [Activity 22](./Coding%20Projects/Activity%2022.cpp)
 
+Write a C++ program which declares an array which can hold 50 int values.  Use a const to establish the size of
+the array.  Use a loop to fill the array with 50 random numbers.  Then display the values 10 per line, like:
+
+```
+32734  11377  29730  25790  27662  31264   5530   7441  14377  21719
+28059  27864   4276   1495  29687  12784  19497  31106  21525  22643
+```
+
 ## [Activity 23](./Coding%20Projects/Activity%2023.cpp)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/b8bc3d02-7ba8-4ccf-afa3-571e485f58bc)
+
 
 ## [Activity 24](./Coding%20Projects/Activity%2024.cpp)
 Write a program using parallel vectors and a function which fills each of them with 500 random numbers between 1 and 100. The program should then pass both vectors to a function which will return an integer indicating a count of how many times both vectors had even numbers in the same location. So if vector01[0] contained 4 and vector02[0] contained 12, you would add one to count. If vector01[1] contained 3 and vector02[1] contained 4, you would not add one to count.
@@ -237,9 +299,19 @@ Each of the preceding values should be determined by a function and returned to 
 
 ## [Lab 10]
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5751d45b-a6ca-457f-8305-7b12f2e9b858)
+
+
 ## [Lab 11]
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/9071bdb1-4a52-43af-bea8-32fb00ab606d)
+
+
 ## [Lab 12]
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/822f254f-b099-4342-8a71-e7c3729bbd99)
+
+
 
 ## [Lab 13](./Coding%20Projects/Lab%2013.cpp)
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/25b1f608-a5b5-4c28-90aa-188b4474916b)
@@ -263,6 +335,16 @@ Each of the preceding values should be determined by a function and returned to 
 
 
 ## [Project 2]
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/8204ac25-4641-466e-87bd-805b91f6bb46)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5e6538a0-663e-4f9b-8f85-ee53c39de231)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/0ae5265b-0e8d-4a6c-895f-732a8c0c2f1b)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/aa39a903-d4bf-4805-917c-1d7bf6afd8fa)
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/cbc83f16-ec18-48f3-8e7a-c7425c612ddc)
 
 ## [Project 3]
 
