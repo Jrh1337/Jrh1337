@@ -633,6 +633,133 @@ If $A$ has pivots in every column it is linearly independent
 
 ## - Basis for Subspaces of $R^n$
 
+**Can we get rid of redundent vectors?**
+
+We'd like to get rid of redundent vectors which don't add to the span.
+
+If you remove a vector from a linearly independent set then the span decreases in size.
+
+If a set is already linearly independent then the set of vectors is already a basis for the set.
+
+Example:
+
+This set is linearly dependent:
+
+$$\begin{bmatrix} 1 \\\ 2 \\\ 1 \end{bmatrix}, \begin{bmatrix} 3 \\\ 3 \\\ 4 \end{bmatrix}, \begin{bmatrix} 2 \\\ 1 \\\ 3 \end{bmatrix}, \begin{bmatrix} -1 \\\ 1 \\\ -2 \end{bmatrix}$$
+
+Put into augmented matrix and solve:
+
+$$\begin{bmatrix} 1 & 3 & 2 & -1 & 0 \\\ 2 & 3 & 1 & 1 & 0 \\\ 1 & 4 & 3 & -2 & 0 \end{bmatrix}$$
+
+Reduce:
+
+$$\begin{bmatrix} 1 & 0 & -1 & 2 & 0 \\\ 0 & 1 & 1 & -1 & 0 \\\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+Trun into equations:
+
+$$c_{1} + 0c_{2} - c_{3} + 2c_{4}=0, c_{1}=c_{3} - 2c_{4}$$
+
+$$c_{2} + c_{3} - c_{4}=0, c_{2}= -c_{3} +c_{4}$$
+
+General solution:
+
+$$(c_{3} - 2c_{4},-c_{3} + c_{4}, c_{3}, c_{4})$$
+
+Remove pivot free columns to form a linearly independent set, now $v_{1},v_{2}$ form a linearly indpendent set.
+
+The pivot free columns are redundent vectors and do not add to the span.
+
+## - Using basis/pivots to describe a span
+
+Find a basis for the span:
+
+$$\begin{bmatrix} 1 \\\ 2 \\\ 1 \end{bmatrix}, \begin{bmatrix} 3 \\\ 3 \\\ 4 \end{bmatrix}, \begin{bmatrix} 2 \\\ 1 \\\ 3 \end{bmatrix}, \begin{bmatrix} -1 \\\ 1 \\\ -2 \end{bmatrix}$$
+
+Give a geometric description of the span:
+
+Put into augmented matrix and get into echelon form to identify pivots:
+
+$$\begin{bmatrix} 1 & 0 & -1 & 2 & 0 \\\ 0 & 1 & 1 & -1 & 0 \\\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+PIvots in column 1 and 2 correspond to original set:
+
+Basis:
+
+$$\begin{bmatrix} 1 \\\ 2 \\\ 1 \end{bmatrix}, \begin{bmatrix} 3 \\\ 3 \\\ 4 \end{bmatrix}$$
+
+2 vectors in basis means the span is a plane living in $R^3$
+
+The number of vectors in the basis is the dimension of the space living in $R^n$
+
+## - What does a basis really mean?
+
+If a set of vectors is linearly independent therefore it forms a basis for the span of those vectors.
+
+Every vector in the span can be written uniquely as a linear combination of the set.
+
+**The standard basis**
+
+$R^2$:
+
+$$\begin{bmatrix} 1 \\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\ 1 \end{bmatrix}$$
+
+$R^3$:
+
+$$\begin{bmatrix} 1 \\\ 0 \\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\ 1 \\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\ 0 \\\ 1 \end{bmatrix}$$
+
+The vectors can be written as $\vec{e_{n}}$
+
+## - The Matrix Vector Product
+
+**Dot Product**
+
+Example:
+
+$$\vec{v}= \begin{bmatrix} v_{1} \\\ v_{2} \\\ .. \\\ v_{n} \end{bmatrix}, \vec{w}=\begin{bmatrix} w_{1} \\\ w_{2} \\\ .. \\\ w_{n} \end{bmatrix}$$
+
+$$\vec{v} * \vec{w}= v_{1} w_{1} + v_{2} w_{2} +...+ v_{n} w_{n}$$
+
+**Note:** Vectors must have same dimenions or dot product is not defined.
+
+**Matrix Vector products**
+
+If $A$ is an mxn matric and $\vec{x}$ is a vector in $R^n$, then the ith - entry of $A\vec{x}$ is the dot prodct of the ith row of $A$ with $\vec{x}$. $A\vec{x}$ is a vector in $R^m$
+
+Example:
+
+$$\begin{bmatrix} 2 & -3 \\\ 8 & 0 \\\ -5 & 2 \end{bmatrix} \begin{bmatrix} 4 \\\ 7 \end{bmatrix}$$
+
+Note that the first matrix is a 3x2 and vector is 2x1
+
+Number of columns of the first matrix must match the number of rows in the second matrix or vector.
+
+$$\begin{bmatrix} (2, -3) * (4, 7) \\\ (8, 0) * (4, 7) \\\ (-5, 2) * (4, 7) \end{bmatrix}$$
+
+$$=\begin{bmatrix} -13 \\\ 32 \\\ 6 \end{bmatrix}$$
+
+Note that this is a vector in $R^3$
+
+## - The Matrix Equation
+
+Consider the linear system:
+
+$$x_{1} - 2x_{2} = 1$$
+
+$$3x_{1} + 5x_{2} = 19$$
+
+Which can be represented with the augmented matrix:
+
+$$\begin{bmatrix} 1 & -2 & 1 \\\ 3 & 5 & 19 \end{bmatrix}$$
+
+or the vector equation:
+
+$$x_{1} \begin{bmatrix} 1 \\\ 3 \end{bmatrix} + x_{2} \begin{bmatrix} -2 \\\ 5 \end{bmatrix} = \begin{bmatrix} 1 \\\ 19 \end{bmatrix}$$
+
+Which is equal to the matrix equation:
+
+$$\begin{bmatrix} 1 x_{1} & -2 x_{2} \\\ 3 x_{1} & 5 x_{2} \end{bmatrix} = \begin{bmatrix} 1 & -2 \\\ 3 & 5 \end{bmatrix} \begin{bmatrix} x_{1} \\\ x_{2} \end{bmatrix}= \begin{bmatrix} 1 \\\ 19 \end{bmatrix}$$
+
+## - Linear Population Model(Butterfly Example)
 
 
 
