@@ -450,7 +450,7 @@ Geometrically, we add vectors using the Parallelogram Law:  $\vec{v} + \vec{w}$ 
 
 **Scalar Multiplication**
 
-Suupose $c$ is a scalar and $\vec{v}$ is a vector, then:
+Suppose $c$ is a scalar and $\vec{v}$ is a vector, then:
 
 $$c\vec{v}=c \begin{bmatrix} v_{1} \\\ v_{2} \\\ \vdots \\\ v_{n} \end{bmatrix} = \begin{bmatrix} cv_{1} \\\ cv_{2} \\\ \vdots \\\ cv_{n} \end{bmatrix}$$
 
@@ -1048,7 +1048,7 @@ $$\begin{bmatrix} x_{1} \\\ x_{2} \\\ x_{3} \\\ x_{4} \end{bmatrix} = \begin{bma
 
 The solution sets are almost identical put in the non homegenous case we have a constant vector being added to the linear combination.
 
-$$ - Geometric description of Non-Homogeneous Solution Sets
+## - Geometric description of Non-Homogeneous Solution Sets
 
 Taking the previous non-homogeneous solution set:
 
@@ -1314,18 +1314,33 @@ Subsititute the vector and multiply by the standard transformation matrix to com
 $$T \bigl( \begin{bmatrix} 1 \\\ 2 \end{bmatrix} \bigr) = \begin{bmatrix} \frac{1}{2} & - \frac{\sqrt{3}}{2} \\\ \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
 
 
+## - Compositions of Geometric Transformations
 
+Example: Suppose
 
+$$\vec{v} = \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
 
+First rotate the vector counter-clockwise by $\frac{\pi}{2}$ and then reflect the vector over the x-axis.
 
+Rotatation:
 
+$$\vec{v_{1}} = \begin{bmatrix} cos(\frac{\pi}{2}) & -sin(\frac{\pi}{2})\\\ sin(\frac{\pi}{2}) & cos(\frac{\pi}{2}) \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bmatrix} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bmatrix} = \begin{bmatrix} -2 \\\ 1 \end{bmatrix}$$
 
+now take $\vec{v_{1}}$ and reflect the vector over the x-axis:
 
+$$\vec{v_{2}} = \begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix} \begin{bmatrix} -2 \\\ 1 \end{bmatrix} = \begin{bmatrix} -2 \\\ -1 \end{bmatrix}$$
 
+Example: Suppose
 
-## - Composition 
+$$\vec{v} = \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
 
+First reflect the vector over the x-axis and then rotate the vector counter-clockwise by $\frac{\pi}{2}$.
 
+$$\begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bmatrix} = \begin{bmatrix} 1 \\\ -2 \end{bmatrix}$$
+
+Now rotate $\vec{v_{1}}$ by $\frac{\pi}{2}$
+
+$$\vec{v_{2}} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\\ -2 \end{bmarix} = \begin{bmatrix} 2 \\\ 1 \end{bmatrix}$$
 
 
 
