@@ -2871,5 +2871,228 @@ else
 }
 ```
 
+# Sorting
 
+Sorting is the process of putting data in an array or vector in order.
+
+Can be in Alphabetical or numerical order
+
+By sorting data before searching through data you increase efficiency by making the searching process easier.
+
+**Big O notation**
+
+THis is a symbolism used in computer science and mathematics to describe asymptotic behaviors of functions.  It tells you how fast a function grows or declines.  The rate of growth of a function is called its order.
+
+When analyzing some algorithm, one might find the time it takes to complete a problem of the size $n$ is given by $T(n) = 4n^2 - 2n + 2$
+
+If we ignore constants and slower growing terms, we could say $T(n)$ grows at the order of $n^2$ and write: $T(n)=O(n^2)$
+
+
+## - Simple Sorting Algorithms
+
+3 simples one:
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+
+**Bubble Sort**
+
+Slowest but easiest to use.  Steps:
+1. Compare each element (except the last one) with its neighbor on the right
+   - If they are out of order swap them
+   - This puts the largets element at the very end
+   - This element is now in the correct place
+2. Compare each element (except the last two) with its neighbor to the right
+   - If they are out of order swap them
+   - This puts the second largest element next to last
+   - The last two elements are now in the correct place
+3. Continue to compare lements in this fashion until there are no more unsorted elements on the left
+
+Code for bubble sort:
+
+```
+void bubbleSort(vector <int> &V)
+{
+int outer, inner;
+for (outer = V.size() - 1; outer > 0; outer--)
+   {  // counting down
+      for (inner = 0; inner < outer; inner++)
+      {        // bubbling up
+        if (V[inner] > V[inner + 1])
+        { 
+            // if out of order...
+            int temp = V[inner];   
+               // ...then swap
+            V[inner] = V[inner + 1];
+            V[inner + 1] = temp;
+        }
+      }
+   }
+}
+```
+
+Analysis of code:
+
+Let `n = V.size()` = size of the vector. The outer loop is executed $n-1$ times (call it n, that’s close enough). Each time the outer loop is executed, the inner loop is executed. Inner loop executes $n-1$ times at first, linearly dropping to just once. On average, inner loop executes about n/2 times for each execution of the outer loop. In the inner loop, the comparison is always done (constant time), the swap might be done (also constant time). Result is $n * \frac{n}{2} * k$, that is, $O(\frac{n^2}{2} + k) = O(n^2)$
+
+**Selection Sort**
+
+The selection sort works by slecting the smallest unsorted item remaining in the list, and then swapping it with the item in the next position to be filled.
+
+Given an array of length $n$
+
+1. Search elements 0 through $n-1$ and select the smallest
+   - Swap it with the element in location 0
+2. Search elements 1 through $n-1$ and select the smallest
+   - Swap it with the element in location 1
+3. Search elements 2 through $n-1$ and select the smallest
+   - Swap it with the element in location2
+4. Search elements 3 through $n-1$ and select the smallest
+   - Swap it with the element in location 3
+5. Continue in this fashion until there is nothing left to search.
+
+Analysis:
+
+The Selection Sort might swap an array element with itself--this is harmless, and not worth checking for.
+
+- The outer loop executes $n-1$ times
+- The inner loop executes about &\frac{n}{2} times on average (from n to 2 times)
+- Work done in the inner loop is constant (swap two array elements)
+- Time required is roughly $(n-1)*(\frac{n}{2})$
+- You should recognize this as $O(n^2)$
+
+Code example:
+
+```
+void selectionSort(vector <int> &V)
+{
+    int outer, inner, min;
+    for (outer = 0; outer < V.size() - 1; outer++)
+    { // outer counts down
+        min = outer;
+        for (inner = outer + 1; inner < V.size(); inner++)
+        {
+            if (V[inner] < V[min])
+            {
+                min = inner;
+            }
+    // Invariant: for all i, if outer <= i <= inner,
+    //  then V[min] <= V[i]
+        }
+      // V[min] is least among V[outer]..V[V.size() - 1]
+        int temp = V[outer];
+        V[outer] = V[min];
+        V[min] = temp;
+        // Invariant: for all i <= outer,
+        // if i < j then V[i] <= V[j]
+    }
+}
+```
+
+**Invariants for Selection Sort**
+
+- For the inner Loop:
+  - This loop searches through the array, incrementing inner from its initial value of outer+1 up to `V.size()-1`
+  - As the loop proceeds, min is set to the index of the smallest number found so far
+  - Our invariant is:
+  - for all i such that outer `<= i <= inner, V[min] <= V[i]`
+
+- For the outer (enclosing) loop:
+  - The loop counts up from outer = 0
+  - Each time through the loop, the minimum remaining value is put in `V[outer]`
+  - Our invariant is:
+  - for all i <= outer, if `i < j` then `V[i] <= V[j]`
+ 
+**Insertion Sort**
+
+The insertion sort works just like its name suggests - it inserts each item into its proper place in the final list. The simplest implementation of this requires two list structures - the source list and the list into which sorted items are inserted. To save memory, most implementations use an in-place sort that works by moving the current item past the already sorted items and repeatedly swapping it with the preceding item until it is in place.
+
+The outer loop of insertion sort is:
+
+```
+for (outer = 1; outer < V.size(); outer++) {...}
+```
+
+The invariant is that all the elements to the left of outer are sorted with respect to one another.
+
+- For all `i < outer`, `j < outer`, if `i < j` then `V[i] <= V[j]`
+- This does not mean they are all in their final correct place; the remaining array elements may need to be inserted
+- When we increase outer, `V[outer-1]` becomes to its left; we must keep the invariant true by inserting
+- `V[outer-1]` into its proper place
+
+This means:
+- Finding the element’s proper place
+- Making room for the inserted element (by shifting over other elements)
+- Inserting the element
+
+Code for Insertion Sort:
+
+```
+void insertionSort(vector <int> &V)
+{
+   for (int i = 0; i<V.size() - 1; i++)
+   //inserts unsorted elements into sub-array.
+  {
+     for (int j = i + 1; j>0; j--)
+     // sub-array -- size rows incrementally.
+     {
+        if (V[j] < V[j - 1])
+         //compares & swaps if not in the
+         //right order.
+        {
+           int h = V[j];
+           V[j] = V[j - 1];
+           V[j - 1] = h;
+        }
+     }
+  }
+}
+```
+
+Analysis:
+
+- We run once through the outer loop, inserting each of n elements; this is a factor of n
+- On average, there are n/2 elements already sorted
+  - The inner loop looks at (and moves) half of these
+  - This gives a second factor of n/4
+- Hence, the time required for an insertion sort of an array of n elements is proportional to n2/4
+- Discarding constants, we find that insertion sort is $O(n^2)$
+
+**Summary**
+
+- Bubble Sort, Selection Sort, and Insertion Sort are all $O(n^2)$. As we will see later, we can do much better than this with somewhat more complicated sorting algorithms. Within $O(n^2)$, Bubble Sort is very slow, and should probably never be used for anything.
+- Selection Sort is intermediate in speed. Insertion Sort is usually the fastest of the three--in fact, for small arrays (say, 10 or 15 elements), insertion sort is faster than more complicated sorting algorithms. Selection Sort and Insertion Sort are “good enough” for small arrays.
+- Use of a Bubble Sort tends to elicit derision from your colleagues.
+
+## - Shell Sort
+
+Most efficient of the $O(n^2)$ class sorting algorithms but also most complex
+
+The shell sort is a diminishing increment sort known as a comb sort.  The algorithmm makes multiple passes through the lsit, and each time sorts a number of equally sized sets using the insertion sort.  THe size of the set to be stored gets larger and larger with each pass of the list, until the set consists of the entire list.
+
+The items contained in each set are not contiguous - rather, if there are i sets, then a set is composed of every i-th element. For example, if there are 3 sets then the first set would contain the elements located at positions 1, 4, 7 and so on. The second set would contain the elements located at positions 2, 5, 8, and so on; while the third set would contain the items located at positions 3, 6, 9, and so on.
+
+Code example:
+
+```
+void ShellSort(vector <int> &num)
+{
+   bool flag = true;
+   int i;
+   int d = num.size();
+   while(flag ||(d>1)) // bool flag
+   {
+     flag = false;  //set flag to false    
+     d = (d+1) / 2;
+     for (i = 0; i < (num.size() - d); i++)
+     {
+        if (num[i + d] < num[i])
+        {
+           swapper(num[i + d], num[i]); 
+           flag = true; //tells swap has occurred
+        }
+     }
+   }
+}
+```
 
