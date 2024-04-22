@@ -1087,7 +1087,7 @@ For $\vec{x}$ in $R^n$ the vector $T(\vec{x})$ is called the image of $\vec{x}$ 
 A transformation is linear if:
 
 1. $T(c\vec{u}) = cT(\vec{u})$
-2. T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v{)$
+2. $T( \vec{u} + \vec{v} ) = T( \vec{u} ) + T( \vec{v} )$
 
 For all vectors $\vec{u},\vec{v}$ and all scalars $c$.
 
@@ -1099,26 +1099,107 @@ $T: R^2 \to R^3$
 
 $T(1, 2) = (3, -2, 2)$
 
-First property: $T(cx,cy) = (cx +cy, -3(cx), cy)$
+First property: $T(cx,cy) = (cx +cy, -2(cx), cy)$
 
 $= (c(x + y), c(-2x), cy)$
 
-$= c(x + Y, -2x, y)$
+$= c(x + y, -2x, y)$
 
 $= c(T\vec{u})$
 
+Second Property: $T(\vec{u} + \vec{v}) = T(x_{1} + x_{2}, y_{1} + y_{2}) = ((x_{1} + x_{2}) + (y_{1} + y_{2}), -2(x_{1} + x_{2}), y_{1} + y_{2})$
 
+$= (x_{1} + y_{1}, -2x_{1}, y_{1}) + (x_{2} + y_{2}, -2x_{2}, y_{2})$
 
+## - Properties of Linear Transformations
 
+Example:
 
+Suppose $T$ is a linear transformation such that:
 
+$$T \bigl( \begin{bmatrix} -2 \\\ 4 \end{bmatrix} \bigr) = \begin{bmatrix} 2 \\\ 2 \end{bmatrix}, T \bigl( \begin{bmatrix} 3 \\\ 9 \end{bmatrix} \bigr) = \begin{bmatrix} 6 \\\ -3 \end{bmatrix}$$
 
+Find:
 
+$$T \bigl( \begin{bmatrix} 1 \\\ 8 \end{bmatrix} \bigr) $$
 
+write:
 
+$$\begin{bmatrix} 1 \\\ 8 \end{bmatrix}$$
 
+as a linear combination of:
 
+$$\begin{bmatrix} -2 \\\ 4 \end{bmatrix}$$
 
+and:
+
+$$\begin{bmatrix} 3 \\\ 9 \end{bmatrix}$$
+
+$$\begin{bmatrix} -2 & 3 & 1 \\\ 4 & 9 & 8 \end{bmatrix}$$
+
+solve:
+
+$$\begin{bmatrix} 1 & 0 & \frac{1}{2} \\\ 0 & 1 & \frac{2}{3} \end{bmatrix}$$
+
+$$\frac{1}{2} \begin{bmatrix} -2 \\\ 4 \end{bmatrix} + \frac{2}{3} \begin{bmatrix} 3 \\\ 9 \end{bmatrix} = \begin{bmatrix} 1 \\\ 8 \end{bmatrix}$$
+
+Apply $T$ and use linearity
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 8 \end{bmatrix} \bigr) = T \bigl( \frac{1}{2} \begin{bmatrix} -2 \\\ 4 \end{bmatrix} + \frac{2}{3} \begin{bmatrix} 3 \\\ 9 \end{bmatrix} \bigr)$$
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 8 \end{bmatrix} \bigr) = \frac{1}{2} T \bigl( \begin{bmatrix} -2 \\\ 4 \end{bmatrix} \bigr) + \frac{2}{3} T \bigl( \begin{bmatrix} 3 \\\ 9 \end{bmatrix} \bigr)$$
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 8 \end{bmatrix} \bigr) = \frac{1}{2} \begin{bmatrix} 2 \\\ 2 \end{bmatrix} + \frac{2}{3} \begin{bmatrix} 6 \\\ -3 \end{bmatrix}$$
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 8 \end{bmatrix} \bigr) = \begin{bmatrix} 5 \\\ -1 \end{bmatrix}$$
+
+Example:
+
+Suppose $T: R^3 \to R^2$ is a linear transformation such that:
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 0 \\\ 0 \end{bmatrix} \bigr) = \begin{bmatrix} 2 \\\ 5 \end{bmatrix}, T \bigl( \begin{bmatrix} 0 \\\ 1 \\\ 0 \end{bmatrix} \bigr) = \begin{bmatrix} -1 \\\ -6 \end{bmatrix}, T \bigl( \begin{bmatrix} 0 \\\ 0 \\\ 1 \end{bmatrix} \bigr) = \begin{bmatrix} 1 \\\ -3 \end{bmatrix}$$
+
+Find:
+
+$$T \bigl( \begin{bmatrix} 2 \\\ -3 \\\ 1 \end{bmatrix} \bigr)$$ 
+
+Then find a general formula for $T$.
+
+Write as a linear combination:
+
+$$\begin{bmatrix} 2 \\\ -3 \\\ 1 \end{bmatrix} = 2\vec{e_{1}} - 3\vec{e_{2}} + 1\vec{e_{3}}$$
+
+Apply transformation to both sides:
+
+$$T \bigl( \begin{bmatrix} 2 \\\ -3 \\\ 1 \end{bmatrix} \bigr) = T(2\vec{e_{1}} - 3\vec{e_{2}} + 1\vec{e_{3}})$$ 
+
+Apply linearity to split up sums and pull constants out
+
+$$= T(2\vec{e_{1}} - T(3\vec{e_{2}}) + T(\vec{e_{3}})$$
+
+$$= 2T(\vec{e_{1}}) - 3T(\vec{e_{2}}) + T(\vec{e_{3}})$$
+
+$$= 2 \begin{bmatrix} 2 \\\ 5 \end{bmatrix} - 3 \begin{bmatrix} -1 \\\ -6 \end{bmatrix} + \begin{bmatrix} 1 \\\ -3 \end{bmatrix}$$
+
+$$= \begin{bmatrix} 8 \\\ 25 \end{bmatrix}$$
+
+## - The Standard Matrix of a Linear Transformation
+
+From previous example find a general formula for:
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 0 \\\ 0 \end{bmatrix} \bigr) = \begin{bmatrix} 2 \\\ 5 \end{bmatrix}, T \bigl( \begin{bmatrix} 0 \\\ 1 \\\ 0 \end{bmatrix} \bigr) = \begin{bmatrix} -1 \\\ -6 \end{bmatrix}, T \bigl( \begin{bmatrix} 0 \\\ 0 \\\ 1 \end{bmatrix} \bigr) = \begin{bmatrix} 1 \\\ -3 \end{bmatrix}$$
+
+use a general vector:
+
+$$\begin{bmatrix} x \\\ y \\\ z \end{bmatrix} = x\vec{e_{1}} + y\vec{e_{2}} + z\vec{e_{3}}$$
+
+$$T \bigl( \begin{bmatrix} x \\\ y \\\ z \end{bmatrix} \bigr) = T(x\vec{e_{1}} + y\vec{e_{2}} + z\vec{e_{3}})$$
+
+$$T \bigl( \begin{bmatrix} x \\\ y \\\ z \end{bmatrix} \bigr) = xT(\vec{e_{1}}) + yT(\vec{e_{2}}) + zT(\vec{e_{3}})$$
+
+Plug in known values:
+
+$$T \bigl( \begin{bmatrix} x \\\ y \\\ z \end{bmatrix} \bigr) = x \begin{bmatrix} 2 \\\ 5 \end{bmatrix} + y \begin{bmatrix} -1 \\\ -6 \end{bmatrix}  + z \begin{bmatrix} 1 \\\ -3 \end{bmatrix}$$
 
 
 
