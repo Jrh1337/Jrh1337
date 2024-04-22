@@ -19,7 +19,7 @@
 - Linear Independence
 - Pivot Test for Linear Independence/Dependence
 
-[WEEK 3: Basis, Matrix-Vector Products and Population Modeling]
+[WEEK 3: Basis, Matrix-Vector Products and Population Modeling](./MATH220.md#week-3-basis-matrix-vector-products-population-modeling)
 - Basis for the subspaces of $R^n$
 - Using Basis/Pivots to Describe a Span
 - Defining a Basis
@@ -31,7 +31,13 @@
 - Setting up a Population Transistion Matrix
 
 [WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous]
-
+- The Column Space
+- Rank of a Matrix
+- Parametric Vector Form
+- Homogenous Equations and Null Space
+- Nullity and Rank-Nullity Theorem
+- Non-Homogenous Systems
+- Geometry of Solution Sets
 
 
 [WEEK 5: Linear Transformations]
@@ -760,6 +766,99 @@ Which is equal to the matrix equation:
 $$\begin{bmatrix} 1 x_{1} & -2 x_{2} \\\ 3 x_{1} & 5 x_{2} \end{bmatrix} = \begin{bmatrix} 1 & -2 \\\ 3 & 5 \end{bmatrix} \begin{bmatrix} x_{1} \\\ x_{2} \end{bmatrix}= \begin{bmatrix} 1 \\\ 19 \end{bmatrix}$$
 
 ## - Linear Population Model(Butterfly Example)
+
+Example:
+
+In the Amazon rainforest each month 5% of caterpillars survive and mature into butterflies, each butterfly lays 500 eggs that hatch and become caterpillars, and 40% of butterflies survive.  Caterpillars do not lay eggs.
+
+1. Write equations that determine the number of caterpillars $b_{1}$ and butterflies $b_{2}$ after 1 month, given an initial number $x_{1}$ of caterpillars and $x_{2}$ of butterflies.
+
+caterpillars = $b_{1} = 0x_{1} + 500x_{2}$
+
+Butterflies = $b_{2} = 0.005x_{1} + 0.4x_{2}$
+
+2. Find the matrix euation that corresponds to your linear system.
+
+$$\begin{bmatrix} 0 & 500 \\\ 0.05 & 0.4 \end{bmatrix} \begin{bmatrix} x_{1} \\\ x_{2} \end{bmatrix} = \begin{bmatrix} b_{1} \\\ b_{2} \end{bmatrix}$$
+
+3. Initially, there are 200 caterpillars and 100 butterflies.  Find the number of each one month later.
+
+$x_{1}=$ initial number of caterpillars
+
+$x_{2}=$ initial number of butterflies
+
+$b_{1}=$ caterpillars one month later
+
+$b_{2}=$ butterflies one month later
+
+$$\begin{bmatrix} 0 & 500 \\\ 0.05 & 0.4 \end{bmatrix} \begin{bmatrix} 200 \\\ 100 \end{bmatrix} = \begin{bmatrix} b_{1} \\\ b_{2} \end{bmatrix}$$
+
+Do matrix vector product to get $b_{1},b_{2}$
+
+$$\begin{bmatrix} 50,000 \\\ 50 \end{bmatrix}$$
+
+4. Suppose the trend contiues, how many of each after two months
+
+The new $x_{1},x_{2}$ values become 50,000 and 50
+
+After doing another matrix vector product:
+
+$$\begin{bmatrix} 25,000 \\\ 2,520 \end{bmatrix}$$
+
+## - Linear Difference Equations
+
+Let's see if we can generalize the result of the butterfly population model.
+
+**Modeling a linear dynamical system**
+
+- The initial state of the system is decribed by the vector $\vec{x_{0}}$
+- Several features of the system are each measured as discrete time intervals, producing a sequence of vectors $\vec{x_{0}},\vec{x_{1}},\vec{x_{2}} ...$ The entries in $\vec{x_{k}}$ provide information about the status of the system at the time of the kth time measurement.
+- Given $\vec{x_{k}}$ we can determine what happens at the $(k+1)$ time interval give the linear difference equation:
+
+$$\vec{x_{k+1}}=A\vec{x_{k}}$$
+
+Example using an SIR model:
+
+During an epidemic the population is classified as susceptible, infected or recovered.  For a particular strain of the flu it is found that over each one week period:
+
+- 5% of the susceptible population becomes infected with the flu and the rest remain susceptible
+- 40% of the infected population recovers and the rest remain infected
+- 15% of the recovered population becomes susceptible and the rest remain recovered
+
+1. Create a 3x3 matrix $A$ that describes the population's movement between susceptible, infected and recovered states over each one week period.  Begin by selecting an order for the given states, such as state 1 is susceptible (S), state 2 is infected (I), and state 3 is recovered (R).
+
+Fill in the entries of $A$ by letting $a_{ij}$ be the proportion of the population that moves from state i to state j over a single time period.
+
+$$\begin{bmatrix} 0.95 & 0 & 0.15 \\\ 0.05 & 0.6 & 0 \\\ 0 & 0.4 & 0.85 \end{bmatrix}$$
+
+2. A college campus houses 1,001 students.  After Thanksgiving break one student is infected.  Everyone else is considered susceptible.  Find an inital vector $\vec{x_{0}}$ for our student population.
+
+$$\vec{x_{0}}= \begin{bmatrix} S \\\ I \\\ R \end{bmatrix} = \begin{bmatrix} 1000 \\\ 1 \\\ 0 \end{bmatrix}$$
+
+3. Use the difference equation to determine how many students are infected after one week.
+
+$$\vec{x_{1}}=A \vec{x_{0}} = \begin{bmatrix} 0.95 & 0 & 0.15 \\\ 0.05 & 0.6 & 0 \\\ 0 & 0.4 & 0.85 \end{bmatrix} \begin{bmatrix} 1000 \\\ 1 \\\ 0 \end{bmatrix} = \begin{bmatrix} 950 \\\ 50.6 \\\ 0.4 \end{bmatrix}$$
+
+You would round number of student to whole students to match
+
+$$\vec{x_{2}}=A\vec{x_{1}}= \begin{bmatrix} 0.95 & 0 & 0.15 \\\ 0.05 & 0.6 & 0 \\\ 0 & 0.4 & 0.85 \end{bmatrix} \begin{bmatrix} 950 \\\ 50.6 \\\ 0.4 \end{bmatrix} = \begin{bmatrix} 902.56 \\\ 77.86 \\\ 20.58 \end{bmatrix}$$
+
+Number of students infected after two weeks = 78
+
+# Week 4 Column and Null Space, Rank and Nullity, Homogenous and Non-Homogenous Equations
+
+## - The Column Space
+
+
+
+
+
+
+
+
+
+
+
 
 
 
