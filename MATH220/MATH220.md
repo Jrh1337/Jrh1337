@@ -1201,6 +1201,109 @@ Plug in known values:
 
 $$T \bigl( \begin{bmatrix} x \\\ y \\\ z \end{bmatrix} \bigr) = x \begin{bmatrix} 2 \\\ 5 \end{bmatrix} + y \begin{bmatrix} -1 \\\ -6 \end{bmatrix}  + z \begin{bmatrix} 1 \\\ -3 \end{bmatrix}$$
 
+$$= \begin{bmatrix} 2x - y + z \\\ 5x -6y -3z \end{bmatrix}$$
+
+rewrite the linear combination as a matrix vector product:
+
+$$= \begin{bmatrix} 2 & -1 & 1 \\\ 5 & 6 & -3 \end{bmatrix} \begin{bmatrix} x \\\ y \\\ z \end{bmatrix}$$
+
+**The Standard Matrix**
+
+Suppose: $T: R^n \to R^m$.  Then there exists an mxn matrix $A$ such that $T(\vec{x}) = A\vec{x}$.
+
+Moreover,
+
+$$A = [ T(\vec{e_{1}}) ... T(\vec{e_{n}}) ]$$
+
+where $\vec{e_{1}}, ... \vec{e_{n}}$ are the standard basis vectors of $R^n$. $A$ is referred to as the standard matrix of $T$.
+
+Example:
+
+Let $T: R^n \to R^m$ where
+
+$$T(\vec{e_{1}}) = \begin{bmatrix} 1 \\\ 2 \\\ 3 \end{bmatrix}, T(\vec{e_{2}}) = \begin{bmatrix} 4 \\\ 5 \\\ 6 \end{bmatrix}$$
+
+Find the standard matrix of $A$ and use this to compute:
+
+$$T \bigl( \begin{bmatrix} 2 \\\ -1 \end{bmatrix} \bigr)$$
+
+$$A= \begin{bmatrix} 1 & 4 \\\ 2 & 5 \\\ 3 & 6 \end{bmatrix}$$
+
+$$T \bigl( \begin{bmatrix} 2 \\\ -1 \end{bmatrix} \bigr) = A \begin{bmatrix} 2 \\\ -1 \end{bmatrix} = \begin{bmatrix} 1 & 4 \\\ 2 & 5 \\\ 3 & 6 \end{bmatrix} \begin{bmatrix} 2 \\\ -1 \end{bmatrix} = \begin{bmatrix} -2 \\\ 1 \\\ 0 \end{bmatrix}$$
+
+The vector calculated is the output of the transformation,
+
+## - Geometric Linear Transformations of $R^2$ Part I: Contractions/Expansion, Shears
+
+**Contractions and Expansions**
+
+Consider the transformation $T(\vec{x})= A\vec{x}$
+
+$$A = \begin{bmatrix} 2 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+$$\begin{bmatrix} 2 & 0 \\\ 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\\ 0 \end{bmatrix} = \begin{bmatrix} 2 \\\ 0 \end{bmatrix}$$
+
+$$\begin{bmatrix} 2 & 0 \\\ 0 & 1 \end{bmatrix} \begin{bmatrix} 0 \\\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\\ 1 \end{bmatrix}$$
+
+x component gets scaled by 2 while the y component remains fixed
+
+**Stretches/Shrinks**
+
+$$A= \begin{bmatrix} k & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+- $T$ is a horizontal stretch: if $k > 1$
+- $T$ is a horizontal shrink if $0 < k < 1$
+
+If:
+
+$$A = \begin{bmatrix} 1 & 0 \\\ 0 & k \end{bmatrix}$$
+
+- $T$ is a vertical stretch if $k > 1$
+- $T$ is a vertical shrink if $0 < k < 1$
+
+**Shears**
+
+Horizontal Shear:
+
+$$A= \begin{bmatrix} 1 & k \\\ 0 & 1 \end{bmatrix}$$
+
+Vertical Shear:
+
+$$A = \begin{bmatrix} 1 & 0 \\\ k & 1 \end{bmatrix}$$
+
+
+## - Geometric Linear Transformations of $R^2$ Part II: Projections, Reflections and Rotations
+
+Reflection over the y-axis:
+
+$$A= \begin{bmatrix} -1 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+Reflection over the x-axis:
+
+$$A= \begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix}$$
+
+**Projections**
+
+Projects onto the x-axis (y component disappears):
+
+$$A = \begin{bmatrix} 1 & 0 \\\ 0 & 0 \end{bmatrix}$$
+
+Projects onto y-axis (x component disappears):
+
+$$A = \begin{bmatrix} 0 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+You can have projections onto other lines that will be learned later
+
+
+**Rotations**
+
+Counterclockwise rotation standard matrix:
+
+$$A = \begin{bmatrix} cos(\theta) & -sin(\theta) \\\ sin(\theta) & cos(\theta) \end{bmatrix}$$
+
+Example: Find the linear transformation $T$ that rotates vectors counterclockwise by $\frac{pi}{3}$
+
+
 
 
 
