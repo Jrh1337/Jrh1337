@@ -356,7 +356,7 @@ Each of the preceding values should be determined by a function and returned to 
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/cbc83f16-ec18-48f3-8e7a-c7425c612ddc)
 
-## [Project 3]
+## [Project 3](./Coding%20Projects/Project%203.cpp)
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/73e030c7-d2c2-4f48-97c2-61a8d4df20e9)
 
