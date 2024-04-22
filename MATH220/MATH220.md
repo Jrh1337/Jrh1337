@@ -30,7 +30,7 @@
 - Linear Difference Equations
 - Setting up a Population Transistion Matrix
 
-[WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous]
+[WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous](./MATH220.md#week-4-column-and-null-space-rank-and-nullity-homogenous-and-non-homogenous-equations)
 - The Column Space
 - Rank of a Matrix
 - Parametric Vector Form
@@ -41,6 +41,14 @@
 
 
 [WEEK 5: Linear Transformations]
+- Transformations and Linear Transformations
+- Properties of Linear Transformations
+- The standard Matrix of a Linear Transformation
+- Geometric Linear Transformations
+- Composition of Geometric Transformations
+- Rank and Nullity of a Linear Transformation
+- Onto and One-to-one Transformations
+- Determining Onto and One-toOne Transformations with Rank/Nullity
 
 
 [WEEK 6: Matrix Multiplication and other Matrix Operations]
@@ -848,6 +856,225 @@ Number of students infected after two weeks = 78
 # Week 4 Column and Null Space, Rank and Nullity, Homogenous and Non-Homogenous Equations
 
 ## - The Column Space
+
+Example:
+
+$$A= \begin{bmatrix} 1 & 2 & -1 \\\ 0 & -5 & 15 \end{bmatrix}, \vec{b}= \begin{bmatrix} 4 \\\ 10 \end{bmatrix}$$
+
+Is there an $\vec{x}$ such that $A\vec{x} = \vec{b}$?
+
+Same as solving the augmented matrix:
+
+$$\begin{bmatrix} 1 & 2 & -1 & 4 \\\ 0 & -5 & 15 & 10 \end{bmatrix}$$
+
+Already in echelon form notice system is consistent.  Number of solutions is infinite with presence of a free variable.
+
+The answer is **yes**
+
+Varying over all $\vec{x}$ then $A\vec{x}$ is equal to the span of the columns of $A$
+
+**Definition** 
+
+The span of the columns of $A$ is called the column space of $A$
+
+The previous example is the same as asking if $\vec{b}$ is in the column space of $A$?
+
+$$Col(A)= span \begin{bmatrix} 1 \\\ 0 \end{bmatrix} \begin{bmatrix} 2 \\\ -5 \end{bmatrix} \begin{bmatrix} -1 \\\ 15 \end{bmatrix}$$
+
+## - The Rank of a Matrix
+
+The rank of a matrix $A$ is the dimension of the column space of $A$
+
+$$Col(A)= span \begin{bmatrix} 1 \\\ 0 \end{bmatrix} \begin{bmatrix} 2 \\\ -5 \end{bmatrix} \begin{bmatrix} -1 \\\ 15 \end{bmatrix}$$
+
+Because the last vector is redundent (third column was pivot free), The basis for the span consists of two vectors, so the rank of $A$ is 2.
+
+**Theorem**
+
+Suppose $A$ is an mxn matrix.  The following are equivalent:
+
+1. The columns of $A$ span $R^m$
+2. The rank of $A$ is equal to m
+3. Each $\vec{b}$ in $R^m$ is in the column space of $A$, can be written as a linear combination of the columns in $A$
+4. For each $\vec{b}$ in $R^m$, the matrix equation $A\vec{x}= \vec{b}$ is consistent
+5. $A$ has a pivot position in every row
+
+## - Parametric Vector Form
+
+Suppose:
+
+$$A= \begin{bmatrix} 1 & -2 & 1 & -1 \\\ 2 & -3 & 4 & -3 \\\ 3 & -5 & 5 & -4 \\\ -1 & 1 & -3 & 2 \end{bmatrix}$$
+
+Solve $A\vec{x}= \vec{0}$
+
+$$A= \begin{bmatrix} 1 & -2 & 1 & -1 & 0 \\\ 2 & -3 & 4 & -3 & 0 \\\ 3 & -5 & 5 & -4 & 0 \\\ -1 & 1 & -3 & 2 & 0 \end{bmatrix}$$
+
+Reduce:
+
+$$A= \begin{bmatrix} 1 & 0 & 5 & -3 & 0 \\\ 0 & 1 & 2 & -1 & 0 \\\ 0 & 0 & 0 & 0 & 0 \\\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+Notice that $x_{1}, x_{2}$ are basic varaibles
+
+Solve for basic variables:
+
+$$x_{1}= -5x_{3} + 3x_{4}$$
+
+$$x_{2}= -2x_{3} +x_{4}$$
+
+The solution in tuple notation is:
+
+$$\vec{x}= (-5x_{3} + 3x_{4}, -2x_{3} + x_{4}, x_{3}, x_{4})$$
+
+This can be expressed as a column vector:
+
+$$\vec{x}= \begin{bmatrix} -5x_{3} + 3x_{4} \\\ -2x_{3} + x_{4} \\\ x_{3} \\\ x_{4} \end{bmatrix}$$
+
+rewrite into two sperate column vectors and remove variables:
+
+$$x_{3} \begin{bmatrix} -5 \\\ -2 \\\ 1 \\\ 0 \end{bmatrix} + x_{4} \begin{bmatrix} 3 \\\ 1 \\\ 0 \\\ 1 \end{bmatrix}$$
+
+Solution is now in parametric vector form
+
+Here are the steps:
+
+1. Row reduce augmented matrix to echelon form
+2. Express each basic variable in terms of free variables
+3. Express the solution $\vec{x}$ whose entries depend on free variables, and then decompose into a linear combination using free variables as parameters
+
+## - Homogenous Systems and the Null Space
+
+To be homogeneous a system of linear equations can be writtenin the form:
+
+$$A\vec{x} = \vec{0}$$
+
+A system $A\vec{x} = \vec{b}$ is non-homogeneous if $\vec{b}$ does not equal 0
+
+$A\vec{x}= \vec{0}$ is always consistent because $\vec{x} = \vec{0}$ is a solution.  This is called the trivial solution.
+
+From the previous parametric vector solution used:
+
+$$x_{3} \begin{bmatrix} -5 \\\ -2 \\\ 1 \\\ 0 \end{bmatrix} + x_{4} \begin{bmatrix} 3 \\\ 1 \\\ 0 \\\ 1 \end{bmatrix}$$
+
+How do you get $\vec{x}$ as the 0 vector?
+
+You set $x_{3}$ and $x_{4}$ to = 0.
+
+Any $\vec{x}$ in the span of these two vectors.
+
+The span of these two vectors represents a 2 dimensional subspace (plane) in $R^4$
+
+**Null Space**
+
+This subspace is referred to as the null space of $A$
+
+Definition:  
+
+Suppose $A$ is an mxn matrix.  The solution set to the homogeneous equation $A\vec{x} = \vec{0}$ is a subspace of $R^m$ spanned by the vectors appearing in parametric vector form.  This subspace is reffered to as the null space of $A$
+
+Even better... those vectors form a basis for the solution set
+
+
+## - Nullity and the Rank Nullity Theorem
+
+When solving $A\vec{x} = \vec{0}$ the number of free variables is the dimension of the solution set
+
+To determine the dimension of the span of the columns of $A$:
+
+- Find the number of linearly independent vectors of the columns of $A$ (# of pivot columns)
+
+To determine the dimension of the solution set of $A\vec{x}= \vec{0}$:
+
+- Find the number of free variables (# of pivot free columns)
+
+The nullity of $A$ is the dimension of the null space of $A$
+
+**Rank-Nullity Theorem**
+
+Suppose $A$ is an mxn matrix. Then:
+
+$$rank(A) + nullity(A) = n$$
+
+Example Problem:
+
+Suppose $A$ is a 5x4 matrix.  What are the possible combinations of rank and nullity of $A$?
+
+All combinations that add to 4, rank can be as small as 0 and big as 4.
+
+## - Non-Homogeneous Systems
+
+Let's solve the non-homogeneous system:
+
+$$x_{1} + 3x_{2} + 0x_{3} + 2x_{4} = 1$$
+
+$$ 0x_{1} + 0x_{2} + x_{3} + 4x_{4} = 6$$
+
+$$x_{1} + 3x_{2} + x_{3} + 6x_{4} = 7$$
+
+$$\begin{bmatrix} 1 & 3 & 0 & 2 & 1 \\\ 0 & 0 & 1 & 4 & 6 \\\ 1 & 3 & 1 & 6 & 7 \end{bmatrix}$$
+
+Reduce:
+
+$$\begin{bmatrix} 1 & 3 & 0 & 2 & 1 \\\ 0 & 0 & 1 & 4 & 6 \\\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+$$x_{1}= 1 - 3x_{2} - 2x_{4}$$
+
+$$x_{3} = 6 - 4x_{4}$$
+
+Parametric vector form:
+
+$$\begin{bmatrix} x_{1} \\\ x_{2} \\\ x_{3} \\\ x_{4} \end{bmatrix} = \begin{bmatrix} 1 - 3x_{2} - 2x_{4} \\\ x_{2} \\\ 6 - 4x_{4} \\\ x_{4} \end{bmatrix} = \begin{bmatrix} 1 \\\ 0 \\\ 6 \\\ 0 \end{bmatrix} + x_{2} \begin{bmatrix} -3 \\\ 1 \\\ 0 \\\ 0 \end{bmatrix} + x_{4} \begin{bmatrix} -2 \\\ 0 \\\ -4 \\\ 1 \end{bmatrix}$$
+
+Notice that we have constants in the vector form now
+
+and compare it to the solution to the homogeneous system:
+
+$$x_{1} + 3x_{2} + 0x_{3} + 2x_{4} = 0$$
+
+$$ 0x_{1} + 0x_{2} + x_{3} + 4x_{4} = 0$$
+
+$$x_{1} + 3x_{2} + x_{3} + 6x_{4} = 0$$
+
+$$\begin{bmatrix} 1 & 3 & 0 & 2 & 0 \\\ 0 & 0 & 1 & 4 & 0 \\\ 1 & 3 & 1 & 6 & 0 \end{bmatrix}$$
+
+Reduce:
+
+$$\begin{bmatrix} 1 & 3 & 0 & 2 & 0 \\\ 0 & 0 & 1 & 4 & 0 \\\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+$$x_{1}= 3x_{2} - 2x_{4}$$
+
+$$x_{3} = 4x_{4}$$
+
+$$\begin{bmatrix} x_{1} \\\ x_{2} \\\ x_{3} \\\ x_{4} \end{bmatrix} = \begin{bmatrix}  3x_{2} - 2x_{4} \\\ x_{2} \\\ 4x_{4} \\\ x_{4} \end{bmatrix} =  x_{2} \begin{bmatrix} -3 \\\ 1 \\\ 0 \\\ 0 \end{bmatrix} + x_{4} \begin{bmatrix} -2 \\\ 0 \\\ -4 \\\ 1 \end{bmatrix}$$
+
+The solution sets are almost identical put in the non homegenous case we have a constant vector being added to the linear combination.
+
+$$ - Geometric description of Non-Homogeneous Solution Sets
+
+Taking the previous non-homogeneous solution set:
+
+$$\vec{x} = \begin{bmatrix} 1 \\\ 0 \\\ 6 \\\ 0 \end{bmatrix} + x_{2} \begin{bmatrix} -3 \\\ 1 \\\ 0 \\\ 0 \end{bmatrix} + x_{4} \begin{bmatrix} -2 \\\ 0 \\\ -4 \\\ 1 \end{bmatrix}$$
+
+By adding a constant vector to the solution set this is no longer a subspace because all subspaces have to go through the origin.
+
+You can think of this constant vector as shifting this plane that lives in $R^4$ over from the origin.
+
+
+
+# Week 5 Linear Transformations
+
+## - Transformations and Linear Transformations
+
+Transformations are mappings/functions from one euclidean space to another (R to R)
+
+Domain represents all the inputs
+
+Codomain represents the outputs
+
+Range is all the values that are mapped to
+
+
+
+
 
 
 
