@@ -1301,9 +1301,29 @@ Counterclockwise rotation standard matrix:
 
 $$A = \begin{bmatrix} cos(\theta) & -sin(\theta) \\\ sin(\theta) & cos(\theta) \end{bmatrix}$$
 
-Example: Find the linear transformation $T$ that rotates vectors counterclockwise by $\frac{pi}{3}$
+Example: Find the linear transformation $T$ that rotates vectors counterclockwise by $\frac{\pi}{3}$ Then compute:
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 2 \end{bmatrix} \bigr)$$
+
+$$A = \begin{bmatrix} cos(\frac{\pi}{3}) & -sin(\frac{\pi}{3}) \\\ sin(\frac{\pi}{3}) & cos(\frac{\pi}{3}) \end{bmatrix}= \begin{bmatrix} \frac{1}{2} & - \frac{\sqrt{3}}{2} \\\ \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}$$
+
+$$T(\vec{v}) = A\vec{v} = \begin{bmatrix} \frac{1}{2} & - \frac{\sqrt{3}}{2} \\\ \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix} \begin{bmatrix} v_{1} \\\ v_{2} \end{bmatrix}$$
+
+Subsititute the vector and multiply by the standard transformation matrix to compute the transformation
+
+$$T \bigl( \begin{bmatrix} 1 \\\ 2 \end{bmatrix} \bigr) = \begin{bmatrix} \frac{1}{2} & - \frac{\sqrt{3}}{2} \\\ \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
 
 
+
+
+
+
+
+
+
+
+
+## - Composition 
 
 
 
