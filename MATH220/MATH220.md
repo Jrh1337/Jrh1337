@@ -1072,6 +1072,42 @@ Codomain represents the outputs
 
 Range is all the values that are mapped to
 
+**Definition**
+
+A transformation (or function or mapping) $T$ from $R^n$ to $R^m$ is labelled $T: R^n \to R^m$ $T$ is a rule that assigns each vector $\vec{x}$ in $R^n$ a vector $T(\vec{x})$ in $R^m$
+
+The set $R^n$ is called the domain of $T$
+
+$R^m$ is the codomain
+
+For $\vec{x}$ in $R^n$ the vector $T(\vec{x})$ is called the image of $\vec{x}$ (under the action of $T$).  The set of all images is called the range of $T$.
+
+**Linear Transformations**
+
+A transformation is linear if:
+
+1. $T(c\vec{u}) = cT(\vec{u})$
+2. T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v{)$
+
+For all vectors $\vec{u},\vec{v}$ and all scalars $c$.
+
+Example:
+
+Determine whether $T(x,y) = (x + y, -2x, y)$
+
+$T: R^2 \to R^3$
+
+$T(1, 2) = (3, -2, 2)$
+
+First property: $T(cx,cy) = (cx +cy, -3(cx), cy)$
+
+$= (c(x + y), c(-2x), cy)$
+
+$= c(x + Y, -2x, y)$
+
+$= c(T\vec{u})$
+
+
 
 
 
