@@ -40,7 +40,7 @@
 - Geometry of Solution Sets
 
 
-[WEEK 5: Linear Transformations]
+[WEEK 5: Linear Transformations](./MATH220.md#week-5-linear-transformations)
 - Transformations and Linear Transformations
 - Properties of Linear Transformations
 - The standard Matrix of a Linear Transformation
@@ -1346,7 +1346,7 @@ Note: The order you pass these vectors through the these transformations matters
 
 ## - Rank and Nullity of Linear Transformations
 
-**Understanding linear transformations as matrix transformations**
+**Understanding linear transformations as Matrix Transformations**
 
 Suppose $T$ is a linear transformation defined by $T(\vec{x}) = A\vec{x}$ where $A$ is an mxn matrix.  Then:
 
@@ -1361,6 +1361,13 @@ The rank of a linear transformation is the dimension of its range so,
 Rank of $T$ = Rank of $A$
 
 The Nullity of $T$ is = to the Nullity of $A$
+
+
+
+
+
+
+
 
 
 
