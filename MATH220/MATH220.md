@@ -1340,7 +1340,27 @@ $$\begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bm
 
 Now rotate $\vec{v_{1}}$ by $\frac{\pi}{2}$
 
-$$\vec{v_{2}} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\\ -2 \end{bmarix} = \begin{bmatrix} 2 \\\ 1 \end{bmatrix}$$
+$$\vec{v_{2}} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\\ -2 \end{bmatrix} = \begin{bmatrix} 2 \\\ 1 \end{bmatrix}$$
+
+Note: The order you pass these vectors through the these transformations matters!
+
+## - Rank and Nullity of Linear Transformations
+
+**Understanding linear transformations as matrix transformations**
+
+Suppose $T$ is a linear transformation defined by $T(\vec{x}) = A\vec{x}$ where $A$ is an mxn matrix.  Then:
+
+domain of $T$ = $R^n$
+
+Codomain of $T$ = $R^m$
+
+Range of $T$ = $col(A)$
+
+The rank of a linear transformation is the dimension of its range so,
+
+Rank of $T$ = Rank of $A$
+
+The Nullity of $T$ is = to the Nullity of $A$
 
 
 
