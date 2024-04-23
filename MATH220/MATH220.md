@@ -1522,7 +1522,7 @@ Notice when multiplying matrices together you are multiplying the first row of t
 
 The product of $B$ with $A$ is the 2x2 matrix:
 
-$$BA= \begin{bmatrix} B_{\vec{a_{1}}} & B_{\vec{a_{2}}}$$
+$$BA= \begin{bmatrix} B_{\vec{a_{1}}} & B_{\vec{a_{2}}} \end{bmatrix}$$
 
 Example:
 
