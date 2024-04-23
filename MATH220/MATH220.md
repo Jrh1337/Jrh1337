@@ -1508,7 +1508,17 @@ B: Reflects vectors over the y-axis.
 
 Can we find a matrix $C$ so that $T_{C} = T_{B} \circ T_{A}$.  That is, we first rotate counterclockwise, then reflect over the y-axis.  We  call this matrix the product $BA$ of $B$ and $A$
 
+You could send the standard basis vectors and multiply them by A and then the result by B to form the columns of C
 
+Or you could just mulitply the matrices together to form $C$
+
+Order matters when multiplying these matrices if you want the roation of $A$ to occur first then $BA$ must be multiplied.
+
+$$\begin{bmatrix} -1 & 0 \\\ 0 & 1 \end{bmatrix} \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} = \begin{bmatrix] (-1)(0) + (0)(1) & (-1)(-1) + (0)(0) \\\ (0)(0) + (1)(1) & (0)(-1) + (1)(0) \end{bmatrix}$$
+
+Notice when multiplying matrices together you are multiplying the first row of the left matrix with the first column on the right, then first row of left with second column on the right.  Once out of columns, move on to the next row of the left matrix.
+
+## - Computing Matrix Multiplication of 2x2 Matrices
 
 
 
