@@ -52,6 +52,14 @@
 
 
 [WEEK 6: Matrix Multiplication and other Matrix Operations]
+- Addition of Matrices and Scalar Multiplication
+- Matrix Multiplication for Composition of Linear Transformations
+- Computing Matrix Multiplication of 2x2 Matrices
+- Matrix Multiplication for any sized Matrix
+- Properties of Matrix Multiplication and Matrix Powers
+- The Inverse of a Matrix
+- Properties of Inverses
+- The Transpose of a Matrix
 
 
 [WEEK 7: Inverse Matrices]
@@ -1361,6 +1369,154 @@ The rank of a linear transformation is the dimension of its range so,
 Rank of $T$ = Rank of $A$
 
 The Nullity of $T$ is = to the Nullity of $A$
+
+The null space consists of all vectors that collapse to the zero vector.
+
+Example: Determine the rank and nullity of the transformation $T(\vec{x}) = A\vec{x}$.  Do so in two ways:
+
+1. By interpreting what is happening geometrically/visually in the transformation.
+2. By computing the rank and nullity of $A$
+
+$T: R^2 \to R^2$ is the transformation that projects vectors onto the x-axis.
+
+What's out domain and codomain?
+
+The first $R^2$ is the domain and where new vectors are being projected is the second $R^2$ and the codomain.
+
+In this situation all vectors are being projected onto the x-axis.  The only vecotrs that are being sent to 0 is the line on the y-axis.
+
+$$A= \begin{bmatrix} 1 & 0 \\\ 0 & 0 \end{bmatrix}$$
+
+1 pivot: rank = 1
+
+1 Pivot free column: nullity = 1
+
+Column Space: Line along the x-axis
+
+Null Space: Line along y-axis
+
+Ex. 2
+
+$T: R^2 \to R^2$ is the transformation that scales vectors vertically by a factor of 2.
+
+$$A= \begin{bmatrix} 1 & 0 \\\ 0 & 2 \end{bmatrix}$$
+
+2 pivots: rank = 2
+
+0 pivot free: nullity = 0
+
+column space: all of $R^2$
+
+nullspace = just the 0 vector, only the point at the origin is being sent to itself at the origin still.
+
+Ex. 3
+
+$T: R^3 \to R^2$ where,
+
+$$A= \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \end{bmatrix}$$
+
+Domain: $R^3$
+
+Codomain: $R^2$
+
+Projecting points onto the xy plane.
+
+rank = 2, we are projecting onto the entire xy plane.
+
+nullspace = 1, line along the z-axis is the nullspace
+
+## - Onto and One-to-One linear Transformations
+
+A transformation $T: R^n \to R^m$ is onto if for each $\vec{b}$ in $R^m$, there is a $\vec{x}$  in $R^n$ where $T(\vec{x}) = \vec{b}$.
+
+A linear transformation is onto when the rank of $T$ = $m$.
+
+So basically the range of the transformation = the codomain.
+
+In the previous example that was an onto linear transformation because all the points being projected onto the xy plane filled the entire plane.
+
+The first example of a transformation which projects vectors onto the x-axis is not onto because this projection does not fill all of $R^2$ but the range is only a line on the x-axis.
+
+**One-to-One**
+
+A transformation $T: R^n \to R^m$ is one-to-one if for each $\vec{b}$ there is at most one $\vec{x} \in R^n$ so that $T(\vec{x}) = \vec{b}$
+
+That is, if there is a solution to $T(\vec{x}) = \vec{b}$, the vector $\vec{x}$ is unique.
+
+Basically every single output being projected is unique.
+
+In order for a linear transformation to be considered one-to-one the nullity must be = to 0.
+
+## - Determining one-to-one and onto using Rank and Nullity
+
+Onto: Rank of $T$ must be equal to $m$
+
+One-to-One: Nullity of $T$ equal to 0.  THis is also equivelent to the rank of $T$ being $n$.
+
+Example: Determine whether the standard matrix for each of the following linear transformations is onto or one-to-one.
+
+$$A= \begin{bmatrix} 1 & 0 & 0 \\\ 2 & 1 & 1 \end{bmatrix}$$
+
+After reducing there is two pivots also you can take the dimensions of the matrix to write out your domain and codomain for the transformation $T: R^3 \to R^2$
+
+Note the rank is = 2 which is equal to m but not n.  This tells us right away that this transformation is onto but not one-to-one.
+
+
+
+$$A= \begin{bmatrix} 1 & 0 \\\ 0 & 1 \\\ 0 & 1 \end{bmatrix}$$
+
+$T: R^2 \to R^3$
+
+one-to-one but not onto.
+
+$$A= \begin{bmatrix} 1 & 0 & 2 \\\ 0 & 1 & 0 \\\ 0 & 1 & 2 \end{bmatrix}$$
+
+ $T: R^3 \to R^3$
+
+ In this case neither one-to-one or onto.
+
+
+ # Week 7 Matrix Multiplication and Other Matrix Operations
+
+ ## - Addition of Matrices and Scalar Multiplication
+
+ Addition is straightforward
+
+ Add componentwise:
+
+ $$\begin{bmatrix} 1 & 2 \\\ 3 & 4 \end{bmatrix} + \begin{bmatrix} -1 & 1 \\\ 2 & 2 \end{bmatrix}$$
+
+ $$= \begin{bmatrix} 0 & 3 \\\ 5 & 6 \end{bmatrix}$$
+
+ **Scalar Multiplication**
+
+ $$3 \begin{bmatrix} 1 & 2 \\\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 3 & 6 \\\ 9 & 12 \end{bmatrix}$$
+
+ ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/d52751c6-b250-45e2-8d39-b5be44cdcc12)
+
+## - Matrix Multiplication for Composition of Linear Transformations
+
+The motivation behind matrix multiplication is to compose linear transformations.
+
+Example:
+
+$$A = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix},B= \begin{bmatrix} -1 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+A: Rotates vectors counterclockwise by $\frac{\pi}{2}$
+
+B: Reflects vectors over the y-axis.
+
+Can we find a matrix $C$ so that $T_{C} = T_{B} \circ T_{A}$.  That is, we first rotate counterclockwise, then reflect over the y-axis.  We  call this matrix the product $BA$ of $B$ and $A$
+
+
+
+
+
+
+
+
+
+
 
 
 
