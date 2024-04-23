@@ -1,3 +1,71 @@
+# Week 1-6 Linear Algebra Table of Contents
+----------------------------------------------------------------------------------------------
+
+
+[WEEK 1: Solving Systems of Equations](./)
+- What is a Linear System
+- Matrices
+- Elementary Row Operations
+- Solving a System of Equations with Row Operations
+- Echelon and Reduced Echelon Form
+- Pivots
+- Gauss-Jordan Elimination
+- Interpolating Polynominals
+- Inconsistent Systems
+- Consistent Systems with Unique and Infinite Solutions
+
+[WEEK 2: Vectors, Span and Linear Independence](./)
+- Vectors and Vector Addition
+- Scalar Multiplication of Vectors and Properties
+- Linear Combinations and Vector Equations
+- Span
+- Linear Independence
+- Pivot Test for Linear Independence/Dependence
+
+[WEEK 3: Basis, Matrix-Vector Products and Population Modeling](./)
+- Basis for the subspaces of $R^n$
+- Using Basis/Pivots to Describe a Span
+- Defining a Basis
+- The Matrix Vector Product
+- Properties of the Matrix Vector Product
+- The Matrix Equation
+- Linear Population Model
+- Linear Difference Equations
+- Setting up a Population Transistion Matrix
+
+[WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous](./)
+- The Column Space
+- Rank of a Matrix
+- Parametric Vector Form
+- Homogenous Equations and Null Space
+- Nullity and Rank-Nullity Theorem
+- Non-Homogenous Systems
+- Geometry of Solution Sets
+
+
+[WEEK 5: Linear Transformations](./)
+- Transformations and Linear Transformations
+- Properties of Linear Transformations
+- The standard Matrix of a Linear Transformation
+- Geometric Linear Transformations
+- Composition of Geometric Transformations
+- Rank and Nullity of a Linear Transformation
+- Onto and One-to-one Transformations
+- Determining Onto and One-toOne Transformations with Rank/Nullity
+
+
+[WEEK 6: Matrix Multiplication and other Matrix Operations](./)
+- Addition of Matrices and Scalar Multiplication
+- Matrix Multiplication for Composition of Linear Transformations
+- Computing Matrix Multiplication of 2x2 Matrices
+- Matrix Multiplication for any sized Matrix
+- Properties of Matrix Multiplication and Matrix Powers
+- The Inverse of a Matrix
+- Properties of Inverses
+- The Transpose of a Matrix
+
+
+
 # Week 1 Solving Systems of Equations
 
 ## - What is a Linear System
