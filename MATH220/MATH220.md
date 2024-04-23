@@ -180,7 +180,101 @@ An elementary matrix is one that is obatined by applying a single row operaion o
 
 Example:
 
+Find the elementary matrix $E$ that is the result of applying the row operation $R_{1} \Leftrightarrow R_{2}$ to the 2x2 identity matrix $I_{2}$
 
+$$\begin{bmatrix} 1 & 0 \\\ 0 & 1 \end{bmatrix} R_{1} \Leftrightarrow R_{2} \begin{bmatrix} 0 & 1 \\\ 1 & 0 \end{bmatrix}$$
+
+Now given the 2x2 matrix:
+
+$$A= \begin{bmatrix} 1 & 2 \\\ 2 & 4 \end{bmatrix}$$
+
+verify that $EA$ performs $R_{1} \Leftrightarrow R_{2}$ to $A$.
+
+$$\begin{bmatrix} 0 & 1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 2 \\\ 2 & 4 \end{bmatrix} = \begin{bmatrix} 2 & 4 \\\ 1 & 2 \end{bmatrix}$$
+
+Row 1 indeed swaps with row 2.
+
+Example: Find $E^{-1}$ by undoing the row operation $R_{1} \Leftrightarrow R_{2}$ to $I_{2}$
+
+Example: Find the elementary matrix $E$ that is the result of applying the row operation $R_{2}/5$ to the 2x2 identity matrix $I_{2}$.
+
+$$\begin{bmatrix} 1 & 0 \\\ 0 & 1 \end{bmatrix} \Rightarrow \begin{bmatrix} 1 & 0 \\\ 0 & \frac{1}{5} \end{bmatrix}$$
+
+Example: Given the 2x2 matrix 
+
+$$A = \begin{bmatrix} 2 & -1 \\\ 0 & 5 \end{bmatrix}$$
+
+verify that $EA$ performs $R_{2}/5$ to $A$.
+
+$$EA = \begin{bmatrix} 1 & 0 \\\ 0 & \frac{1}{5} \end{bmatrix} \begin{bmatrix} 2 & -1 \\\ 0 & 5 \end{bmatrix} = \begin{bmatrix} 2 & -1 \\\ 0 & 1 \end{bmatrix}$$
+
+**Elementary Matrices for Row Replacement**
+
+Example:  Find the elementary matrix $E$ that is the result of applying the row operation $R_{2} \Rightarrow R_{2} - 4R_{1}$ to the 2x2 identity matrix $I_{2}$.
+
+$$E = \begin{bmatrix} 1 & 0 \\\ -4 & 1 \end{bmatrix}$$
+
+Given the 2x2 matrix:
+
+$$A = \begin{bmatrix} 2 & 1 \\\ 8 & 6 \end{bmatrix}$$
+
+verify that $EA$ performs $R_{2} \Rightarrow R_{2} - 4R_{1}$ to $A$.
+
+$$EA = \begin{bmatrix} 1 & 0 \\\ -4 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 \\\ 8 & 6 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\\ 0 & 2 \end{bmatrix}$$
+
+Find $E^{-1}$ by undoing the row operation $R_{2} \Rightarrow R_{2} - 4R_{1}$ to $I_{2}$
+
+You would find this by adding 4R1 to R2 it would look like $R_{2} \Rightarrow R_{2} + 4R_{1}$
+
+$$E^{-1} = \begin{bmatrix} 1 & 0 \\\ 4 & 0 \end{bmatrix}$$
+
+## - Computing the Inverse Matrix
+
+**Using Elementary Matrices to find $A^{-1}$**
+
+Suppose $A$ is an nxn matrix ad that $E_{1},...,E_{m}$ are nxn elementary matrices that correspond to $m$ row operations converting $A$ to the matrix $I_{n}$.  Then,
+
+$$A^{-1} = E_{m} \cdots E_{2}E_{1}$$
+
+Example: Find the inverse of:
+
+$$A = \begin{bmatrix} 0 & 2 & 0 \\\ 1 & 0 & 0 \\\ 0 & 2 & 4 \end{bmatrix}$$
+
+by reducing $A$ to $I_{3}$, keeping track of the corresponding elementary matrices, and then taking the appropriate product of the elementary matrices.
+
+Below the changes made to the identity matrix are on the right with changes to $A$ on the left.
+
+$$R_{1} \Leftrightarrow R_{2} \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 2 & 0 \\\ 0 & 2 & 4 \end{bmatrix} E_{1} = \begin{bmatrix} 0 & 1 & 0 \\\ 1 & 0 & 0 \\\ 0 & 0 & 1 \end{bmatrix}$$
+
+This new matrix is equal to $E_{1}A$
+
+$$R_{2}/2 \Rightarrow \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 2 & 4 \end{bmatrix} E_{2} = \begin{bmatrix} 1 & 0 & 0 \\\ 0 & \frac{1}{2} & 0 \\\ 0 & 0 & 1 \end{bmatrix}$$
+
+This new matrix is equal to $E_{2}E_{1}A$
+
+$$R_{3} \Rightarrow R_{3} - 2R_{2} \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 4 \end{bmatrix} E_{3} = \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & -2 & 1 \end{bmatrix}$$
+
+This new matrix is equal to $E_{3}E_{2}E_{1}A$
+
+$$R_{3}/4 \Rightarrow \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 1 \end{bmatrix} E_{4} = \begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & \frac{1}{4} \end{bmatrix}$$
+
+This new matrix is now the identity matrix and equivilent to $E_{4}E_{3}E_{2}E_{1}A$
+
+$$A^{-1} = E_{4}E_{3}E_{2}E_{1}$$
+
+Now for the much easier way:
+
+Put $A$ and $I_{3}$ in one large augmented matrix and do row operations on both at the same time.
+
+Example:
+
+$$\begin{bmatrix} 0 & 2 & 0 & 1 & 0 & 0 \\\ 1 & 0 & 0 & 0 & 1 & 0 \\\ 0 & 2 & 4 & 0 & 0 & 1 \end{bmatrix}$$
+
+After doing all row operations to reduce $A$, $A$ will become the identity matrix and the identity matrix will become $A^{-1}$
+
+Final result:
+
+$$\begin{bmatrix} 1 & 0 & 0 & 0 & 1 & 0 \\\ 0 & 1 & 0 & \frac{1}{2} & 0 & 0 \\\ 0 & 0 & 1 & - \frac{1}{4} & 0 & \frac{1}{4} \end{bmatrix}$$
 
 
 
