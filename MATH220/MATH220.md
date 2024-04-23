@@ -1522,7 +1522,7 @@ Notice when multiplying matrices together you are multiplying the first row of t
 
 The product of $B$ with $A$ is the 2x2 matrix:
 
-$$BA= \begin{bmatrix} B_{\vec{a_{1}}} & B_{\vec{a_{2}}} \end{bmatrix}$$
+$$BA= \begin{bmatrix} B\vec{a_{1}} & B\vec{a_{2}} \end{bmatrix}$$
 
 Example:
 
@@ -1554,6 +1554,24 @@ $$T_{D}(2,1) = D \begin{bmatrix} 2 \\\ 1 \end{bmatrix} = \begin{bmatrix} 0 & 1 \
 
 Note: Matrix Multiplication is not communitive
 
+
+## - Matrix Multiplication for any Sized Matrix
+
+Let $B$ be an mxp and $A$ be a pxn matrix.  Then the entries of the mxn matrix $BA$ are:
+
+$$BA = \begin{bmatrix} B\vec{a_{1}} & \cdots & B\vec{a_{n}} \end{bmatrix}$$
+
+where $\vec{a_{i}}$ is the ith column of $A$.
+
+**Computing Matrix Multiplication**
+
+Example:
+
+$$\begin{bmatrix} 1 & 2 & 5 \\\ 2 & 4 & 6 \end{bmatrix} \begin{bmatrix} 1 & 1 \\\ 0 & -1 \\\ 2 & 3 \end{bmatrix}$$
+
+notice that the first matrix is a 2x3 and the second is a 3x2.  The product matrix should be 2x2
+
+$$= \begin{bmatrix} (1)(1) + 2(0) + 5(2) & 1(1) + 2(-1) + 5(3) \\\ 2(1) + 4(0) + 6(2) & 2(1) + 4(-1) + 6(3) \end{bmatrix} = \begin{bmatrix} 11 & 14 \\\ 14 & 16 \end{bmatrix}$$
 
 
 
