@@ -54,7 +54,7 @@
 - Determining Onto and One-toOne Transformations with Rank/Nullity
 
 
-[WEEK 6: Matrix Multiplication and other Matrix Operations](./)
+[WEEK 6: Matrix Multiplication and other Matrix Operations](./Week%201_6.md#week-6-matrix-multiplication-and-other-matrix-operations)
 - Addition of Matrices and Scalar Multiplication
 - Matrix Multiplication for Composition of Linear Transformations
 - Computing Matrix Multiplication of 2x2 Matrices
