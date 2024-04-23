@@ -1386,7 +1386,7 @@ $$A= \begin{bmatrix} 1 & 0 & 2 \\\ 0 & 1 & 0 \\\ 0 & 1 & 2 \end{bmatrix}$$
  In this case neither one-to-one or onto.
 
 
- # Week 7 Matrix Multiplication and Other Matrix Operations
+ # Week 6 Matrix Multiplication and Other Matrix Operations
 
  ## - Addition of Matrices and Scalar Multiplication
 
