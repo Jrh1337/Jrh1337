@@ -1573,7 +1573,71 @@ notice that the first matrix is a 2x3 and the second is a 3x2.  The product matr
 
 $$= \begin{bmatrix} (1)(1) + 2(0) + 5(2) & 1(1) + 2(-1) + 5(3) \\\ 2(1) + 4(0) + 6(2) & 2(1) + 4(-1) + 6(3) \end{bmatrix} = \begin{bmatrix} 11 & 14 \\\ 14 & 16 \end{bmatrix}$$
 
+Keep in mind number of columns of the first matrix must be the same number of the rows of the second matrix in order for the product to be defined.
 
+Example:
+
+$$\begin{bmatrix} 1 & 2 & 3 \\\ 2 & 4 & 6 \end{bmatrix} \begin{bmatrix} 2 & 4 \\\ 1 & -5 \end{bmatrix}$$
+
+THE ABOVE PRODUCT WILL NOT WORK/PRODUCT NOT DEFINED
+
+
+## - Properties of Matrix Multiplication
+
+$AB \neq BA$
+
+Order matters with matrix products
+
+$A(BC)=(AB)C$  Associative
+
+$A(B + C) = AB + AC$
+
+$(B + C)A = BA + CA$
+
+$r(AB) = (rA)B = A(rB)$ associativity wiht scalar multiplication
+
+$I_{m}A = A = AI_{n}$ $A$ is an mxn matrix
+
+**Matrix Powers**
+
+The matrix power $A^p$ is the product of $A$ with itself $p$ times.  That is, 
+
+$$A^p = A \cdots A(p-times)$$
+
+Note: $A$ must be a square matrix.
+
+Example:
+
+$$A = \begin{bmatrix} 1 & 2 \\\ -1 & 1 \end{bmatrix}$$
+
+Compute $A^2$ and $A^3$.
+
+$$A^2=AA= \begin{bmatrix} 1 & 2 \\\ -1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 2 \\\ -1 & 1 \end{bmatrix} = \begin{bmatrix} -1 & 4 \\\ -2 & -1 \end{bmatrix}$$
+
+$$A^3 = A(AA) = AA^2 = \begin{bmatrix} 1 & 2 \\\ -1 & 1 \end{bmatrix} \begin{bmatrix} -1 & 4 \\\ -2 & -1 \end{bmatrix}$$
+
+## - The Inverse of a Matrix
+
+Motivated by ideas coming from linear transformations
+
+For the linear transformation $T: R^n \to R^n$ (domain = codomain) where $T(\vec{x}) = A\vec{x}$, we want to find the inverse transformation $T^{-1}$.  The corresponding matrix is $A^{-1}$
+
+What is $T^{-1}$?
+
+This will undo what $T$ did to the vector.
+
+$$T^{-1}\vec{x} = A^{-1}\vec{x}$$
+
+Example:
+
+Let $A$ be the matrix so that $T(\vec{x}) = A\vec{x}$ is the transformation that rotates the plane counterclockwise by $\frac{\pi}{2}$ Find $A^{-1}$  $T: R^2 \to R^2$
+
+$T^{-1}$ is going to rotate clockwise by $\frac{\pi}{2}$ or counter clockwise by $- \frac{\pi}{2}$
+
+Therefore $A^{-1}$ is going to be the matrix which rotates by either of those conditions above.
+
+
+## - Properties of Inverse Matrices
 
 
 
