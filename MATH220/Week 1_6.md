@@ -33,7 +33,7 @@
 - Linear Difference Equations
 - Setting up a Population Transistion Matrix
 
-[WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous](./)
+[WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous](./Week%201_6.md#week-4-column-and-null-space-rank-and-nullity-homogenous-and-non-homogenous-equations)
 - The Column Space
 - Rank of a Matrix
 - Parametric Vector Form
