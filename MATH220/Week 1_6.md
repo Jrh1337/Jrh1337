@@ -22,7 +22,7 @@
 - Linear Independence
 - Pivot Test for Linear Independence/Dependence
 
-[WEEK 3: Basis, Matrix-Vector Products and Population Modeling](./)
+[WEEK 3: Basis, Matrix-Vector Products and Population Modeling](./Week%201_6.md#week-3-basis-matrix-vector-products-population-modeling)
 - Basis for the subspaces of $R^n$
 - Using Basis/Pivots to Describe a Span
 - Defining a Basis
