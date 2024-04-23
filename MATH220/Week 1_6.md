@@ -43,7 +43,7 @@
 - Geometry of Solution Sets
 
 
-[WEEK 5: Linear Transformations](./)
+[WEEK 5: Linear Transformations](./Week%201_6.md#week-5-linear-transformations)
 - Transformations and Linear Transformations
 - Properties of Linear Transformations
 - The standard Matrix of a Linear Transformation
