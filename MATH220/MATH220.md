@@ -63,6 +63,13 @@
 
 
 [WEEK 7: Inverse Matrices]
+- The Row Space and the Rank of $A^T$
+- Invertible and Singular Matrices
+- Inverse of 2x2 Matrices
+- Solving Systems with $A^{-1}$
+- The Invertible Matrix Theorem
+- Elementary Matrices
+- Computing the Inverse Matrix
 
 
 
@@ -1638,6 +1645,78 @@ Therefore $A^{-1}$ is going to be the matrix which rotates by either of those co
 
 
 ## - Properties of Inverse Matrices
+
+$(B^{-1})^{-1} = B$
+
+Suppose $A$ is an nxn matrix. Then $A^{-1}$ is the inverse of $A$ if it satisfies:
+
+$AA^{-1} = A^{-1}A = I_{n}$
+
+Note: The inverse of a matrix is unique
+
+**Inverse of Products**
+
+$(AB)^{-1} = B^{-1}A^{-1}$
+
+
+## - The Transpose of a Matrix
+
+The transpose of an mxn matrix $A$ is denoted $A^T$. $A^T$ is the nxm matrix where:
+
+$$(A^T)_{ij} = A_{ij}$$
+
+Simply swap rows and columns:
+
+Example:
+
+$$A = \begin{bmatrix} -1 & 5 \\\ 0 & 7 \end{bmatrix}$$
+
+$$A^T = \begin{bmatrix} -1 & 0 \\\ 5 & 7 \end{bmatrix}$$
+
+Note: 
+
+$(A^T)^T = A$
+
+$(A^{-1})^T = (A^T)^{-1}$
+
+$(A + B)^T = A^T + B^T$
+
+$r(A^T) = (rA^T)$
+
+$(AB)^T = B^TA^T$
+
+# Week 7 Inverse Matrices, Elementary Matrices
+
+## - The Row Space and the Rank of $A^T$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
