@@ -62,7 +62,7 @@
 - The Transpose of a Matrix
 
 
-[WEEK 7: Inverse Matrices]
+[WEEK 7: Inverse Matrices](./MATH220.md#week-7-inverse-matrices-elementary-matrices)
 - The Row Space and the Rank of $A^T$
 - Invertible and Singular Matrices
 - Inverse of 2x2 Matrices
@@ -1689,10 +1689,64 @@ $(AB)^T = B^TA^T$
 
 ## - The Row Space and the Rank of $A^T$
 
+The column space of $A^T$ consists of all linear combinations of the rows of $A$.  This is referred to as the row space of $A$.
+
+The rank of $A^T$ equals the rank of $A$.  That is the row space of $A$ has the same dimension as the column space of $A$.
+
+So this gives us another way to compute the rank:
+
+Instead of counting number of linearly independent columns you can count number of linearly independent columns and remove redundent rows or columns.
+
+Example:
+
+What is the biggest possible rank of a matrix given the dimensions:
+
+1. 3x4? Biggest rank would be the minimum of m or n, so rank cannot exceed 3
+
+2. 7x5? max rank is 5.
+
+## - Invertible and Singular Matrices
+
+Example:
+
+$$A = \begin{bmatrix} 1 & 0 \\\ 0 & 0 \end{bmatrix}$$
+
+so that $T(\vec{x}) = A\vec{x}$ is the linear transformation that projects vectors onto the x-axis.  Why is this matrix not invertible?
+
+Everything get projected onto the x-axis unclear where to put points back to original positions.
+
+$A$ is invertible if $A^{-1}$ exists.  If no such matrix exists then $A$ is singular.
+
+**Determining Invertible Linear Transformations
+
+A transformation $T: R^n \to R^n$ is invertible if and only if it is both one-to-one and onto
+
+So the rank must be = to $n$
+
+Example:  Determine if each Matrix is invertible or singular
+
+$$A = \begin{bmatrix} 1 & 0 & 2 \\\ 0 & 1 & 0 \\\ 0 & 0 & 2 \end{bmatrix}$$
+
+rank = 3 = $n$ so yes invertible
+
+$$A = \begin{bmatrix} 3 & 0 & 1 \\\ 0 & 2 & 2 \\\ 0 & 4 & 4 \end{bmatrix}$$
+
+Row 3 is redundent therefore rank must be less than 3, so this matrix is singular.
 
 
+## - Inverse of 2x2 Matrices
 
+If:
 
+$$A = \begin{bmatrix} a & b \\\ c & d \end{bmatrix}$$
+
+then $A$ is invertible when:
+
+$$ad - bc \neq 0$$
+
+and 
+
+$$A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\ -c & a \end{bmatrix}$$
 
 
 
