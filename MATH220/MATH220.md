@@ -1520,6 +1520,39 @@ Notice when multiplying matrices together you are multiplying the first row of t
 
 ## - Computing Matrix Multiplication of 2x2 Matrices
 
+The product of $B$ with $A$ is the 2x2 matrix:
+
+$$BA= \begin{bmatrix} B_{\vec{a_{1}}} & B_{\vec{a_{2}}}$$
+
+Example:
+
+Find the matrix $C$ so that $T_{C}(\vec{x}) = C\vec{x}$ is the linear transformation that first rotates a vectors counterclockwise by $\frac{\pi}{2}$, then reflects the vector over the x-axis.  Then compute $T_{C}(2,1)$ using the matrix $C$.
+
+$$A = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}$$
+
+$$B = \begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix}$$
+
+$A$ rotates and $B$ reflects
+
+$$T_{C} \to T_{B}(T_{A}) \to C = BA$$
+
+$$C = \begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix} \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} = \begin{bmatrix} 0 & -1 \\\ -1 & 0 \end{bmatrix}$$
+
+$$T_{C}(2,1) = \begin{bmatrix} 0 & -1 \\\ -1 & 0 \end{bmatrix} \begin{bmatrix} 2 \\\ 1 \end{bmatrix} = \begin{bmatrix} -1 \\\ -2 \end{bmatrix}$$
+
+Example:
+
+Find the matrix $D$ so that $T_{D}(\vec{x}) = D\vec{x}$ is the transformation that first reflects a vector over the x-axis, then roatates a vector counterclockwise by $\frac{\pi}{2}$.  Then compute $T_{D}(2,1)$ using the matrix $D$.
+
+Instead of $BA$ do the product of $AB$
+
+$$T_{D} = T_{A}(T_{B})$$
+
+$$D = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\\ 0 & -1 \end{bmatrix} = \begin{bmatrix} 0 & 1 \\\ 1 & 0 \end{bmatrix}$$
+
+$$T_{D}(2,1) = D \begin{bmatrix} 2 \\\ 1 \end{bmatrix} = \begin{bmatrix} 0 & 1 \\\ 1 & 0 \end{bmatrix} \begin{bmatrix} 2 \\\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
+
+Note: Matrix Multiplication is not communitive
 
 
 
