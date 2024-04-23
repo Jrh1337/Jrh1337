@@ -1,66 +1,4 @@
-# MATH 220 LINEAR ALGEBRA TABLE OF CONTENTS
-[WEEK 1: Solving Systems of Equations](./MATH220.md#week-1-solving-systems-of-equations)
-- What is a Linear System
-- Matrices
-- Elementary Row Operations
-- Solving a System of Equations with Row Operations
-- Echelon and Reduced Echelon Form
-- Pivots
-- Gauss-Jordan Elimination
-- Interpolating Polynominals
-- Inconsistent Systems
-- Consistent Systems with Unique and Infinite Solutions
-
-[WEEK 2: Vectors, Span and Linear Independence](./MATH220.md#week-2-vectors-span-and-linear-independence)
-- Vectors and Vector Addition
-- Scalar Multiplication of Vectors and Properties
-- Linear Combinations and Vector Equations
-- Span
-- Linear Independence
-- Pivot Test for Linear Independence/Dependence
-
-[WEEK 3: Basis, Matrix-Vector Products and Population Modeling](./MATH220.md#week-3-basis-matrix-vector-products-population-modeling)
-- Basis for the subspaces of $R^n$
-- Using Basis/Pivots to Describe a Span
-- Defining a Basis
-- The Matrix Vector Product
-- Properties of the Matrix Vector Product
-- The Matrix Equation
-- Linear Population Model
-- Linear Difference Equations
-- Setting up a Population Transistion Matrix
-
-[WEEK 4: Column and Null Space, Rank and Nullity, Homogeneous vs. Non Homogeneous](./MATH220.md#week-4-column-and-null-space-rank-and-nullity-homogenous-and-non-homogenous-equations)
-- The Column Space
-- Rank of a Matrix
-- Parametric Vector Form
-- Homogenous Equations and Null Space
-- Nullity and Rank-Nullity Theorem
-- Non-Homogenous Systems
-- Geometry of Solution Sets
-
-
-[WEEK 5: Linear Transformations](./MATH220.md#week-5-linear-transformations)
-- Transformations and Linear Transformations
-- Properties of Linear Transformations
-- The standard Matrix of a Linear Transformation
-- Geometric Linear Transformations
-- Composition of Geometric Transformations
-- Rank and Nullity of a Linear Transformation
-- Onto and One-to-one Transformations
-- Determining Onto and One-toOne Transformations with Rank/Nullity
-
-
-[WEEK 6: Matrix Multiplication and other Matrix Operations](./MATH220.md#week-7-matrix-multiplication-and-other-matrix-operations)
-- Addition of Matrices and Scalar Multiplication
-- Matrix Multiplication for Composition of Linear Transformations
-- Computing Matrix Multiplication of 2x2 Matrices
-- Matrix Multiplication for any sized Matrix
-- Properties of Matrix Multiplication and Matrix Powers
-- The Inverse of a Matrix
-- Properties of Inverses
-- The Transpose of a Matrix
-
+# MATH 220 LINEAR ALGEBRA WEEK 7-12 TABLE OF CONTENTS
 
 [WEEK 7: Inverse Matrices](./MATH220.md#week-7-inverse-matrices-elementary-matrices)
 - The Row Space and the Rank of $A^T$
@@ -161,11 +99,86 @@ and
 $$A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\ -c & a \end{bmatrix}$$
 
 
+Example: Find the inverse if it exists of:
+
+$$A = \begin{bmatrix} 1 & 3 \\\ 2 & 5 \end{bmatrix}$$
+
+$ad-bc = 1(5) - 2(3) = -1$
+
+Invertible
+
+$$A^{-1} = \frac{1}{-1} \begin{bmatrix} 5 & -3 \\\ -2 & 1 \end{bmatrix} = \begin{bmatrix} -5 & 3 \\\ 2 & -1 \end{bmatrix}$$
+
+Example: Find the inverse
+
+$$A = \begin{bmatrix} 1 & 2 \\\ 2 & 4 \end{bmatrix}$$
+
+$$ad - bc = 4 - 4 = 0$$
+
+This matrix is singular based on this, however also notice that the rows and columns are both linearly dependent.
+
+
+## - Solving Systems with $A^{-1}$
+
+A square matrix $A$ is invertibel is invertible only for all $\vec{b}$ in $R^n$, $A\vec{x} = \vec{b}$ is consisent and has a unique solution.
+
+Being onto and one-to-one are equivalent statements.
+
+If $A$ is invertibel the unique solution $A\vec{x} = \vec{b}$ is:
+
+$$\vec{x} = A^{-1}\vec{b}$$
+
+Example: Solve:
+
+$$A\vec{x} = \begin{bmatrix} 1 \\\ 2 \\\ 4 \end{bmatrix}$$
+
+given
+
+$$A^{-1} = \begin{bmatrix} 3 & 0 & 1 \\\ 0 & 2 & 2 \\\ 0 & 0 & 1 \end{bmatrix}$$
+
+Multiply both sides by $A^{-1}$
+
+$$A^{-1}\vec{x} = A^{-1} \begin{bmatrix} 1 \\\ 2 \\\ 4 \end{bmatrix}$$
+
+$$\vec{x} = \begin{bmatrix} 3 & 0 & 1 \\\ 0 & 2 & 2 \\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \\\ 4 \end{bmatrix}$$
+
+$$\vec{x} = \begin{bmatrix} 7 \\\ 12 \\\ 4 \end{bmatrix}$$
 
 
 
 
+## - The Invertible Matrix Theorem
 
+Summary of properties that are equivalent to making a matrix invertible
+
+Suppose $A$ is a nxn matrix.  Then the following are all equivalent to $A$ being invertible:
+
+1. The linear transformation $T: R^n \to R^n$ defined by $T(\vec{x}) = A\vec{x}$ is one-to-one and onto.
+2. For all $\vec{b}$ in $R^n$, $A\vec{x} = \vec{b}$ is consistent and has a unique solution.
+3. $rank(A) = n$ 
+4. $nullity(A) = 0$
+
+Recall how rank and nullity relate to one-to-one, onto and number of solutions to equations.
+
+If rank(A) = n 
+- $T$ is onto
+
+If nullity(A) = 0
+- $T$ is one-to-one
+
+Additionally:
+
+- The columns of $A$ are linearly independent
+- There is a pivot in every column
+- The rows of $A$ are linearly independent
+- There is a pivot in every row
+- The reduced echelon form of $A$ is the identity matrix
+
+## - Elementary Matrices
+
+An elementary matrix is one that is obatined by applying a single row operaion on the identity matrix
+
+Example:
 
 
 
