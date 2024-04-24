@@ -602,25 +602,178 @@ $$det(A + B) \neq det(A) + det(B)$$
 
 # Week 9 Eigenvectors, Length and Projections
 
-## - The meaning of Eigenvectors and Eigenvalues
+## - The Meaning of Eigenvectors and Eigenvalues
+
+A scalar $\lambda$ is called an eigenvalue of an nxn matrix $A$ if there is a nonzero solution $\vec{v}$ of $A\vec{v} = \lambda\vec{v}$.  Such an $\vec{v}$ is called an eigenvector corresponding to $\lambda$.
+
+Alternatively, $\lambda$, $\vec{v}$ is an eigenvector/eigenvalue of the linear transformation $T: R^n \to R^n$ if $T(\vec{v}) = \lambda \vec{v}$
+
+Example: 
+
+Confirm that:
+
+$$\vec{v} = \begin{bmatrix} 1 \\\ 1 \end{bmatrix}$$
+
+is an eigenvector and that:
+
+$$\vec{w} = \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
+
+is not an eigenvector of:
+
+$$\begin{bmatrix} 0 & 2 \\\ 2 & 0 \end{bmatrix}$$
 
 
+$$A\vec{v} = \begin{bmatrix} 0 & 2 \\\ 2 & 0 \end{bmatrix} \begin{bmatrix} 1 \\\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\\ 2 \end{bmatrix} = ? \begin{bmatrix} 1 \\\ 1 \end{bmatrix}$$
+
+So what scalar would we have to multiply by (1, 1) to create (2, 2)?  That would be a two so $\lambda = 2$
+
+$$A\vec{v} = \begin{bmatrix} 0 & 2 \\\ 2 & 0 \end{bmatrix} \begin{bmatrix} 1 \\\ 2 \end{bmatrix} = \begin{bmatrix} 4 \\\ 2 \end{bmatrix} = ? \begin{bmatrix} 1 \\\ 2 \end{bmatrix}$$
+
+There is no scalar that will multiply (1,2) to produce (4, 2) so $\vec{w}$ is not an eigenvector.
+
+**Visualizing Eigenvectors in a Linear Transformation**
+
+Example:  Find the Eigenvectors of the transformation $T: R^2 \to R^2$ where $T$ is the transformation that projects vectors onto the x-axis and scales vectors horizontally by a factor of 3.  Confirm your answer by looking at the standard matrix $A$.
 
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/f8be06a8-e331-4857-bb19-539371e1702f)
 
 
+The meaning of an eigenvalue being zero is the eigenvector gets sent to the 0 vector.
+
+Note we dont let 0 itself be an eigenvector.  However 0 can be an eigenvalue.
+
+If a Matrix has an eigenvalue of 0 then the matrix is singular. Means the nullspace contains nonzero vectors.
 
 
+## - Computing the Eigenvalues of a Matrix
 
+**The Characteristic Equation**
 
+A scalar $\lambda$ is an eigenvalue of an nxn matrix $A$, if and only if it satisfies the characteristic equation:
 
+$$det(A - \lambda I_{n}) = 0$$
 
+$det(A - \lambda I_{n})$ is reffered to as the characteristic polynomial of $A$.
 
+Example: Find the Eigenvalues of:
 
+$$\begin{bmatrix} 2 & 7 \\\ 7 & 2 \end{bmatrix}$$
 
+$$A - \lambda I_{n} = \begin{bmatrix} 2 & 7 \\\ 7 & 2 \end{bmatrix} - \lambda \begin{bmatrix} 1 & 0 \\\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 2 - \lambda & 7 \\\ 7 & 2 - \lambda \end{bmatrix}$$
 
+now take the determinant:
 
+$$det(A - \lambda I_{n}) = \begin{vmatrix} 2 - \lambda & 7 \\\ 7 & 2 - \lambda \end{vmatrix} = (2 - \lambda)(2 - \lambda) - 7(7) = \lambda^2 - 4\lambda - 45$$
 
+The result is the characteristic polynomial now set this equal to 0 and solve for $\lambda$
+
+$$(\lambda - 9)(\lambda + 5)$$
+
+$$\lambda = 9, -5$$
+
+More Examples: Find the Eigenvalues
+
+$$\begin{bmatrix} 2 & 1 \\\ -1 & 4 \end{bmatrix}$$
+
+$$\begin{vmatrix} 2 - \lambda & 1 \\\ -1 & 4 - \lambda \end{vmatrix} = (2 - \lambda)(4 - \lambda) - (-1)(1) = \lambda^2 - 6\lambda + 9$$
+
+$$(\lambda - 3)(\lambda - 3) = 0$$
+
+$$\lambda = 3$$
+
+Note there is only one eigenvalue.
+
+$$\begin{bmatrix} 5 & 3 \\\ -4 & 4 \end{bmatrix}$$
+
+$$\begin{vmatrix} 5 - \lambda & 3 \\\ -4 & 4 - \lambda \end{vmatrix} = (5 - \lambda)(4 - \lambda) - (3)(-4) = \lambda^2 - 9\lambda + 32$$
+
+After using quadratic formula you will get complex eigenvalues. (no real Eigenvalues)
+
+## - Multiplicities of Eigenvalues
+
+A 2x2 Matrix can have:
+- Two distinct real Eigenvalues
+- One repeated Eigenvalue
+- Two distinct complex Eigenvalues
+
+The Algebraic multiplicity of an eigenvalue $\lambda$ is its multiplicity as a root of the characteristic equation.
+
+Example: Find the eigenvalues and there multiplicities:
+
+$$\begin{bmatrix} 4 & -2 & 5 \\\ 0 & 3 & 1 \\\ 0 & 0 & 2 \end{bmatrix}$$
+
+Note this is already in echelon form so just subtract $\lambda$ along the diagonal and then multiply the diagonal
+
+$$\begin{bmatrix} 4 - \lambda & -2 & 5 \\\ 0 & 3 - \lambda & 1 \\\ 0 & 0 & 2 - \lambda \end{bmatrix}$$
+
+$$\begin{vmatrix} 4 - \lambda & -2 & 5 \\\ 0 & 3 - \lambda & 1 \\\ 0 & 0 & 2 - \lambda \end{vmatrix} = (4 - \lambda)(3 - \lambda)(2 - \lambda)$$
+
+$$\lambda = 4,3,2$$
+
+Each $\lambda$ has a multiplicity of 1.
+
+Harder example:
+
+$$\begin{bmatrix} -5 & 2 & -6 \\\ 2 & -2 & 3 \\\ 4 & -2 & 5 \end{bmatrix}$$
+
+$$\begin{bmatrix} -5 - \lambda & 2 & -6 \\\ 2 & -2 - \lambda & 3 \\\ 4 & -2 & 5 - \lambda \end{bmatrix}$$
+
+$$\begin{vmatrix} -5 - \lambda & 2 & -6 \\\ 2 & -2 - \lambda & 3 \\\ 4 & -2 & 5 - \lambda \end{vmatrix}$$
+
+Do a cofactor expansion:
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/be03903b-656f-4268-9eb8-4bdcb0968a81)
+
+$\lambda = -1, 0$
+
+Note that -1 has a multiplicity of 2, 0 a multiplicity of 1.
+
+## - Finding Eigenvectors
+
+Example: Given that $\lambda = 10$ is an eigenvalue of:
+
+$$\begin{bmatrix} 4 & -2 \\\ -3 & 9 \end{bmatrix}$$
+
+Find a corresponding eigenvector
+
+Find $\vec{v}$ so $A\vec{v} = \lambda \vec{v}$
+
+$(A - \lambda I_{n})\vec{v} = \vec{0}$
+
+Solve:
+
+$$\begin{bmatrix} 4-10 & -2 & 0 \\\ -3 & 9 - 10 & 0 \end{bmatrix} = \begin{bmatrix} -6 & -2 & 0 \\\ -3 & -1 & 0 \end{bmatrix} = \begin{bmatrix} -6 & -2 & 0 \\\ 0 & 0 & 0 \end{bmatrix}$$
+
+$$\begin{bmatrix} 1 & \frac{1}{3} & 0 \\\ 0 & 0 & 0 \end{bmatrix}$$
+
+The first column corresponds to $V_{1}$ and the second column $v_{2}$ note that $v_{2}$ is a free variable.
+
+$$\vec{v} = \begin{bmatrix} v_{1} \\\ v_{2} \end{bmatrix} = \begin{bmatrix} \frac{-1}{3} v_{2} \\\ v_{2} \end{bmatrix} = v_{2} \begin{bmatrix} \frac{-1}{3} \\\ 1 \end{bmatrix}$$
+
+To find one specific solution, choose any nonzero value for $v_{2}$ This goes back to an eigenvector not being allowed to be the $\vec{0}$
+
+Any nonzero multiple is an eigenvector.
+
+Example: Find all eigenvectors corresponding to the eigenvalue $\lambda = 3$ for:
+
+$$\begin{bmatrix} 4 & 2 & 3 \\\ -1 & 1 & -3 \\\ 2 & 4 & 9 \end{bmatrix}$$
+
+$$\begin{bmatrix} 4 - \lambda & 2 & 3 & 0 \\\ -1 & 1 - \lambda & -3 & 0 \\\ 2 & 4 & 9 - \lambda & 0 \end{bmatrix}$$
+
+$$\begin{bmatrix} 4 - 3 & 2 & 3 & 0 \\\ -1 & 1 - 3 & -3 & 0 \\\ 2 & 4 & 9 - 3 & 0 \end{bmatrix}$$
+
+$$\begin{bmatrix} 1 & 2 & 3 & 0 \\\ -1 & -2 & -3 & 0 \\\ 2 & 4 & 6 & 0 \end{bmatrix}$$
+
+After doing row operations:
+
+$$\begin{bmatrix} 1 & 2 & 3 & 0 \\\ 0 & 0 & 0 & 0 \\\ 0 & 0 & 0 & 0 \end{bmatrix}$$
+
+$v_{2}$ and $v_{3}$ are free
+
+$$\vec{v} = \begin{bmatrix} v_{1} \\\ v_{2} \\\ v_{3} \end{bmatrix} = \begin{bmatrix} -2v_{2} - 3v_{3} \\\ v_{2} \\\ v_{3} \end{bmatrix}$$
+
+Put in parametric vector form:
 
 
 
