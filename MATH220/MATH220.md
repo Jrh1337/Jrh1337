@@ -25,6 +25,14 @@
 
 
 [WEEK 9: Eigenvectors, Length and Projections]
+- The Meaning of Eigenvectors and Eigenvalues
+- Computing the Eigenvalues of a Matrix
+- Multiplicities of Eigenvalues
+- Finding Eigenvectors
+- The Dot Product and Length of Vectors
+- Unit Vectors and the distance between Vectors
+- Projections onto Vectors
+- Orthogonality and Orthonormal Sets
 
 
 [WEEK 10: Orthonormal Basis, Eigenbasis, Long Term Behavior of Population Matrices and Projection onto Subspaces]
@@ -552,7 +560,39 @@ Cross out the row and column of each scalar and place the remainder of the matri
 
 ![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/ea7dc6bd-bf53-40c2-89e3-65cbd7013e30)
 
+Honestly just use the row reduction method fam.
 
+## - Other Properties of Determinants
+
+- $det(AB) = det(A)det(B)$
+- $det(A^k) = (det(A))^k$
+- $det(A^{-1}) = \frac{1}{det(A)}$
+- $det(A^T) = det(A)$
+
+Example: Let $A$ and $B$ be 3x3 matrices with $det(A) = 3$ and $det(B) = -1$.  Compute Each:
+
+1. $det(AB)$
+2. $det(B^5)$
+3. $det(A^TBA)$
+4. $det(B^{-1}AB)$
+
+
+
+Answers:
+1. -3
+2. -1
+3. -9
+4. 3
+
+
+Just keep in mind:
+
+$$det(A + B) \neq det(A) + det(B)$$
+
+
+# Week 9 Eigenvectors, Length and Projections
+
+## - The meaning of Eigenvectors and Eigenvalues
 
 
 
