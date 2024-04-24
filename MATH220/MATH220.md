@@ -24,7 +24,7 @@
 - Other Properties of Determinants
 
 
-[WEEK 9: Eigenvectors, Length and Projections]
+[WEEK 9: Eigenvectors, Length and Projections](./MATH220.md#week-9-eigenvectors-length-and-projections)
 - The Meaning of Eigenvectors and Eigenvalues
 - Computing the Eigenvalues of a Matrix
 - Multiplicities of Eigenvalues
@@ -41,6 +41,16 @@
 
 
 [WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./MATH220.md#week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
+- Introduction to Least Squares Approximation
+- Normal Equations for Solving Least Squares
+- Least-Squares Example
+- Orthogonal Matrices
+- QR Factorization
+- Solving Least-Squares with QR Factorization
+- Diaginalization of a Matrix
+- Computing the Diagonalization of a Matrix
+- When is a MAtrix Diagonalizable
+- Determining if a Matrix is Diagonalizable
 
 [WEEK 12: SVD and Abstract Vectors](./MATH220.md#week-12-svd-and-abstract-vectors)
 - The Singular Value Decomposition (SVD)
