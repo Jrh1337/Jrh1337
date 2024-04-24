@@ -12,6 +12,16 @@
 
 
 [WEEK 8: Determinants]
+- The Idea of Determinants
+- Determinants in Higher Dimensions
+- The Determinant Formula for 2x2 Matrices
+- When the Determinant is 0
+- The Determinant of Elementary Matrices
+- The Determinant of Products
+- Effect of Row Operations on the Determinant
+- Computing the Determinant using row Reduction
+- Computing the Determinant using Cofactor Expansion
+- Other Properties of Determinants
 
 
 [WEEK 9: Eigenvectors, Length and Projections]
@@ -277,10 +287,270 @@ Final result:
 $$\begin{bmatrix} 1 & 0 & 0 & 0 & 1 & 0 \\\ 0 & 1 & 0 & \frac{1}{2} & 0 & 0 \\\ 0 & 0 & 1 & - \frac{1}{4} & 0 & \frac{1}{4} \end{bmatrix}$$
 
 
+# Week 8 Determinants
+
+## - The Idea of Determinants
+
+How is area changed under a linear transformation?
+
+How does $T(\vec{x}) = A\vec{x}$ where:
+
+$$A = \begin{bmatrix} 5 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+distort area?
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/ccfa25f1-7b92-46ea-b69a-2af90115447b)
+
+$T$ scales area by a factor of 5 (as a linear map it scales other shapes by the same factor).
+
+How does $T(\vec{x}) = A\vec{x}$ where:
+
+$$A = \begin{bmatrix} -5 & 0 \\\ 0 & 1 \end{bmatrix}$$
+
+distort signed area? (the signed area is negative if the orientation is reversed).
+
+$T$ scales vectors horizontally by 5 then reflects over the y-axis
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/11b10b2f-0645-49f7-b166-8dc1efac19fe)
+
+Notice the standard basis vectors got flipped around so the orientation is reversed.  
+
+The signed area has been changed by a factor of -5
+
+**Informal Meaning of the Determinant**
+
+Suppose $A$ is an nxn matrix.  Then the determinant measures how signed area/volume is changed under $T: R^{n} \to R^{n}$ where $T(\vec{x}) = A\vec{x}$
+
+$$det \bigl( \begin{bmatrix} 5 & 0 \\\ 0 & 1 \end{bmatrix} \bigr) = 5$$
+
+$$det \bigl( \begin{bmatrix} -5 & 0 \\\ 0 & 1 \end{bmatrix} \bigr) = -5$$
+
+Examples:
+
+Determine what the determinant should be of the following by inspecting how area of the unit square changes.
+
+1. Horizontal scaling by 2 and vertical scaling by 3:
+
+$$\begin{bmatrix} 2 & 0 \\\ 0 & 3 \end{bmatrix}$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/4c782bcc-6484-4818-8648-ae45cabddb3a)
+
+2. Rotating counterclockwise by $\frac{\pi}{4}$
+
+$$\begin{bmatrix} cos(\frac{\pi}{4}) & -sin(\frac{\pi}{4}) \\\ sin(\frac{\pi}{4}) & cos(\frac{\pi}{4}) \end{bmatrix}$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/1df26030-a3fc-438a-8726-bbf24522dbfc)
+
+3. Projection onto the x-axis:
+
+$$A = \begin{bmatrix} 1 & 0 \\\ 0 & 0 \end{bmatrix}$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/6d525fe8-2af4-494a-b276-8c38567948c7)
+
+If rank(A) < 2 for a 2x2 matrix, range is collapsed and determinant is 0 in this case.
+
+## - Determinants in Higher Dimensions
+
+- For 3x3 matrices, we measure how the signed volume is changed.
+- For nxn matrices, we measure how signed n-volume is changed
+- if rank(A) < n, the $T$ collapses vectors so the dimension reduces.  This implies det(A) = 0.
+
+What is n-volume?
+
+In higher dimensions its not clear what these objects mean.  However we can use the ideas from lower dimensions to generalize formulas for higher dimensions.
+
+This will tell us how to measure the size of a 4 dimensional object.
+
+Examples:
+
+Find the Determinants
+
+$$\begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 1 \end{bmatrix}$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/a60d8d5e-7a9c-4c9d-8165-15d3f7279255)
 
 
 
+$$\begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 0 \end{bmatrix}$$
 
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/efc5ccf7-0eef-4324-afdf-7b6116647076)
+
+$$\begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 4 \end{bmatrix}$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/5c2e5c6b-82e3-4141-b600-984ad1700fbc)
+
+$$\begin{bmatrix} 2 & 0 & 0 \\\ 0 & 3 & 0 \\\ 0 & 0 & 4 \end{bmatrix}$$
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/909081f0-3a97-44e1-94eb-6f2ad9c48648)
+
+
+## - The Determinant Formula for 2x2 Matrices
+
+
+For a 2x2 matrix in the form:
+
+$$\begin{bmatrix} a & b \\\ c & d \end{bmatrix}$$
+
+$$det(A) = |A| = \begin{vmatrix} a & b \\\ c & d \end{vmatrix} = ad - bc$$
+
+If the $det(A) = 0$ is equivalent to $rank(A) < 2$ and $A$ being a singular matrix
+
+Compute the determinant of each matrix:
+
+$$\begin{bmatrix} 3 & 6 \\\ 2 & 4 \end{bmatrix} = 3(4) - 6(2) = 0$$
+
+Singular
+
+$$\begin{bmatrix} -5 & 0 \\\ 10 & -2 \end{bmatrix} = -5(-2) - (0)(10) = 10$$
+
+Invertible $ad-bc \neq 0$
+
+Connection with the inverse notice the formula for calculating the inverse of a 2x2 matrix is:
+
+$$A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\ -c & a \end{bmatrix}$$
+
+Notice if $ad - bc = 0$ this would be undefined with a 0 in the denominator.  Hence when the $det(A) = 0$ it's the same as $A$ being singular.
+
+## - When the Determinant is Zero
+
+When the determinant is 0 that means things collapse and the dimension is reduced under $T(\vec{x}) = A\vec{x}$
+
+Suppose $A$ is an nxn matrix.  Then, $det(A) = 0$ if an only if $rank(A) < n$
+
+As a consequence, $det(A) = 0$ is equivelent to:
+- $A$ is singular
+- rows are linearly dependent
+- columns are linearly dependent
+- and other things from  the invertible matrix theorem
+
+Example: Compute the Determinant using theory
+
+$$\begin{bmatrix} 1 & 2 & 3 \\\ 2 & 4 & 6 \\\ 1 & 1 & 1 \end{bmatrix}$$
+
+The determinant is 0 because the rows are linearly dependent R2 = 2R1
+
+## - The Determinant of Elementary Matrices
+
+$det(I_{n}) = 1$
+
+if $E$ corresponds to scaling a row by $r$: $det(E) = r$
+
+if $E$ corresponds to a row swap: $det(E) = -1
+
+if $E$ correponds to a row replacement: $det(E) = 1$
+
+Row scaling Example:
+
+$$\begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 4 \end{bmatrix}$$
+
+The determinant is equal to 4 because hight is scaled by 4
+
+$$\begin{bmatrix} 1 & 0 & 0 & 0 \\\ 0 & 1 & 0 & 0 \\\ 0 & 0 & -4 & 0 \\\ 0 & 0 & 0 & 1 \end{bmatrix}$$
+
+The third row is being scaled by -4 which means the determinant is -4
+
+**Row Swap**
+
+Reverses the orientation but volume doesn't change
+
+$$\begin{bmatrix} 0 & 1 \\\ 1 & 0 \end{bmatrix}$$
+
+orientation reversed hence determinant is -1
+
+**Row Replacement Example**
+
+Row replacement does not change the determinant
+
+$$\begin{bmatrix} 1 & -2 \\\ 0 & 1 \end{bmatrix}$$
+
+This is a horizontal shear but even though one of the vectors is changing the area and volume is not changing.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/bcc1bd9a-7495-44af-b5df-727a75b32993)
+
+These methods work under higher dimensions
+
+## - The Determinant of Products
+
+If $A$ and $B$ are both nxn matrices then,
+
+$$det(AB) = det(A)det(B)$$
+
+
+
+## - Effect of row operations on Determinants
+
+Note: $det(rA) = r^ndet(A)$
+
+Suppose:
+
+$$\begin{vmatrix} a & b & c \\\ d & e & f \\\ g & h & i \end{vmatrix} = 7$$
+
+$$\begin{vmatrix} 3a & 3b & 3c \\\ d & e & f \\\ g & h & i \end{vmatrix} = 3 \begin{vmatrix} a & b & c \\\ d & e & f \\\ g & h & i \end{vmatrix} = 3 * 7$$
+
+$$\begin{vmatrix} 3a & 3b & 3c \\\ 3d & 3e & 3f \\\ g & h & i \end{vmatrix} = 3^2 \begin{vmatrix} a & b & c \\\ d & e & f \\\ g & h & i \end{vmatrix} = 3^2 * 7$$
+
+$$\begin{vmatrix} 3a & 3b & 3c \\\ 3d & 3e & 3f \\\ 3g & 3h & 3i \end{vmatrix} = 3^3 \begin{vmatrix} a & b & c \\\ d & e & f \\\ g & h & i \end{vmatrix} = 3^3 * 7$$
+
+Example: Suppose $A$ is a 4x4 matrix where $det(A) = 3$ Find $det(2A)$
+
+$2^4 * 3$
+
+## - Computing the Determinant Using Row Reduction
+
+Compute:
+
+$$\begin{vmatrix} 1 & 2 & 9 \\\ 0 & 2 & 6 \\\ 0 & 0 & 3 \end{vmatrix}$$
+
+Doing just row replacements which don't change the determinant you get:
+
+$$\begin{vmatrix} 1 & 0 & 0 \\\ 0 & 2 & 0 \\\ 0 & 0 & 3 \end{vmatrix}$$
+
+Pulling out the scalers of each row:
+
+$$= 2 * 3 * 1 \begin{vmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 1 \end{vmatrix}$$
+
+**Observation**
+
+If $U$ is in echelon form, then $det(U)$ is equal to the product of the components along the diagonal. 
+
+**Calculating the Determinant for any nxn Matrix**
+
+Example: Compute:
+
+$$\begin{vmatrix} 3 & 6 & -9 \\\ 0 & 0 & -2 \\\ -2 & 1 & 5 \end{vmatrix}$$
+
+Factor out a 3 from the first row:
+
+$$3 \begin{vmatrix} 1 & 2 & -3 \\\ 0 & 0 & -2 \\\ -2 & 1 & 5 \end{vmatrix}$$
+
+Row replacement $R3 \to R3 + 2R1$
+
+$$3 \begin{vmatrix} 1 & 2 & -3 \\\ 0 & 0 & -2 \\\ 0 & 5 & 11 \end{vmatrix}$$
+
+Row swap:
+
+$$-3 \begin{vmatrix} 1 & 2 & -3 \\\ 0 & 5 & 11 \\\ 0 & 0 & -2 \end{vmatrix}$$
+
+Now in echelon form multiply elements along the diagonal and the scalar sign change from any row swaps
+
+$(-3) * (1) * (5) * (-2)$
+
+## - Computing the Determinant using Cofactor Expansion
+
+Using the formula from a 2x2 matrix:
+
+$$det(A) = ad - bc$$
+
+Formula for a 3x3 matrix:
+
+$$\begin{vmatrix} a_{11} & a_{12} & a_{13} \\\ a_{21} & a_{22} & a_{23} \\\ a_{31} & a_{32} & a_{33} \end{vmatrix} = a_{11} \begin{vmatrix} a_{22} & a_{23} \\\ a_{32} & a_{33} \end{vmatrix} - a_{12} \begin{vmatrix} a_{21} & a_{23} \\\ a_{31} & a_{33} \end{vmatrix} + a_{13} \begin{vmatrix} a_{21} & a_{22} \\\ a_{31} & a_{32} \end{vmatrix}$$
+
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/e5ce2498-ac06-486c-8bfc-185a1b985d4c)
+
+Cross out the row and column of each scalar and place the remainder of the matrix in each.
+
+![image](https://github.com/Jrh1337/Jrh1337/assets/166570231/ea7dc6bd-bf53-40c2-89e3-65cbd7013e30)
 
 
 
