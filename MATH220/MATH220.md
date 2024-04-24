@@ -11,7 +11,7 @@
 
 
 
-[WEEK 8: Determinants]
+[WEEK 8: Determinants](./MATH220.md#week-8-determinants)
 - The Idea of Determinants
 - Determinants in Higher Dimensions
 - The Determinant Formula for 2x2 Matrices
