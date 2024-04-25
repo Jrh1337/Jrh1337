@@ -889,9 +889,86 @@ $$= \frac{5}{\sqrt{5}} (\frac{2}{\sqrt{5}}, 0, \frac{1}{\sqrt{5}}) = (2, 0, 1)$$
 
 -----------------------------------------------------------------------------------------------------------------
 
-**Projection onto any vector or line**
+**Projection onto any Vector or Line**
 
-Suppose $\vec{w}$ is a vector (not necessarily a unit vector).
+Suppose $\vec{w}$ is a vector (not necessarily a unit vector).  Then the projection of $\vec{v}$ onto $\vec{w}$ is given by:
+
+$$proj_{\vec{w}} \vec{v} = \frac{(\vec{v} * \vec{w})}{||\vec{w}||^2} \vec{w}$$
+
+This is also referred to as the projection of $\vec{v}$ onto the line in the direction of $\vec{w}$
+
+-----------------------------------------------------------------------------------------------------------------
+
+Example: Compute the projection of $\vec{v} = (1, 7)$ onto the line in the direction of the vector $\vec{w} = (-4, 2)$
+
+$$proj_{\vec{w}} \vec{v} = \frac{(\vec{v} * \vec{w})}{||\vec{w}||^2} \vec{w} = \frac{10}{20} \vec{w} = \frac{1}{2} (-4, 2) = (-2, 1)$$
+
+-----------------------------------------------------------------------------------------------------------------
+
+## - Orthogonality and Orthonormal Sets
+
+Two vectors are orthogonal (perpendicular) if $\vec{v} * \vec{w} = 0$
+
+Happens when the dot product is equal to zero.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Example: Set $\vec{q} = (1, 2, 3, 4), \vec{v} = (2, 1, 0, -1), \vec{w} = (1, 1, -1, 0)$.  Which vectors are orthogonal to each other?
+
+Find which dot products = 0.
+
+$$(1, 2, 3, 4) * (2, 1, 0, -1) = (2 + 2 + 0 -4) = 0$$
+
+$$(1, 2, 3, 4) * (1, 1, -1, 0) = (1 + 2 - 3 + 0) = 0$$
+
+$$(1, 1, -1, 0) * (2, 1, 0, -1) = (2 + 1 + 0 + 0) = 3$$
+
+From the dot products above $\vec{v}$ and $\vec{w}$ are not orthogonal to each other
+
+-----------------------------------------------------------------------------------------------------------------
+
+**Orthogonal Set vs Orthonormal Set**
+
+An orthogonal set is a collection of vectors that are orthogonal to each other.
+
+An orthonormal set is an orthogonal set where each vector is a unit vector.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Example: Determine if the following sets are orthogonal/orthonormal.  If the are orthogonal but not orthonormal, normalize each vector to make an orthonormal set.
+
+$$\begin{bmatrix} -0.6 \\\ 0.8 \end{bmatrix} \begin{bmatrix} 0.8 & 0.6 \end{bmatrix}$$
+
+$$(-0.6)(0.8) + (0.8)(0.6) = 0$$
+
+Orthogonal, to determine if orthonormal, measure length of each vector:
+
+$$= \sqrt{(-0.6)^2 + (0.8)^2} = \sqrt{0.36 + 0.64} = \sqrt{1} = 1$$
+
+$$= \sqrt{(0.8)^2 + (0.6)^2} = \sqrt{0.64 + 0.36} = \sqrt{1} = 1$$
+
+This is an orthonormal set.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Week 11 Least Squares Approximation, QR factorization and Diagonalizable Matrices
