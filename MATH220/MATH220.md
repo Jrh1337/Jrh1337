@@ -775,9 +775,123 @@ $$\vec{v} = \begin{bmatrix} v_{1} \\\ v_{2} \\\ v_{3} \end{bmatrix} = \begin{bma
 
 Put in parametric vector form:
 
+$$= v_{2} \begin{bmatrix} -2 \\\ 1 \\\ 0 \end{bmatrix} + v_{3} \begin{bmatrix} -3 \\\ 0 \\\ 1 \end{bmatrix}$$
 
+The eigen vectors are everything in the span except for the zero vector.
 
+## - The Dot Product and Length of Vectors
 
+$$\vec{v} * \vec{w} = v_{1}w_{1} + \cdots + v_{n}w_{n} = \vec{v} \vec{w}^T$$
+
+This is also referred to as the scalar product or inner product
+
+**Length of a Vector**
+
+The length of a vector $\vec{v}$ is given by:
+
+$$||\vec{v}|| = \sqrt{v * v}$$
+
+so,
+
+$$||\vec{v}||^2 = \vec{v} * \vec{v}$$
+
+Example:
+
+Find the length of $\vec{v} = (1, 2, 3)$
+
+$$||\vec{v}||^2 = \vec{v} * \vec{v} = (1, 2, 3) * (1, 2, 3) = 14$$
+
+$$||\vec{v}|| = \sqrt{v * v} = \sqrt{14}$$
+
+**Scaled Length**
+
+$$||k\vec{v}|| = |k|||\vec{v}||$$
+
+Example:
+
+Suppose $\vec{v} = (-3, 1, 4)$ Find $||\vec{v}||$ and $||-5\vec{v}||$
+
+$$||\vec{v}|| = \sqrt{\vec{v} * \vec{v}} = \sqrt{(-3)^2 + 1^2 + 4^2} = \sqrt{26}$$
+
+$$||-5\vec{v}|| = |-5|||\vec{v}|| = 5 * \sqrt{\vec{v} * \vec{v}} = 5\sqrt{26}$$
+
+## - Unit Vectors and the Distance between Vectors
+
+A vector $\vec{u}$ is a unit vector (or normal vector) if $||\vec{u}|| = 1$.  That is the length is 1.
+
+Equivalently, $||\vec{u}||^2 = 1$ or $\vec{u} * \vec{u} = 1$
+
+To get the unit vector $\vec{u}$ in the direction of $\vec{v}$, take $\vec{u} = \frac{\vec{v}}{||\vec{v}||}$.  This is referred to as normalizing $\vec{v}$.
+
+From the previous example:
+
+$$||\vec{v}|| = \sqrt{26}$$
+
+This is not a unit vector because the length isn't 1.
+
+To Find the unit vector that goes in the direction of $\vec{v}$
+
+$$\vec{u} = \frac{\vec{v}}{||\vec{v}||} = \frac{(-3, 1, 4)}{\sqrt{26}} = (\frac{-3}{\sqrt{26}}, \frac{1}{\sqrt{26}}, \frac{4}{\sqrt{26}})$$
+
+Example: Let $\vec{v} = (1, -2, 2, 0)$ Find the unit vector in the direction of $\vec{v}$
+
+$$||\vec{v}|| = 3$$
+
+$$\vec{u} = \frac{(1, -2, 2, 0)}{3} = (\frac{1}{3}, \frac{-2}{3}, \frac{2}{3}, 0)$$
+
+**Finding the Distance Between Vectors**
+
+The distance between vectors $\vec{w}$ and $\vec{v}$ in $R^n$ is given by:
+
+$$||\vec{v} - \vec{w}||$$
+
+Example: Compute the distance of $(1, 2, 3)$ and $(0, 2, 2)$
+
+$$\vec{v} - \vec{w} = (1 - 0, 2 - 2, 3 - 2) = (1, 0, 1)$$
+
+$$= \sqrt{1^2 + 0^2 + 1^2} = \sqrt{2}$$
+
+## - Projecting onto Vectors
+
+Consider $\vec{v} = (3, 5)$
+
+Compute $\vec{v} * \vec{e_{1}}$ and $\vec{v} * \vec{e_{2}}$
+
+Notice that the first product gives back 3 the first coordinate of $\vec{v}$ and the next gives the second coordinate.
+
+We see that $\vec{v} * \vec{e_{i}}$ gives how much of $\vec{v}$ lies in the direction of $\vec{e_{i}}$.
+
+So, $(\vec{v} * \vec{e_{i}}) \vec{e_{i}}$ is the projection of $\vec{v}$ onto $\vec{e_{i}}$.
+
+**Dot products are invariant(Don't change) under rotation in $R^2$**
+
+-----------------------------------------------------------------------------------------------------------------
+
+**Projection onto any unit Vector**
+
+Suppose $\vec{v}$ is a vector in $R^n$ and $\vec{u}$ is any unit vector in $R^n$.
+
+Then the orthogonal projection of $\vec{v}$ onto $\vec{u}$ is denoted $proj_{\vec{u}} \vec{v}$ and is computed by:
+
+$$proj_{\vec{u}} \vec{v} = (\vec{v} * \vec{u}) \vec{u}$$
+
+That is, $\vec{v} * \vec{u}$ measures the amount of $\vec{v}$ in the direction of $\vec{u}$.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Example: Compute the projections of $\vec{v} = (1, 2, 3)$ onto the unit vector $\vec{u} = \frac{1}{\sqrt{5}} (2, 0, 1)$
+
+$$\vec{u} = (\frac{2}{\sqrt{5}}, 0, \frac{1}{\sqrt{5}})$$
+
+$$proj_{\vec{u}} \vec{v} = ((1, 2, 3) * (\frac{2}{\sqrt{5}}, 0, \frac{1}{\sqrt{5}})) * (\frac{2}{\sqrt{5}}, 0, \frac{1}{\sqrt{5}})$$
+
+$$= \frac{5}{\sqrt{5}} (\frac{2}{\sqrt{5}}, 0, \frac{1}{\sqrt{5}}) = (2, 0, 1)$$
+
+-----------------------------------------------------------------------------------------------------------------
+
+**Projection onto any vector or line**
+
+Suppose $\vec{w}$ is a vector (not necessarily a unit vector).
 
 
 # Week 11 Least Squares Approximation, QR factorization and Diagonalizable Matrices
