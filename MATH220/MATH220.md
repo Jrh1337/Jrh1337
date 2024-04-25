@@ -956,9 +956,27 @@ This is an orthonormal set.
 
 
 
+# Week 10 Orthonormal Basis, Eigenbasis, Long Term Behavior of Population Matrices, Projection Onto Subspaces
 
+## - Orthonormal Basis
 
+A basis for a subspace satisfies:
+1. The span of the basis vectors is equal to the space in $W$
+2. The vectors form a linearly independent set
 
+$W$ is a p-dimensional space living in $R^n$
+
+Another way to look at it:
+
+Any $\vec{w}$ in $W$ can be written uniquely as $\vec{w} = a_{1}\vec{v_{1}} + \cdots + a_{p}\vec{v_{p}}$
+
+-----------------------------------------------------------------------------------------------------------------
+
+An orthogonal basis for a subspace $H$ is a basis for $H$ that is also an orthogonal set.
+
+An orthonormal basis for a subspace $H$ is a basis for $H$ that is also an orthonormal set.
+
+Note: If a set is orthogonal, then it is automatically a linearly independent set.  So, an orthogonal/orthonormal set is always a basis for the subspace it spans.
 
 
 
