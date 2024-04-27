@@ -36,8 +36,15 @@
 
 
 [WEEK 10: Orthonormal Basis, Eigenbasis, Long Term Behavior of Population Matrices and Projection onto Subspaces]
-
-
+- Orthonormal Basis
+- Writing a Vector as a linear combination of an orthonormal basis
+- Eigenspaces
+- Eigenbasis
+- Using an Eigenbasis in iterates of a Linear Transformation
+- Long-Term Behavior of a Population Matrix
+- Example with Finding Long-Term Behavior of a Population
+- Projecting onto a Subspace
+- Orthogonal Decomposition
 
 
 [WEEK 11: Least Squares Approximation, QR factorization and Diagonalizable Matrices](./MATH220.md#week-11-least-squares-approximation-qr-factorization-and-diagonalizable-matrices)
@@ -978,12 +985,106 @@ An orthonormal basis for a subspace $H$ is a basis for $H$ that is also an ortho
 
 Note: If a set is orthogonal, then it is automatically a linearly independent set.  So, an orthogonal/orthonormal set is always a basis for the subspace it spans.
 
+Examples of orthonormal basis:
+
+$$\vec{e_{1}},...,\vec{e_{n}}$$
+
+Orthonormal basis for $R^n$
+
+-----------------------------------------------------------------------------------------------------------------
+
+**Coefficients with an Orthonormal Basis
+
+If $\vec{v_{1}},..., \vec{v_{p}}$ is a basis for a subspace $W$, we know that for any $\vec{w}$ in $W$, there are unique scalars $a_{1},..., \vec{a_{p}}$ so that $w = a_{1} \vec{v_{1}} + ... + a_{p} \vec{v_{p}}$
+
+Moreover, if $\vec{v_{1},..., \vec{v_{p}}$ is an orthonormal basis, we have:
+
+$$a_{i} = \vec{w} * \vec{v_{i}}$$
 
 
+This measures how much of $\vec{w}$ lies in the $\vec{v_{i}}$ direction.
 
+With a non orthonormal basis we had to solve the vector equation by solving the corresponding augmented matrix.
 
+## - Example of Writing a Vector as a Linear Combination of Orthonormal Basis
 
+$$\vec{w} = proj_{\vec{v_{1}} \vec{w} + ... + proj_{\vec_{p}} \vec{w}$$
 
+In other words, to express $\vec{w}$ as a linear combination of an orthonormal basis, we project $\vec{w}$ onto each basis vector.
+
+Example: Consider the orthonormal basis for $R^3$:
+
+$$\vec{v_{1}}, \vec{v_{2}}, \vec{v_{3}} = (0, 0, -1), (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0), (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0)$$
+
+Write $\vec{w}$ as a linear combination of the $\vec{v_{i}}$'s
+
+$$\vec{w} = proj_{\vec{v_{1}} \vec{w} + proj_{\vec{v_{2}} \vec{w} + proj_{\vec{v_{3}} \vec{w}$$
+
+$$proj_{\vec{v_{1}} \vec{w} = (\vec{w} * \vec{v_{1}}) \vec{v_{1}} = ((1, 2, 3) * (0, 0, -1)) (0, 0, -1) = -3 \vec{v_{1}}$$
+
+$$proj_{\vec{v_{2}} \vec{w} = (\vec{w} * \vec{v_{2}}) \vec{v_{2}} = ((1, 2, 3) * (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0)) (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0) = \frac{3}{\sqrt{2}} \vec{v_{2}}$$
+
+$$proj_{\vec{v_{3}} \vec{w} = (\vec{w} * \vec{v_{3}}) \vec{v_{3}} = ((1, 2, 3) * (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0)) (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0) = \frac{-1}{\sqrt{2}} \vec{v_{3}}$$
+
+$$\vec{w} = -3\vec{v_{1}} + \frac{3}{\sqrt{2}} \vec{v_{2}} + \frac{-1}{\sqrt{2}} \vec{v_{3}}$$
+
+## - Eigenspaces
+
+Suppose $\lambda$ is an eigenvalue of $A$.  Then the eigenspace corresponding to $\lambda$ is the set containing all corresponding eigenvectors as well as $\vec{0}$.  
+
+That is, the eigenspace of $\lambda$ contains all solutions to $det(A - \lambda I_{n}) = 0$
+
+Example: Find all the eigenvalues and corresponding eigenspaces to
+
+$$A = \begin{bmatrix} 4 & 2 & 3 \\\ -1 & 1 & -3 \\\ 2 & 4 & 9 \end{bmatrix}$$
+
+The characteristic polynomial after calculating is: $(\lambda - 3)^2 (\lambda - 8) = 0$
+
+$\lambda_{1} = 3$
+
+Subtract along diagonal and solve augmented matrix:
+
+The parametric vector solution is:
+
+$$\vec{v} = s \begin{bmatrix} -3 \\\ 0 \\\ 1 \end{bmatrix} + t \begin{bmatrix} -2 \\\ 1 \\\ 0 \end{bmatrix}$$
+
+The Eigenspace is the span of these vectors
+
+Now do $\lambda_{2} = 8$
+
+$$\vec{v} = s \begin{bmatrix}  1 \\\ -1 \\\ 2 \end{bmatrix}$$
+
+The corresponding eigenspace to this eigenvalue is the span of this vector.
+
+-----------------------------------------------------------------------------------------------------------------
+
+## - Eigenbasis
+
+**Linearly Independent Eigenvectors**
+
+Eigenvectors corresponding to distinct eigenvalues are linearly independent.  Even more, different eigenspaces only have the zero vector in common (linearly independent from each other).
+
+From this, we conclude that the dimension of the span of the eigenvectors is equal to the sum of the dimension of the different eigenspaces.
+
+Example:
+
+Using the Eigenvectors of the 3x3 matrix from the previous example.  One eigenvalue had 2 eigenvectors, while the second had 1 eigenvectors.  All of these eigenvectors are linearly independent from each other.  All of the vectors are 3 dimensional and live in $R^3$
+
+The collection of all three of these vectors forms an eigenbasis for $R^3$
+
+Keep in mind an eigenbasis does not always exist.  If the eigenvectors don't span all of $R^n$ then it won't form an eigenbasis.
+
+## - Using an Eigenbasis to iterate a Linear Transformation
+
+Example: Suppose that 60% of juveniles produce offspring each year, 80% of adults produce offspring, and 90% of juveniles survive to adulthood the next year.  No adults live past 2 years.
+
+The population matrix is:
+
+$$A = \begin{bmatrix} 0.6 & 0.8 \\\ 0.9 & 0 \end{bmatrix}$$
+
+If the initial population vector:
+
+$$\vec{x_{0}} = \begin{bmatrix} J_{0} \\\ A_{0} \end{bmatrix}, \vec{x_{n}} = T^{(n)}(x_{0}) = A^n \vec{x_{0}}$$
 
 
 
