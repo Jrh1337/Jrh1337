@@ -993,11 +993,11 @@ Orthonormal basis for $R^n$
 
 -----------------------------------------------------------------------------------------------------------------
 
-**Coefficients with an Orthonormal Basis
+**Coefficients with an Orthonormal Basis**
 
-If $\vec{v_{1}},..., \vec{v_{p}}$ is a basis for a subspace $W$, we know that for any $\vec{w}$ in $W$, there are unique scalars $a_{1},..., \vec{a_{p}}$ so that $w = a_{1} \vec{v_{1}} + ... + a_{p} \vec{v_{p}}$
+If $ \vec{v_{1}},..., \vec{v_{p}} $ is a basis for a subspace $W$, we know that for any $\vec{w}$ in $W$, there are unique scalars $ a_{1},..., \vec{a_{p}} $ so that $w = a_{1} \vec{v_{1}} + ... + a_{p} \vec{v_{p}}$
 
-Moreover, if $\vec{v_{1},..., \vec{v_{p}}$ is an orthonormal basis, we have:
+Moreover, if $ \vec{v_{1}},..., \vec{v_{p}}$ is an orthonormal basis, we have:
 
 $$a_{i} = \vec{w} * \vec{v_{i}}$$
 
@@ -1008,7 +1008,7 @@ With a non orthonormal basis we had to solve the vector equation by solving the 
 
 ## - Example of Writing a Vector as a Linear Combination of Orthonormal Basis
 
-$$\vec{w} = proj_{\vec{v_{1}} \vec{w} + ... + proj_{\vec_{p}} \vec{w}$$
+$$\vec{w} = proj_{\vec{v_{1}}} \vec{w} + ... + proj_{\vec{v_{p}}} \vec{w}$$
 
 In other words, to express $\vec{w}$ as a linear combination of an orthonormal basis, we project $\vec{w}$ onto each basis vector.
 
@@ -1018,13 +1018,13 @@ $$\vec{v_{1}}, \vec{v_{2}}, \vec{v_{3}} = (0, 0, -1), (\frac{1}{\sqrt{2}}, \frac
 
 Write $\vec{w}$ as a linear combination of the $\vec{v_{i}}$'s
 
-$$\vec{w} = proj_{\vec{v_{1}} \vec{w} + proj_{\vec{v_{2}} \vec{w} + proj_{\vec{v_{3}} \vec{w}$$
+$$\vec{w} = proj_{ \vec{v_{1}}} \vec{w} + proj_{ \vec{v_{2}}} \vec{w} + proj_{\vec{v_{3}}} \vec{w}$$
 
-$$proj_{\vec{v_{1}} \vec{w} = (\vec{w} * \vec{v_{1}}) \vec{v_{1}} = ((1, 2, 3) * (0, 0, -1)) (0, 0, -1) = -3 \vec{v_{1}}$$
+$$proj_{\vec{v_{1}}} \vec{w} = (\vec{w} * \vec{v_{1}}) \vec{v_{1}} = ((1, 2, 3) * (0, 0, -1)) (0, 0, -1) = -3 \vec{v_{1}}$$
 
-$$proj_{\vec{v_{2}} \vec{w} = (\vec{w} * \vec{v_{2}}) \vec{v_{2}} = ((1, 2, 3) * (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0)) (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0) = \frac{3}{\sqrt{2}} \vec{v_{2}}$$
+$$proj_{\vec{v_{2}}} \vec{w} = (\vec{w} * \vec{v_{2}}) \vec{v_{2}} = ((1, 2, 3) * (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0)) (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0) = \frac{3}{\sqrt{2}} \vec{v_{2}}$$
 
-$$proj_{\vec{v_{3}} \vec{w} = (\vec{w} * \vec{v_{3}}) \vec{v_{3}} = ((1, 2, 3) * (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0)) (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0) = \frac{-1}{\sqrt{2}} \vec{v_{3}}$$
+$$proj_{\vec{v_{3}}} \vec{w} = (\vec{w} * \vec{v_{3}}) \vec{v_{3}} = ((1, 2, 3) * (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0)) (\frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 0) = \frac{-1}{\sqrt{2}} \vec{v_{3}}$$
 
 $$\vec{w} = -3\vec{v_{1}} + \frac{3}{\sqrt{2}} \vec{v_{2}} + \frac{-1}{\sqrt{2}} \vec{v_{3}}$$
 
