@@ -1086,6 +1086,150 @@ If the initial population vector:
 
 $$\vec{x_{0}} = \begin{bmatrix} J_{0} \\\ A_{0} \end{bmatrix}, \vec{x_{n}} = T^{(n)}(x_{0}) = A^n \vec{x_{0}}$$
 
+Suppose:
+
+$$\vec{x_{0}} = \begin{bmatrix} 400 \\\ 300 \end{bmatrix}$$
+
+Notice that $\vec{x_{0}}$ is an eigenvector of $A$ with corresponding eigenvalue $\lambda = 1.2$  What is $\vec{x_{n}}$?
+
+$$\vec{x_{n}} = \lambda^n \vec{x_{0}} = (1.2)^n \begin{bmatrix} 400 \\\ 300 \end{bmatrix}$$
+
+Building a matrix like this is easy with an eigenvector.
+
+-----------------------------------------------------------------------------------------------------------------
+
+**Linear Transformations in terms of an eigenbasis**
+
+$$T^{(n)} (\vec{x}) = a_{1}\lambda^n_{1} \vec{v_{1}} + ... + a_{m}\lambda^n_{m} \vec{v_{m}}$$
+
+## - Example of using an eigenbasis for Population Matrices
+
+The eigenvalues are: $\lambda_{1} = 1.2, \lambda_{2} = -0.6$ with corresponding eigenvectors $\vec{v_{1}} = (4, 3), \vec{v_{2}} = (2, -3)$
+
+Initial population vector is: $\vec{x_{0}} = (6, -3)$.  Notice that $\vec{x_{0}} = \vec{v_{1}} + 2\vec{v_{2}}$
+
+Using the above properties: 
+
+$$\vec{x_{n}} = T^{(n)}(\vec{x_{0}}) = T^{(n)}(\vec{v_{1}} + 2\vec{v_{2}})$$
+
+$$= T^{(n)}(\vec_{v_{1}}) + 2T^{(n)}(\vec{v_{2}})$$
+
+$$= \lambda^n_{1}\vec{v_{1}} + 2\lambda^n_{2}\vec{v_{2}}$$
+
+$$= (1.2)^n \begin{bmatrix} 4 \\\ 3 \end{bmatrix} + 2(-0.6)^n \begin{bmatrix} 2 \\\ -3 \end{bmatrix}$$
+
+## - Long term behavior of Population Matrices
+
+Using the formula we got for $\vec{x_{n}}$
+
+Factor out $(1.2)^n$
+
+$$= (1.2)^n( \begin{bmatrix} 4 \\\ 3 \end{bmatrix} + 2(-0.5)^n \begin{bmatrix} 2 \\\ 3 \end{bmatrix}$$
+
+The population grows/goes to infinity. 4/7 of the population will account for juveniles while 3/7 will account for adults.  
+
+The dominant eigenvalue tells the long term behavior of the population growth rate.
+
+If: 
+
+$\lambda_{1} > 1$: Population grows
+
+$\lambda_{1} < 1$: Population decays
+
+$\lambda_{1} = 1$: Population trends toward a constant value
+
+The corresponding eigenvector determines the long term population distribution, which we find by dividing $\vec{v_{1}}$ by the sum of its entries.
+
+
+## - Projecting onto a Subspace
+
+Suppose we want to solve $A\vec{x} = \vec{b}$
+
+where:
+
+$$A = \begin{bmatrix} 1 & 1 \\\ 1 & 2 \\\ 1 & 3 \end{bmatrix}, \vec{b} = \begin{bmatrix} 0 \\\ 1 \\\ 3 \end{bmatrix}$$
+
+This equation is inconsistent.
+
+Instead of solving can we find a solution that is close by finding some $\vec{x}$ that minimizes $vec{b}$ from the column space of $A$.
+
+To do this we need to project a vector onto a subspace.
+
+**Projection onto a subspace**
+
+Suppose $W$ is a subspace of $R^n$ and that $\vec{q_{1},.. \vec{q_{m}}$ is any orthogonal basis for $W$.  Then we take the projection of any vector $\vec{v}$ in $R^n$ onto the subspace $W$ by computing:
+
+$$proj_{W} \vec{v} = proj_{\vec{q_{1}}} \vec{v} + ... + proj_{\vec{q_{m}}} \vec{v}$$
+
+This represents how much of $\vec{v}$ lies in $W$.
+
+Example:  Let $\vec{y} = (2, 3, 4)$. Find the projection of $\vec{y}$ onto the xy-plane.
+
+An orthogonal basis for the xy plane: $(1, 0, 0), (0, 1, 0)$
+
+$$proj_{W} \vec{y} = proj_{\vec{e_{1}}} \vec{y} + proj_{\vec{e_{2}}} \vec{y}$$
+
+$$= ((2, 3, 4) * (1, 0, 0)) \vec{e_{1}} + ((2, 3, 4) * (0, 1, 0)) \vec{e_{2}}$$
+
+$$= 2\vec{e_{1}} + 3\vec{e_{2}}$$
+
+$$= (2, 0, 0) + (0, 3, 0) = (2, 3, 0)$$
+
+
+## - Orthogonal Decomposition
+
+Let $W$ be a subspace of $R^n$.  Then each $\vec{y}$ in $R^n$ can be written uniquely in the form:
+
+$$\vec{y} = \hat{y} + \vec{e}$$
+
+where $\hat{y} = proj_{W} \vec{y}$ and $\vec{e}$, referred to as the error, is orthogonal to $W$.
+
+**The Best Approximation Theorem**
+
+$\hat{y}$ is the closest point in $W$ to $\vec{y}$. That is:
+
+$$||\vec{y} - \hat{y}|| \leq ||\vec{y} - \vec{v}||$$
+
+The distance of $\vec{y}$ to $W$ is given by:
+
+$$||\vec{e}|| = ||\vec{y} - \hat{y}||$$
+
+Example:
+
+Let $W$ span:
+
+$$\begin{bmatrix} 0 \\\ 1 \\\ -4 \\\ -1 \end{bmatrix}, \begin{bmatrix} 3 \\\ 5 \\\ 1 \\\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\\ 0 \\\ 1 \\\ -4 \end{bmatrix}$$
+
+Find the orthogonal decomposition of $\vec{y}$ with respect to $W$, and then find the closest point in $W$ to $\vec{y}$.
+
+$$\vec{y} = \begin{bmatrix} 10 \\\ -8 \\\ 2 \\\ 0 \end{bmatrix}$$
+
+The projection of $\vec{y}$ onmto $W$ was already calculated as:
+
+$$proj_{W} \vec{y} = \begin{bmatrix} 0 \\\ -2 \\\ 4 \\\ -2 \end{bmatrix}$$
+
+$$\vec{y} = \hat{y} + \vec{e}$$
+
+$$\vec{e} = \vec{y} - \hat{y} = \begin{bmatrix} 10 \\\ -6 \\\ -2 \\\ 2 \end{bmatrix}$$
+
+The orthogonal decomposition can be represented by: 
+
+$$\vec{y} = \begin{bmatrix} 0 \\\ -2 \\\ 4 \\\ -2 \end{bmatrix} + \begin{bmatrix} 10 \\\ -6 \\\ -2 \\\ 2 \end{bmatrix}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
