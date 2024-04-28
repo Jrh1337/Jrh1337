@@ -995,9 +995,9 @@ Orthonormal basis for $R^n$
 
 **Coefficients with an Orthonormal Basis**
 
-If $ \vec{v_{1}},..., \vec{v_{p}} $ is a basis for a subspace $W$, we know that for any $\vec{w}$ in $W$, there are unique scalars $ a_{1},..., \vec{a_{p}} $ so that $w = a_{1} \vec{v_{1}} + ... + a_{p} \vec{v_{p}}$
+If $\vec{v_{1}},..., \vec{v_{p}}$ is a basis for a subspace $W$, we know that for any $\vec{w}$ in $W$, there are unique scalars $a_{1},..., \vec{a_{p}}$ so that $w = a_{1} \vec{v_{1}} + ... + a_{p} \vec{v_{p}}$
 
-Moreover, if $ \vec{v_{1}},..., \vec{v_{p}}$ is an orthonormal basis, we have:
+Moreover, if $\vec{v_{1}},..., \vec{v_{p}}$ is an orthonormal basis, we have:
 
 $$a_{i} = \vec{w} * \vec{v_{i}}$$
 
@@ -1090,7 +1090,7 @@ Suppose:
 
 $$\vec{x_{0}} = \begin{bmatrix} 400 \\\ 300 \end{bmatrix}$$
 
-Notice that $\vec{x_{0}}$ is an eigenvector of $A$ with corresponding eigenvalue $\lambda = 1.2$  What is $\vec{x_{n}}$?
+Notice that $\vec{x_{0}}$ is an eigenvector of $A$ with corresponding eigenvalue $\lambda = 1.2$  What is $\vec{x_{n}}$$
 
 $$\vec{x_{n}} = \lambda^n \vec{x_{0}} = (1.2)^n \begin{bmatrix} 400 \\\ 300 \end{bmatrix}$$
 
