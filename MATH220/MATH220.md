@@ -35,7 +35,7 @@
 - Orthogonality and Orthonormal Sets
 
 
-[WEEK 10: Orthonormal Basis, Eigenbasis, Long Term Behavior of Population Matrices and Projection onto Subspaces]
+[WEEK 10: Orthonormal Basis, Eigenbasis, Long Term Behavior of Population Matrices and Projection onto Subspaces](./MATH220.md#week-10-orthonormal-basis-eigenbasis-long-term-behavior-of-population-matrices-projection-onto-subspaces)
 - Orthonormal Basis
 - Writing a Vector as a linear combination of an orthonormal basis
 - Eigenspaces
