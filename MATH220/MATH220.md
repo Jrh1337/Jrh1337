@@ -155,11 +155,11 @@ This matrix is singular based on this, however also notice that the rows and col
 
 ## - Solving Systems with $A^{-1}$
 
-A square matrix $A$ is invertibel is invertible only for all $\vec{b}$ in $R^n$, $A\vec{x} = \vec{b}$ is consisent and has a unique solution.
+A square matrix $A$ is invertible only for all $\vec{b}$ in $R^n$, $A\vec{x} = \vec{b}$ is consisent and has a unique solution.
 
 Being onto and one-to-one are equivalent statements.
 
-If $A$ is invertibel the unique solution $A\vec{x} = \vec{b}$ is:
+If $A$ is invertible the unique solution $A\vec{x} = \vec{b}$ is:
 
 $$\vec{x} = A^{-1}\vec{b}$$
 
