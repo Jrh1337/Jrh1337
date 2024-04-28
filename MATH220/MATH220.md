@@ -1214,7 +1214,7 @@ $$\vec{e} = \vec{y} - \hat{y} = \begin{bmatrix} 10 \\\ -6 \\\ -2 \\\ 2 \end{bmat
 
 The orthogonal decomposition can be represented by: 
 
-$$\vec{y} = \begin{bmatrix} 0 \\\ -2 \\\ 4 \\\ -2 \end{bmatrix} + \begin{bmatrix} 10 \\\ -6 \\\ -2 \\\ 2 \end{bmatrix}$
+$$\vec{y} = \begin{bmatrix} 0 \\\ -2 \\\ 4 \\\ -2 \end{bmatrix} + \begin{bmatrix} 10 \\\ -6 \\\ -2 \\\ 2 \end{bmatrix}$$
 
 
 
