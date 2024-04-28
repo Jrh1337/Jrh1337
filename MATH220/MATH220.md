@@ -1112,7 +1112,7 @@ Using the above properties:
 
 $$\vec{x_{n}} = T^{(n)}(\vec{x_{0}}) = T^{(n)}(\vec{v_{1}} + 2\vec{v_{2}})$$
 
-$$= T^{(n)}(\vec_{v_{1}}) + 2T^{(n)}(\vec{v_{2}})$$
+$$= T^{(n)}(\vec{v_{1}}) + 2T^{(n)}(\vec{v_{2}})$$
 
 $$= \lambda^n_{1}\vec{v_{1}} + 2\lambda^n_{2}\vec{v_{2}}$$
 
@@ -1157,7 +1157,7 @@ To do this we need to project a vector onto a subspace.
 
 **Projection onto a subspace**
 
-Suppose $W$ is a subspace of $R^n$ and that $\vec{q_{1},.. \vec{q_{m}}$ is any orthogonal basis for $W$.  Then we take the projection of any vector $\vec{v}$ in $R^n$ onto the subspace $W$ by computing:
+Suppose $W$ is a subspace of $R^n$ and that $\vec{q_{1}},... \vec{q_{m}}$ is any orthogonal basis for $W$.  Then we take the projection of any vector $\vec{v}$ in $R^n$ onto the subspace $W$ by computing:
 
 $$proj_{W} \vec{v} = proj_{\vec{q_{1}}} \vec{v} + ... + proj_{\vec{q_{m}}} \vec{v}$$
 
